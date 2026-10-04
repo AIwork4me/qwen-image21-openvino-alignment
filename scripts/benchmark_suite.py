@@ -28,6 +28,7 @@ def main():
     ap.add_argument("--seeds", default="20261001")
     ap.add_argument("--resolution", type=int, default=1024)
     ap.add_argument("--resource-csv", default=None)
+    ap.add_argument("--pids", default=None, help="comma list to restrict to a prompt subset")
     args = ap.parse_args()
 
     cfg = load_cfg()
@@ -36,6 +37,9 @@ def main():
     seeds = [int(s) for s in args.seeds.split(",")]
 
     prompts = json.load(open(os.path.join(ROOT, f"prompts/{args.suite}.json")))["prompts"]
+    if args.pids:
+        keep = set(args.pids.split(","))
+        prompts = [p for p in prompts if p["id"] in keep]
     for p in prompts:
         for arm in arms:
             f = os.path.join(ROOT, "artifacts", "tensors", arm, f"{p['id']}.npz")

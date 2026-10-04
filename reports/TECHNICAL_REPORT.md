@@ -213,3 +213,46 @@ warm latency and ~25× load time vs FP32 on this CPU.
 - plots: `artifacts/plots/*.png` (embedding histograms/heatmap, layer curves)
 - reviews: `artifacts/reviews/*.md`
 - integrity: `python scripts/verify_artifacts.py`
+
+---
+
+## 15. Follow-up experiments (Steps 1–4, each independently reviewed)
+
+### Step 1 — accuracy-aware re-quantization (negative result, decisive)
+Arms: O3q (embedding table FP32; layer-0 error measured 0.0000 — exclusion verified
+structurally: 504 int8 weight constants incl. layer 35) and O3qL (additionally
+`IgnoredScope(patterns=["__module\.lm\.layers\.35\..*"])`; 490 int8 constants,
+0 in layer 35). n=100: O0↔O3q 6.97%, O0↔O3qL 6.10%, R0↔O3qL 9.24% (vs O3r
+6.96%/9.67%). NNCF 3.4.0 raises `ParameterNotSupportedError` for INT8 with ratio≠1
+(reproduced on a toy model) — INT8 has no accuracy knob. Conclusion: the 7% delta is
+distributed trunk noise; single-scope exclusion is ineffective.
+
+### Step 2 — image-level three-way (canary 40 steps, one pipeline, frozen latent)
+Final latent rel L2 on S02@40: O3 18.5%, O3qL 10.3%, O1(BF16) 6.9%.
+Canary LPIPS: medians 0.0246/0.0246/0.0231; **max 0.220 / 0.309 / 0.098** — BF16
+tightens the worst case 2–3×. Nonlinear embedding→image mapping noted (9.2%→10.3%
+vs 9.7%→18.5%): judge distributions, not single points.
+
+### Step 3 — 2K BF16 spot check (P01/P03/P12/P21 @2048, 40 steps)
+R0↔O1 (n=4): LPIPS med 0.031, max 0.132; R0↔O3r on the SAME 4-prompt subset:
+med 0.089, max 0.220 (full-30 O3r suite: med 0.032 / max 0.220). Like-for-like,
+BF16 is better on median and max; direction consistent with 1024.
+
+### Step 4 — customer artifact IR: root cause, runtime fix, bitwise proof
+- Root cause: baked visual/deepstack path — `NonZero(visual_pos_masks)` (data
+  dependent) feeding GatherND, plus `Gather(deepstack_visual_embeds, <baked const>)`
+  into top-level `Add_3/Add_4/Add_5`; text-only inputs produce empty-tensor shapes the
+  CPU plugin's eltwise shape inference rejects (>40 tokens; nondeterministic for
+  shorter ones on this host).
+- Fix (arm O3p, `scripts/patch_ov_artifact_textonly.py`): replace those Adds'
+  visual-branch input with Constant [0,4096] — runtime-only, serialized files
+  untouched, text-to-image only.
+- Equivalence: **bitwise identical** to the artifact's frozen smoke outputs
+  (max_abs = 0.0, S01–S03).
+- Coverage: real artifact at n=100 via O3p: O0↔O3p 6.89%, R0↔O3p 9.65%;
+  O3p↔O3r 0.54% (cos 0.99999) — O3r validated as faithful proxy.
+
+Reviews: `artifacts/reviews/step1_o3q_review.md`, `step2_image_evidence_review.md`,
+`step3_4_followup_review.md` (all PASS WITH WARNINGS; warnings addressed:
+per-arm-merged cpu_performance.json, uniquely-tagged traces, migrated large-artifact
+storage to /valdata with symlinks).

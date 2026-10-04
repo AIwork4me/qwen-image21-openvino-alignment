@@ -20,7 +20,8 @@ os.makedirs(P, exist_ok=True)
 
 def fig_trace_curves():
     for steps in (25, 40):
-        t = load_json(os.path.join(ROOT, "artifacts", "metrics", f"trace_S02_{steps}s.json"))
+        tn = "trace_S02_25s.json" if steps == 25 else "trace_S02_40s_O3.json"
+        t = load_json(os.path.join(ROOT, "artifacts", "metrics", tn))
         ss = [s for s in t["step_stats"]]
         xs = [s["step"] for s in ss]
         fig, axes = plt.subplots(1, 2, figsize=(11, 4))
@@ -46,7 +47,7 @@ def fig_trace_curves():
 
 def fig_step_compare():
     t25 = load_json(os.path.join(ROOT, "artifacts", "metrics", "trace_S02_25s.json"))["step_stats"]
-    t40 = load_json(os.path.join(ROOT, "artifacts", "metrics", "trace_S02_40s.json"))["step_stats"]
+    t40 = load_json(os.path.join(ROOT, "artifacts", "metrics", "trace_S02_40s_O3.json"))["step_stats"]
     fig, ax = plt.subplots(figsize=(7.5, 4.5))
     ax.plot([s["step"] for s in t25], [s["latent.rel_l2"] for s in t25], "o-", ms=3, label="25-step schedule")
     ax.plot([s["step"] for s in t40], [s["latent.rel_l2"] for s in t40], "s-", ms=3, label="40-step schedule")
@@ -156,7 +157,39 @@ def fig_text_rendering():
     plt.close(fig)
 
 
+def fig_arm_tail_comparison():
+    """LPIPS distributions by arm (canary 40s + 2K spot): BF16 tightens the tail."""
+    import csv
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
+    data, labels = [], []
+    for arm in ("O3r", "O3qL", "O1"):
+        f = f"artifacts/metrics/image_metrics_canary___s20261001_40s_R0_vs_{arm}.csv"
+        if os.path.exists(f):
+            rows = list(csv.DictReader(open(f)))
+            data.append([float(r["lpips"]) for r in rows if r.get("lpips")])
+            labels.append(f"INT8 ({arm})" if arm != "O1" else "BF16 (O1)")
+    axes[0].boxplot(data, tick_labels=labels)
+    axes[0].set_ylabel("LPIPS vs GPU reference")
+    axes[0].set_title("Canary 40-step (n=10): BF16 tightens the worst case")
+    axes[0].grid(alpha=0.3, axis="y")
+    d2 = []
+    for arm in ("O3r", "O1"):
+        f = f"artifacts/metrics/image_metrics_production_30_P*_s20261001_40s_R0_vs_{arm}.csv"
+        fs = glob.glob(f)
+        if fs:
+            rows = list(csv.DictReader(open(fs[0])))
+            d2.append([float(r["lpips"]) for r in rows if r.get("lpips")])
+    if d2:
+        axes[1].boxplot(d2, tick_labels=["INT8 (O3r)", "BF16 (O1)"])
+        axes[1].set_title("2K production spot (n=4): same direction")
+        axes[1].grid(alpha=0.3, axis="y")
+    fig.tight_layout()
+    fig.savefig(os.path.join(P, "arm_tail_comparison.png"), dpi=140)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
+    fig_arm_tail_comparison()
     fig_trace_curves()
     fig_step_compare()
     fig_perturbation()

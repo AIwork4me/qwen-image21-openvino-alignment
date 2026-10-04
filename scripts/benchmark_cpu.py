@@ -25,7 +25,7 @@ def bench_ov(arm, prompts_inputs, n_warm, n_iter, threads=None):
                                       find_prenorm_anchor, layer_output_ops)
     core = ov.Core()
     art = {"O0": "/valdata/models/ov_clean_fp32", "O3r": "/valdata/models/ov_clean_int8",
-           "O3": CUSTOMER_INT8}.get(arm)
+           "O3qL": "/valdata/models/ov_clean_int8_acc_full", "O3": CUSTOMER_INT8}.get(arm)
     p = {"EXECUTION_MODE_HINT": "PERFORMANCE"}
     if arm == "O1":
         p["INFERENCE_PRECISION_HINT"] = "bf16"
@@ -42,14 +42,14 @@ def bench_ov(arm, prompts_inputs, n_warm, n_iter, threads=None):
         pre_op = next(op for op in lm.get_ordered_ops() if op.get_friendly_name() == pre_name)
         lm.add_outputs([op.output(0) for op in lops] + [pre_op.output(0)])
     else:
-        lm = core.read_model(os.path.join(art, "language_model_fp32.xml" if arm != "O3r" else "language_model_int8.xml"))
+        lm = core.read_model(os.path.join(art, "language_model_fp32.xml" if arm in ("O0", "O1") else "language_model_int8.xml"))
     read_s = time.perf_counter() - t0
     t0 = time.perf_counter()
     c = core.compile_model(lm, "CPU", p)
     compile_s = time.perf_counter() - t0
 
     int8_tbl = None
-    if arm == "O3r":
+    if arm in ("O3r",):
         tz = np.load("/valdata/models/ov_clean_int8/embed_table_int8.npz")
         int8_tbl = (tz["q"], tz["zero_point"], tz["scale"])
     emb_c = None
@@ -166,7 +166,16 @@ def main():
             out.append({"arm": arm, "status": "FAILED", "error": str(e)[:300]})
     if args.torch_cpu:
         out.append(bench_torch_cpu(inputs, args.n_warm, args.n_iter))
-    save_json(out, os.path.join(ROOT, "artifacts", "metrics", "cpu_performance.json"))
+    perf_path = os.path.join(ROOT, "artifacts", "metrics", "cpu_performance.json")
+    if os.path.exists(perf_path):
+        try:
+            prev = {r.get("arm"): r for r in json.load(open(perf_path)) if r.get("arm")}
+        except Exception:
+            prev = {}
+        for r in out:
+            prev[r.get("arm")] = r
+        out = list(prev.values())
+    save_json(out, perf_path)
     print("saved cpu_performance.json")
 
 

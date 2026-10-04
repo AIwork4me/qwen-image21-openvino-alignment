@@ -1,0 +1,478 @@
+{
+  "suite": "smoke",
+  "pid": "S02",
+  "steps": 40,
+  "resolution": 1024,
+  "arms": [
+    "R0",
+    "O3qL"
+  ],
+  "controls": {
+    "latent_hash": "976e549d9a6fbed7eff278b37b5514677e6292b9cf35cdb879babd0e7f5ae6d5",
+    "pe_hashes": {
+      "R0": "84c3e03353fd60ecfca62e3936a26cd8e2fff918dd4943c7873e7f94fe5b77c4",
+      "O3qL": "826dfe4c6263fc279dae7960d05c32d65e8c68adfe1f4676cbce0c6ce018cf5d"
+    },
+    "timesteps": [
+      1000.0,
+      986.9637451171875,
+      973.593017578125,
+      959.8749389648438,
+      945.7955322265625,
+      931.3406372070312,
+      916.494873046875,
+      901.2421264648438,
+      885.5656127929688,
+      869.4472045898438,
+      852.8682250976562,
+      835.8084716796875,
+      818.2465209960938,
+      800.16015625,
+      781.5255126953125,
+      762.3172607421875,
+      742.5084228515625,
+      722.0701904296875,
+      700.9725341796875,
+      679.1827392578125,
+      656.666259765625,
+      633.3861083984375,
+      609.302734375,
+      584.3739013671875,
+      558.5541381835938,
+      531.794921875,
+      504.0440673828125,
+      475.24542236328125,
+      445.33837890625,
+      414.25787353515625,
+      381.9332580566406,
+      348.2884216308594,
+      313.2407531738281,
+      276.70074462890625,
+      238.5709228515625,
+      198.7451934814453,
+      157.10789489746094,
+      113.53254699707031,
+      67.88056945800781,
+      19.999980926513672
+    ],
+    "mu": 0.6935483870967742,
+    "true_cfg": 1.0,
+    "negative": null
+  },
+  "gen_s": {
+    "R0": 53.19277906417847,
+    "O3qL": 39.955660820007324
+  },
+  "n_steps": {
+    "R0": 40,
+    "O3qL": 40
+  },
+  "step_stats": [
+    {
+      "vs": "O3qL",
+      "step": 0,
+      "latent.cosine": 0.9999992723118492,
+      "latent.rel_l2": 0.001206464643600851,
+      "latent.rmse": 0.0011902867896485504,
+      "latent.max_abs": 0.015625,
+      "model_out.cosine": 0.9998520806015568,
+      "model_out.rel_l2": 0.017240064650926604
+    },
+    {
+      "vs": "O3qL",
+      "step": 1,
+      "latent.cosine": 0.9999975508590353,
+      "latent.rel_l2": 0.0022132430309843303,
+      "latent.rmse": 0.0021556660219917557,
+      "latent.max_abs": 0.03125,
+      "model_out.cosine": 0.9991994678479846,
+      "model_out.rel_l2": 0.040265684496965104
+    },
+    {
+      "vs": "O3qL",
+      "step": 2,
+      "latent.cosine": 0.9999862771136679,
+      "latent.rel_l2": 0.005238896870532527,
+      "latent.rmse": 0.005036071783334137,
+      "latent.max_abs": 0.0625,
+      "model_out.cosine": 0.9872000992982555,
+      "model_out.rel_l2": 0.15962845316149146
+    },
+    {
+      "vs": "O3qL",
+      "step": 3,
+      "latent.cosine": 0.9999822462146701,
+      "latent.rel_l2": 0.005958796838722224,
+      "latent.rmse": 0.005652559015237104,
+      "latent.max_abs": 0.0625,
+      "model_out.cosine": 0.9972883581125759,
+      "model_out.rel_l2": 0.07421900105869338
+    },
+    {
+      "vs": "O3qL",
+      "step": 4,
+      "latent.cosine": 0.9999767141540266,
+      "latent.rel_l2": 0.006824335785214269,
+      "latent.rmse": 0.006387264501021206,
+      "latent.max_abs": 0.0625,
+      "model_out.cosine": 0.9982415291902194,
+      "model_out.rel_l2": 0.05932073488206075
+    },
+    {
+      "vs": "O3qL",
+      "step": 5,
+      "latent.cosine": 0.9999688367147589,
+      "latent.rel_l2": 0.007894729497078352,
+      "latent.rmse": 0.007290058923606246,
+      "latent.max_abs": 0.078125,
+      "model_out.cosine": 0.9982813397575364,
+      "model_out.rel_l2": 0.058606293007867974
+    },
+    {
+      "vs": "O3qL",
+      "step": 6,
+      "latent.cosine": 0.9999586121052506,
+      "latent.rel_l2": 0.009098156565248173,
+      "latent.rmse": 0.008287097943160786,
+      "latent.max_abs": 0.078125,
+      "model_out.cosine": 0.9983375869243836,
+      "model_out.rel_l2": 0.057696844947724035
+    },
+    {
+      "vs": "O3qL",
+      "step": 7,
+      "latent.cosine": 0.9999448685096941,
+      "latent.rel_l2": 0.010500594850626419,
+      "latent.rmse": 0.009434456853264552,
+      "latent.max_abs": 0.09375,
+      "model_out.cosine": 0.9980019384654885,
+      "model_out.rel_l2": 0.06331689829006551
+    },
+    {
+      "vs": "O3qL",
+      "step": 8,
+      "latent.cosine": 0.9999252128704585,
+      "latent.rel_l2": 0.012230080391000724,
+      "latent.rmse": 0.0108386075725679,
+      "latent.max_abs": 0.12109375,
+      "model_out.cosine": 0.9971302260600451,
+      "model_out.rel_l2": 0.07588900177204885
+    },
+    {
+      "vs": "O3qL",
+      "step": 9,
+      "latent.cosine": 0.9998968506564814,
+      "latent.rel_l2": 0.014363154943210006,
+      "latent.rmse": 0.012556913347744541,
+      "latent.max_abs": 0.19140625,
+      "model_out.cosine": 0.9961257783429464,
+      "model_out.rel_l2": 0.08811336531676664
+    },
+    {
+      "vs": "O3qL",
+      "step": 10,
+      "latent.cosine": 0.9998587815442603,
+      "latent.rel_l2": 0.016805829838795937,
+      "latent.rmse": 0.01449631843112585,
+      "latent.max_abs": 0.265625,
+      "model_out.cosine": 0.9958347922180203,
+      "model_out.rel_l2": 0.09131121640759865
+    },
+    {
+      "vs": "O3qL",
+      "step": 11,
+      "latent.cosine": 0.9998103196061627,
+      "latent.rel_l2": 0.019477137065838212,
+      "latent.rmse": 0.016581635830889955,
+      "latent.max_abs": 0.333984375,
+      "model_out.cosine": 0.9958941427220318,
+      "model_out.rel_l2": 0.09066561979240548
+    },
+    {
+      "vs": "O3qL",
+      "step": 12,
+      "latent.cosine": 0.9997502899139992,
+      "latent.rel_l2": 0.022347866126723653,
+      "latent.rmse": 0.01878595757627176,
+      "latent.max_abs": 0.3994140625,
+      "model_out.cosine": 0.9959290244550547,
+      "model_out.rel_l2": 0.09027833725595351
+    },
+    {
+      "vs": "O3qL",
+      "step": 13,
+      "latent.cosine": 0.999677731317629,
+      "latent.rel_l2": 0.02538790945875181,
+      "latent.rmse": 0.021080415210182335,
+      "latent.max_abs": 0.4619140625,
+      "model_out.cosine": 0.9959889226676807,
+      "model_out.rel_l2": 0.08960203883752388
+    },
+    {
+      "vs": "O3qL",
+      "step": 14,
+      "latent.cosine": 0.9995916304043737,
+      "latent.rel_l2": 0.028578829693488638,
+      "latent.rmse": 0.02345478424543904,
+      "latent.max_abs": 0.5263671875,
+      "model_out.cosine": 0.9960383819837503,
+      "model_out.rel_l2": 0.08904406109069743
+    },
+    {
+      "vs": "O3qL",
+      "step": 15,
+      "latent.cosine": 0.9994892990866311,
+      "latent.rel_l2": 0.031959770622211114,
+      "latent.rmse": 0.025950798453456932,
+      "latent.max_abs": 0.5908203125,
+      "model_out.cosine": 0.9960101159078509,
+      "model_out.rel_l2": 0.08937530269405047
+    },
+    {
+      "vs": "O3qL",
+      "step": 16,
+      "latent.cosine": 0.9993696249970712,
+      "latent.rel_l2": 0.035507289467913684,
+      "latent.rmse": 0.028551989458067594,
+      "latent.max_abs": 0.6552734375,
+      "model_out.cosine": 0.9959712609418799,
+      "model_out.rel_l2": 0.08977291328650791
+    },
+    {
+      "vs": "O3qL",
+      "step": 17,
+      "latent.cosine": 0.9992304669583342,
+      "latent.rel_l2": 0.039231283472068355,
+      "latent.rmse": 0.03127803139558937,
+      "latent.max_abs": 0.7236328125,
+      "model_out.cosine": 0.9958999432634752,
+      "model_out.rel_l2": 0.09057727213092685
+    },
+    {
+      "vs": "O3qL",
+      "step": 18,
+      "latent.cosine": 0.9990713539599912,
+      "latent.rel_l2": 0.0430968036065267,
+      "latent.rmse": 0.03411279296747409,
+      "latent.max_abs": 0.791015625,
+      "model_out.cosine": 0.9958708034005718,
+      "model_out.rel_l2": 0.09089837169885431
+    },
+    {
+      "vs": "O3qL",
+      "step": 19,
+      "latent.cosine": 0.9988923650518231,
+      "latent.rel_l2": 0.04706688278905722,
+      "latent.rmse": 0.03705379742606506,
+      "latent.max_abs": 0.86328125,
+      "model_out.cosine": 0.9958525431910032,
+      "model_out.rel_l2": 0.09109061640749239
+    },
+    {
+      "vs": "O3qL",
+      "step": 20,
+      "latent.cosine": 0.9986912342828527,
+      "latent.rel_l2": 0.05116183902055621,
+      "latent.rmse": 0.04013394038883495,
+      "latent.max_abs": 0.935546875,
+      "model_out.cosine": 0.9957738027266907,
+      "model_out.rel_l2": 0.09195600509755701
+    },
+    {
+      "vs": "O3qL",
+      "step": 21,
+      "latent.cosine": 0.9984708883444906,
+      "latent.rel_l2": 0.0553004366950728,
+      "latent.rmse": 0.043319798032711174,
+      "latent.max_abs": 1.015625,
+      "model_out.cosine": 0.9957667806774324,
+      "model_out.rel_l2": 0.09203060475055992
+    },
+    {
+      "vs": "O3qL",
+      "step": 22,
+      "latent.cosine": 0.9982313147009154,
+      "latent.rel_l2": 0.059474325325948915,
+      "latent.rmse": 0.046642281586673426,
+      "latent.max_abs": 1.095703125,
+      "model_out.cosine": 0.9957504377822299,
+      "model_out.rel_l2": 0.09221714001997673
+    },
+    {
+      "vs": "O3qL",
+      "step": 23,
+      "latent.cosine": 0.99797472962089,
+      "latent.rel_l2": 0.0636422541101768,
+      "latent.rmse": 0.0500977205177671,
+      "latent.max_abs": 1.17626953125,
+      "model_out.cosine": 0.9956990225033834,
+      "model_out.rel_l2": 0.09278036661912177
+    },
+    {
+      "vs": "O3qL",
+      "step": 24,
+      "latent.cosine": 0.9977042746311161,
+      "latent.rel_l2": 0.06775789596200335,
+      "latent.rmse": 0.05369468461679282,
+      "latent.max_abs": 1.2666015625,
+      "model_out.cosine": 0.9956432798923056,
+      "model_out.rel_l2": 0.09337315260593458
+    },
+    {
+      "vs": "O3qL",
+      "step": 25,
+      "latent.cosine": 0.9974239198533187,
+      "latent.rel_l2": 0.0717758986680487,
+      "latent.rmse": 0.057434330496636356,
+      "latent.max_abs": 1.357421875,
+      "model_out.cosine": 0.9955843036252524,
+      "model_out.rel_l2": 0.09400342279644143
+    },
+    {
+      "vs": "O3qL",
+      "step": 26,
+      "latent.cosine": 0.9971353357551572,
+      "latent.rel_l2": 0.07568903857799607,
+      "latent.rmse": 0.061350877827073776,
+      "latent.max_abs": 1.4560546875,
+      "model_out.cosine": 0.9955056565338454,
+      "model_out.rel_l2": 0.09484195578453943
+    },
+    {
+      "vs": "O3qL",
+      "step": 27,
+      "latent.cosine": 0.9968487364371872,
+      "latent.rel_l2": 0.07938436028969961,
+      "latent.rmse": 0.06541455874058384,
+      "latent.max_abs": 1.5546875,
+      "model_out.cosine": 0.9954739634154792,
+      "model_out.rel_l2": 0.0951772430094014
+    },
+    {
+      "vs": "O3qL",
+      "step": 28,
+      "latent.cosine": 0.9965647572303357,
+      "latent.rel_l2": 0.0828844337156971,
+      "latent.rmse": 0.06967123785947135,
+      "latent.max_abs": 1.65283203125,
+      "model_out.cosine": 0.9953885655877646,
+      "model_out.rel_l2": 0.09607527933870157
+    },
+    {
+      "vs": "O3qL",
+      "step": 29,
+      "latent.cosine": 0.9962926896494203,
+      "latent.rel_l2": 0.08610297833820907,
+      "latent.rmse": 0.07408100591245155,
+      "latent.max_abs": 1.758544921875,
+      "model_out.cosine": 0.9953383601129369,
+      "model_out.rel_l2": 0.09659380118577904
+    },
+    {
+      "vs": "O3qL",
+      "step": 30,
+      "latent.cosine": 0.9960337743185339,
+      "latent.rel_l2": 0.08905839478663034,
+      "latent.rmse": 0.07869488783316939,
+      "latent.max_abs": 1.865234375,
+      "model_out.cosine": 0.9952373138199787,
+      "model_out.rel_l2": 0.09763770663123253
+    },
+    {
+      "vs": "O3qL",
+      "step": 31,
+      "latent.cosine": 0.9957929064555294,
+      "latent.rel_l2": 0.09172253299330374,
+      "latent.rmse": 0.08352205958623764,
+      "latent.max_abs": 1.97930908203125,
+      "model_out.cosine": 0.9951376398943748,
+      "model_out.rel_l2": 0.09866515067624844
+    },
+    {
+      "vs": "O3qL",
+      "step": 32,
+      "latent.cosine": 0.995571702269663,
+      "latent.rel_l2": 0.09410278058464118,
+      "latent.rmse": 0.088592031717644,
+      "latent.max_abs": 2.0946044921875,
+      "model_out.cosine": 0.9949681861003722,
+      "model_out.rel_l2": 0.10037137161744253
+    },
+    {
+      "vs": "O3qL",
+      "step": 33,
+      "latent.cosine": 0.9953736091222394,
+      "latent.rel_l2": 0.09618406227752686,
+      "latent.rmse": 0.0938635618802796,
+      "latent.max_abs": 2.21722412109375,
+      "model_out.cosine": 0.994777600357942,
+      "model_out.rel_l2": 0.10224201484816112
+    },
+    {
+      "vs": "O3qL",
+      "step": 34,
+      "latent.cosine": 0.9951977938696517,
+      "latent.rel_l2": 0.0979939610154267,
+      "latent.rmse": 0.09940573138173305,
+      "latent.max_abs": 2.3416748046875,
+      "model_out.cosine": 0.9944857005507736,
+      "model_out.rel_l2": 0.10505816382655082
+    },
+    {
+      "vs": "O3qL",
+      "step": 35,
+      "latent.cosine": 0.995044285447314,
+      "latent.rel_l2": 0.09954820933263488,
+      "latent.rmse": 0.10523529683556712,
+      "latent.max_abs": 2.47998046875,
+      "model_out.cosine": 0.9940694674349019,
+      "model_out.rel_l2": 0.10895205060145506
+    },
+    {
+      "vs": "O3qL",
+      "step": 36,
+      "latent.cosine": 0.9949101949311963,
+      "latent.rel_l2": 0.10088790560747012,
+      "latent.rmse": 0.1113803492537257,
+      "latent.max_abs": 2.6171875,
+      "model_out.cosine": 0.9933185498997937,
+      "model_out.rel_l2": 0.11565488147932117
+    },
+    {
+      "vs": "O3qL",
+      "step": 37,
+      "latent.cosine": 0.9947883115145522,
+      "latent.rel_l2": 0.10208897394952576,
+      "latent.rmse": 0.11793396058838096,
+      "latent.max_abs": 2.767578125,
+      "model_out.cosine": 0.9918526400901837,
+      "model_out.rel_l2": 0.12769546713501226
+    },
+    {
+      "vs": "O3qL",
+      "step": 38,
+      "latent.cosine": 0.9946738248078223,
+      "latent.rel_l2": 0.10319794854723197,
+      "latent.rmse": 0.12499585658131551,
+      "latent.max_abs": 2.92529296875,
+      "model_out.cosine": 0.9887904957952327,
+      "model_out.rel_l2": 0.1496359779545004
+    },
+    {
+      "vs": "O3qL",
+      "step": 39,
+      "latent.cosine": 0.9946501942707322,
+      "latent.rel_l2": 0.10342608765101016,
+      "latent.rmse": 0.12778651967278346,
+      "latent.max_abs": 2.9873046875,
+      "model_out.cosine": 0.9893289800387859,
+      "model_out.rel_l2": 0.14608928911175192
+    }
+  ],
+  "final": {
+    "O3qL": {
+      "latent.cosine": 0.9946501942707322,
+      "latent.rel_l2": 0.10342608765101016
+    }
+  }
+}

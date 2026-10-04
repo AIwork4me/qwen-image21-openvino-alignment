@@ -134,6 +134,9 @@ def main():
     imgdir = os.path.join(ROOT, "artifacts", "images")
     os.makedirs(imgdir, exist_ok=True)
     tag = args.seed_tag or f"{args.pid}_{args.steps}s"
+    outp = os.path.join(ROOT, "artifacts", "metrics", f"trace_{tag}.json")
+    if os.path.exists(outp) and not args.seed_tag:
+        tag = f"{tag}_{args.arm_b}"  # never silently overwrite an existing trace
     for arm in arms:
         results[arm]["img"].save(os.path.join(imgdir, f"{tag}_{arm}.png"))
 

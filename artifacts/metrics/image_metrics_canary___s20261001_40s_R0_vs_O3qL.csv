@@ -1,0 +1,11 @@
+arm_a,arm_b,cer_a,cer_b,exact_a,exact_b,expected_text,lpips,ocr_a,ocr_b,pid,prompt,psnr,seed,ssim,steps,tag
+R0,O3qL,,,,,,0.00484637264162302,,,C01,A single yellow rubber duck floating on calm water.,40.93214392752452,20261001,0.994372994117641,40,canary_C01_s20261001_40s
+R0,O3qL,,,,,,0.008879396133124828,,,C02,"A wooden desk with a laptop, a coffee cup, two books and a small potted plant.",34.47116368443205,20261001,0.9852201913565023,40,canary_C02_s20261001_40s
+R0,O3qL,,,,,,0.005822045728564262,,,C03,"A red car parked to the left of a blue mailbox, with a tall tree behind them.",37.09176962245555,20261001,0.9929349406315803,40,canary_C03_s20261001_40s
+R0,O3qL,,,,,,0.06418337672948837,,,C04,Exactly five white sheep standing in a green meadow.,24.274877689117844,20261001,0.9417540165763301,40,canary_C04_s20261001_40s
+R0,O3qL,,,,,,0.2699763774871826,,,C05,A young woman in a red raincoat holding a transparent umbrella on a rainy street.,20.828257267019904,20261001,0.7621713189510029,40,canary_C05_s20261001_40s
+R0,O3qL,,,,,,0.021458065137267113,,,C06,A watercolor painting of a small harbor village at sunrise.,31.81190064832011,20261001,0.9777804281403039,40,canary_C06_s20261001_40s
+R0,O3qL,,,,,,0.021976321935653687,,,C07,A glass sphere on black velvet lit by a single dramatic spotlight from the upper left.,38.573296531043184,20261001,0.9806503252058714,40,canary_C07_s20261001_40s
+R0,O3qL,,,,,,0.07226685434579849,,,C08,"An overhead flat-lay photograph of a craftsman's workbench: scattered brass screws, a vintage caliper, walnut wood shavings, a chisel with a worn handle, a folded blueprint, and a cup of black coffee, warm tungsten light, shallow depth of field.",26.142753371022746,20261001,0.9310149986621967,40,canary_C08_s20261001_40s
+R0,O3qL,0.0,0.0,1.0,1.0,FRESH BAKERY DAILY,0.3085041344165802,FRESH BAKERY DAILY,FRESH BAKERY DAILY,C09,"A storefront sign that says ""FRESH BAKERY DAILY"" in large red letters.",15.547073096987667,20261001,0.6409716845909036,40,canary_C09_s20261001_40s
+R0,O3qL,0.1,0.1,0.0,0.0,开业大酬宾 全场八折,0.027161013334989548,开业 大酬宾 全场八折,开业 大酬宾 全场八折,C10,一张红色喜庆的海报，中间是大号金色汉字“开业大酬宾”，下方写着“全场八折”。,31.605868800063618,20261001,0.9636212521245091,40,canary_C10_s20261001_40s

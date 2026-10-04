@@ -1,0 +1,173 @@
+[O3p] applied runtime text-only patch to 3 visual-branch Adds
+[O3p] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.2s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=38
+[O3p] output names (first/last): ['logits', '588_1', '776_1'] ... ['6649', '6822', 'input']
+[O3p][S01] seq=30 kept=16 emb=0.002s infer=1.520s
+[O3p][S02] seq=40 kept=26 emb=0.001s infer=0.641s
+[O3p][S03] seq=36 kept=22 emb=0.000s infer=0.571s
+done O3p
+[O3p] applied runtime text-only patch to 3 visual-branch Adds
+[O3p] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.1s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=38
+[O3p] output names (first/last): ['logits', '601', '776_1'] ... ['hidden_states.1611', 'hidden_states.1655', '6830']
+[O3p][C01] seq=32 kept=18 emb=0.002s infer=1.462s
+[O3p][C02] seq=42 kept=28 emb=0.004s infer=0.629s
+[O3p][C03] seq=41 kept=27 emb=0.003s infer=0.582s
+[O3p][C04] seq=33 kept=19 emb=0.003s infer=0.477s
+[O3p][C05] seq=39 kept=25 emb=0.004s infer=0.548s
+[O3p][C06] seq=34 kept=20 emb=0.004s infer=0.541s
+[O3p][C07] seq=39 kept=25 emb=0.003s infer=0.538s
+[O3p][C08] seq=79 kept=65 emb=0.000s infer=1.062s
+[O3p][C09] seq=41 kept=27 emb=0.004s infer=0.546s
+[O3p][C10] seq=48 kept=34 emb=0.007s infer=0.644s
+done O3p
+[O3p] applied runtime text-only patch to 3 visual-branch Adds
+[O3p] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.1s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=38
+[O3p] output names (first/last): ['logits', '601', '789'] ... ['6639', 'hidden_states.1655', 'input']
+[O3p][A001] seq=30 kept=16 emb=0.002s infer=1.507s
+[O3p][A002] seq=31 kept=17 emb=0.003s infer=0.497s
+[O3p][A003] seq=30 kept=16 emb=0.003s infer=0.478s
+[O3p][A004] seq=32 kept=18 emb=0.002s infer=0.457s
+[O3p][A005] seq=32 kept=18 emb=0.002s infer=0.450s
+[O3p][A006] seq=33 kept=19 emb=0.002s infer=0.488s
+[O3p][A007] seq=30 kept=16 emb=0.001s infer=0.465s
+[O3p][A008] seq=31 kept=17 emb=0.000s infer=0.463s
+[O3p][A009] seq=33 kept=19 emb=0.002s infer=0.486s
+[O3p][A010] seq=31 kept=17 emb=0.002s infer=0.488s
+[O3p][A011] seq=42 kept=28 emb=0.000s infer=0.584s
+[O3p][A012] seq=41 kept=27 emb=0.003s infer=0.542s
+[O3p][A013] seq=37 kept=23 emb=0.003s infer=0.526s
+[O3p][A014] seq=39 kept=25 emb=0.002s infer=0.528s
+[O3p][A015] seq=37 kept=23 emb=0.002s infer=0.519s
+[O3p][A016] seq=39 kept=25 emb=0.003s infer=0.519s
+[O3p][A017] seq=36 kept=22 emb=0.003s infer=0.459s
+[O3p][A018] seq=35 kept=21 emb=0.003s infer=0.486s
+[O3p][A019] seq=38 kept=24 emb=0.001s infer=0.538s
+[O3p][A020] seq=39 kept=25 emb=0.004s infer=0.539s
+[O3p][A021] seq=41 kept=27 emb=0.000s infer=0.521s
+[O3p][A022] seq=38 kept=24 emb=0.002s infer=0.516s
+[O3p][A023] seq=35 kept=21 emb=0.004s infer=0.483s
+[O3p][A024] seq=41 kept=27 emb=0.002s infer=0.545s
+[O3p][A025] seq=36 kept=22 emb=0.002s infer=0.516s
+[O3p][A026] seq=37 kept=23 emb=0.002s infer=0.513s
+[O3p][A027] seq=38 kept=24 emb=0.002s infer=0.618s
+[O3p][A028] seq=35 kept=21 emb=0.003s infer=0.524s
+[O3p][A029] seq=38 kept=24 emb=0.002s infer=0.531s
+[O3p][A030] seq=35 kept=21 emb=0.001s infer=0.515s
+[O3p][A031] seq=33 kept=19 emb=0.000s infer=0.465s
+[O3p][A032] seq=31 kept=17 emb=0.002s infer=0.454s
+[O3p][A033] seq=36 kept=22 emb=0.007s infer=0.514s
+Traceback (most recent call last):
+  File "/workspace/qwen-image21-openvino-alignment/scripts/run_openvino_encoder.py", line 297, in <module>
+    main()
+  File "/workspace/qwen-image21-openvino-alignment/scripts/run_openvino_encoder.py", line 238, in main
+    npz_save(os.path.join(outdir, f"{pid}.npz"),
+  File "/workspace/qwen-image21-openvino-alignment/scripts/common.py", line 55, in npz_save
+    np.savez(path, **arrays)
+  File "/opt/venv/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 681, in savez
+    _savez(file, args, kwds, False)
+  File "/opt/venv/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 786, in _savez
+    format.write_array(fid, val,
+  File "/opt/venv/lib/p[O3p] applied runtime text-only patch to 3 visual-branch Adds
+[O3p] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.3s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=38
+[O3p] output names (first/last): ['logits', '588_1', '789_1'] ... ['hidden_states.1611', 'hidden_states.1657', 'input']
+[O3p][A001] seq=30 kept=16 emb=0.002s infer=1.400s
+[O3p][A002] seq=31 kept=17 emb=0.004s infer=0.485s
+[O3p][A003] seq=30 kept=16 emb=0.003s infer=0.408s
+[O3p][A004] seq=32 kept=18 emb=0.002s infer=0.486s
+[O3p][A005] seq=32 kept=18 emb=0.002s infer=0.430s
+[O3p][A006] seq=33 kept=19 emb=0.003s infer=0.476s
+[O3p][A007] seq=30 kept=16 emb=0.003s infer=0.420s
+[O3p][A008] seq=31 kept=17 emb=0.002s infer=0.433s
+[O3p][A009] seq=33 kept=19 emb=0.002s infer=0.463s
+[O3p][A010] seq=31 kept=17 emb=0.002s infer=0.407s
+[O3p][A011] seq=42 kept=28 emb=0.003s infer=0.537s
+[O3p][A012] seq=41 kept=27 emb=0.004s infer=0.532s
+[O3p][A013] seq=37 kept=23 emb=0.003s infer=0.458s
+[O3p][A014] seq=39 kept=25 emb=0.002s infer=0.484s
+[O3p][A015] seq=37 kept=23 emb=0.002s infer=0.476s
+[O3p][A016] seq=39 kept=25 emb=0.004s infer=0.473s
+[O3p][A017] seq=36 kept=22 emb=0.007s infer=0.457s
+[O3p][A018] seq=35 kept=21 emb=0.003s infer=0.464s
+[O3p][A019] seq=38 kept=24 emb=0.002s infer=0.477s
+[O3p][A020] seq=39 kept=25 emb=0.002s infer=0.504s
+[O3p][A021] seq=41 kept=27 emb=0.003s infer=0.489s
+[O3p][A022] seq=38 kept=24 emb=0.002s infer=0.472s
+[O3p][A023] seq=35 kept=21 emb=0.003s infer=0.465s
+[O3p][A024] seq=41 kept=27 emb=0.003s infer=0.502s
+[O3p][A025] seq=36 kept=22 emb=0.002s infer=0.440s
+[O3p][A026] seq=37 kept=23 emb=0.002s infer=0.477s
+[O3p][A027] seq=38 kept=24 emb=0.002s infer=0.469s
+[O3p][A028] seq=35 kept=21 emb=0.003s infer=0.462s
+[O3p][A029] seq=38 kept=24 emb=0.002s infer=0.501s
+[O3p][A030] seq=35 kept=21 emb=0.002s infer=0.435s
+[O3p][A031] seq=33 kept=19 emb=0.002s infer=0.438s
+[O3p][A032] seq=31 kept=17 emb=0.002s infer=0.416s
+[O3p][A033] seq=36 kept=22 emb=0.012s infer=0.471s
+[O3p][A034] seq=32 kept=18 emb=0.002s infer=0.432s
+[O3p][A035] seq=30 kept=16 emb=0.001s infer=0.427s
+[O3p][A036] seq=32 kept=18 emb=0.003s infer=0.471s
+[O3p][A037] seq=32 kept=18 emb=0.002s infer=0.408s
+[O3p][A038] seq=32 kept=18 emb=0.019s infer=0.421s
+[O3p][A039] seq=34 kept=20 emb=0.003s infer=0.475s
+[O3p][A040] seq=32 kept=18 emb=0.002s infer=0.466s
+[O3p][A041] seq=39 kept=25 emb=0.003s infer=0.534s
+[O3p][A042] seq=36 kept=22 emb=0.002s infer=0.484s
+[O3p][A043] seq=37 kept=23 emb=0.002s infer=0.500s
+[O3p][A044] seq=32 kept=18 emb=0.001s infer=0.442s
+[O3p][A045] seq=33 kept=19 emb=0.002s infer=0.473s
+[O3p][A046] seq=31 kept=17 emb=0.002s infer=0.469s
+[O3p][A047] seq=33 kept=19 emb=0.002s infer=0.475s
+[O3p][A048] seq=34 kept=20 emb=0.002s infer=0.464s
+[O3p][A049] seq=39 kept=25 emb=0.003s infer=0.491s
+[O3p][A050] seq=35 kept=21 emb=0.003s infer=0.444s
+[O3p][A051] seq=34 kept=20 emb=0.002s infer=0.586s
+[O3p][A052] seq=36 kept=22 emb=0.064s infer=0.577s
+[O3p][A053] seq=35 kept=21 emb=0.002s infer=0.538s
+[O3p][A054] seq=37 kept=23 emb=0.002s infer=0.519s
+[O3p][A055] seq=35 kept=21 emb=0.002s infer=0.471s
+[O3p][A056] seq=37 kept=23 emb=0.002s infer=0.487s
+[O3p][A057] seq=33 kept=19 emb=0.002s infer=0.436s
+[O3p][A058] seq=33 kept=19 emb=0.002s infer=0.446s
+[O3p][A059] seq=35 kept=21 emb=0.007s infer=0.534s
+[O3p][A060] seq=34 kept=20 emb=0.002s infer=0.493s
+[O3p][A061] seq=39 kept=25 emb=0.002s infer=0.536s
+[O3p][A062] seq=37 kept=23 emb=0.002s infer=0.506s
+[O3p][A063] seq=33 kept=19 emb=0.003s infer=0.445s
+[O3p][A064] seq=31 kept=17 emb=0.001s infer=0.446s
+[O3p][A065] seq=35 kept=21 emb=0.003s infer=0.487s
+[O3p][A066] seq=37 kept=23 emb=0.001s infer=0.508s
+[O3p][A067] seq=34 kept=20 emb=0.002s infer=0.552s
+[O3p][A068] seq=32 kept=18 emb=0.001s infer=0.465s
+[O3p][A069] seq=34 kept=20 emb=0.002s infer=0.478s
+[O3p][A070] seq=32 kept=18 emb=0.001s infer=0.480s
+[O3p][A071] seq=79 kept=65 emb=0.006s infer=1.001s
+[O3p][A072] seq=54 kept=40 emb=0.004s infer=0.690s
+[O3p][A073] seq=57 kept=43 emb=0.004s infer=0.747s
+[O3p][A074] seq=53 kept=39 emb=0.004s infer=0.661s
+[O3p][A075] seq=52 kept=38 emb=0.003s infer=0.692s
+[O3p][A076] seq=53 kept=39 emb=0.004s infer=0.991s
+[O3p][A077] seq=53 kept=39 emb=0.003s infer=1.893s
+[O3p][A078] seq=50 kept=36 emb=0.006s infer=0.681s
+[O3p][A079] seq=51 kept=37 emb=0.010s infer=0.713s
+[O3p][A080] seq=49 kept=35 emb=0.003s infer=0.671s
+[O3p][A081] seq=40 kept=26 emb=0.002s infer=0.563s
+[O3p][A082] seq=41 kept=27 emb=0.002s infer=0.565s
+[O3p][A083] seq=42 kept=28 emb=0.007s infer=0.641s
+[O3p][A084] seq=39 kept=25 emb=0.001s infer=0.553s
+[O3p][A085] seq=39 kept=25 emb=0.002s infer=0.542s
+[O3p][A086] seq=36 kept=22 emb=0.002s infer=0.548s
+[O3p][A087] seq=36 kept=22 emb=0.000s infer=0.507s
+[O3p][A088] seq=38 kept=24 emb=0.002s infer=0.524s
+[O3p][A089] seq=40 kept=26 emb=0.001s infer=0.563s
+[O3p][A090] seq=43 kept=29 emb=0.002s infer=0.604s
+[O3p][A091] seq=36 kept=22 emb=0.003s infer=0.481s
+[O3p][A092] seq=48 kept=34 emb=0.006s infer=0.645s
+[O3p][A093] seq=37 kept=23 emb=0.004s infer=0.547s
+[O3p][A094] seq=38 kept=24 emb=0.004s infer=0.562s
+[O3p][A095] seq=47 kept=33 emb=0.003s infer=0.652s
+[O3p][A096] seq=37 kept=23 emb=0.002s infer=0.521s
+[O3p][A097] seq=40 kept=26 emb=0.006s infer=0.540s
+[O3p][A098] seq=42 kept=28 emb=0.004s infer=0.565s
+[O3p][A099] seq=43 kept=29 emb=0.002s infer=0.559s
+[O3p][A100] seq=37 kept=23 emb=0.004s infer=0.511s
+done O3p
+O3P_ENC_DONE

@@ -1,0 +1,13 @@
+[O0][P_short] n=25 cold=11.969s warm_p50=0.726s p95=0.787s
+[O0][P_med] n=67 cold=1.127s warm_p50=1.104s p95=1.147s
+[O0][P_long] n=171 cold=2.433s warm_p50=2.386s p95=4.101s
+[O1][P_short] n=25 cold=1.952s warm_p50=0.336s p95=0.363s
+[O1][P_med] n=67 cold=0.832s warm_p50=0.857s p95=0.881s
+[O1][P_long] n=171 cold=1.279s warm_p50=1.180s p95=1.192s
+[O3r][P_short] n=25 cold=3.328s warm_p50=0.221s p95=0.274s
+[O3r][P_med] n=67 cold=0.810s warm_p50=0.654s p95=0.679s
+[O3r][P_long] n=171 cold=1.139s warm_p50=1.088s p95=1.147s
+[O3qL][P_short] n=25 cold=3.700s warm_p50=0.238s p95=0.246s
+[O3qL][P_med] n=67 cold=0.755s warm_p50=0.728s p95=0.747s
+[O3qL][P_long] n=171 cold=1.168s warm_p50=1.132s p95=1.160s
+saved cpu_performance.json

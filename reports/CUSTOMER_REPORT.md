@@ -203,19 +203,32 @@ Distinguishing the four different concepts:
 INT8 artifact introduces a bounded, stable quantization noise whose visual effect at high
 step counts is indistinguishable from equal-sized non-OpenVINO perturbations.**
 
-## 16. Recommendation
+## 16. Recommendation (updated with follow-up experiment results)
 
-1. **Production use: YES**, with an informed choice of precision:
-   - If 40-step outputs must stay visually close to the GPU reference: use **OpenVINO
-     FP32 or BF16** (BF16 delta 1.3% ≈ visually indistinguishable; 3× faster than FP32).
-   - If throughput is king and "different valid sample" is acceptable (batch/explore
-     workflows): **INT8 is fit for purpose** — equal text-rendering and quality metrics.
-2. Re-quantize with an **accuracy-aware recipe** (exclude/heighten the embedding table and
-   optionally the last transformer block) if you want to shrink the 7% delta; expected
-   gain: embedding delta toward the BF16 envelope (~1–3%).
-3. Ship the **fixed prompt/seed/latent harness** (this repo) in CI to catch real
-   regressions: alert on embedding rel-L2 vs the calibrated bands in
-   `config/thresholds.yaml`, not on image differences alone.
-4. Track the OpenVINO IR issue seen on Zen4 for >40-token prompts with the artifact
-   vendor; re-export with a current optimum/NNCF version (our local re-quantization of the
-   same recipe runs clean at any length).
+Follow-up experiments (each independently verified; see CONCLUSIONS.md §7):
+
+1. **Re-quantization is NOT the accuracy path** (measured): excluding the embedding
+   table (layer-0 error → 0.0000) leaves total error at 6.97%; additionally excluding
+   the last block gives 6.10% (n=100) — the INT8 delta is distributed trunk noise,
+   and NNCF allows no mixed-precision knob for INT8 (ratio locked to 1.0).
+2. **Production matrix (measured)**:
+
+   | Tier | embedding error | load | warm @25 tok | worst-case 40-step LPIPS | Use for |
+   |---|---|---|---|---|---|
+   | OV BF16 | 1.3% | 9.3 s | 0.34 s | **0.098** | **accuracy-critical 40-step output** |
+   | OV INT8 | 7.0% | 1.4 s | 0.22 s | 0.22 | throughput ("different valid sample") |
+
+   BF16 tightens the worst case 2–3× at both 1024 and 2K; medians are similar.
+3. 2K spot check (same 4-prompt subset): R0↔O1 LPIPS 0.031/0.132 vs R0↔O3r
+   0.089/0.220 (O3r full-30 median 0.032) — BF16 better on both median and max.
+3b. **Customer artifact IR bug — root-caused and runtime-fixed (O3p)**: baked
+   visual/deepstack path breaks text-only shape inference on this host. Runtime graph
+   patch (files untouched) proven **bitwise-identical** to the artifact's own frozen
+   outputs; full n=100 coverage achieved with the REAL artifact via O3p
+   (R0↔O3p = 9.65%, matching the O3r reproduction within 0.54%). Recommend upstream
+   re-export with a current optimum/NNCF; use `scripts/patch_ov_artifact_textonly.py`
+   meanwhile (text-to-image only).
+4. Ship the frozen prompt/seed/latent CI harness; alert on embedding rel-L2 against
+   `config/thresholds.yaml` bands, never on image differences alone.
+5. Human blind evaluation remains the one pending item (package ready, no results
+   fabricated).

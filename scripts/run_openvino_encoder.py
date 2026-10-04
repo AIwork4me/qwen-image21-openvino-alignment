@@ -101,6 +101,12 @@ def main():
         art = CUSTOMER_FP16
     elif args.arm == "O3r":
         art = "/valdata/models/ov_clean_int8"
+    elif args.arm == "O3p":
+        art = CUSTOMER_INT8  # real customer artifact + runtime text-only patch
+    elif args.arm == "O3q":
+        art = "/valdata/models/ov_clean_int8_acc_emb"
+    elif args.arm == "O3qL":
+        art = "/valdata/models/ov_clean_int8_acc_full"
     else:
         art = cfg["model"].get("ov_clean_export_dir") or CLEAN_FP32
 
@@ -109,9 +115,13 @@ def main():
 
     core = ov.Core()
     t0 = time.time()
-    if args.arm in ("O3", "O1F"):
+    if args.arm in ("O3", "O1F", "O3p"):
         # ComfyUI-OV style artifact: patch with add_outputs (runtime-only; files untouched)
         lm = core.read_model(os.path.join(art, "openvino_language_model.xml"))
+        if args.arm == "O3p":
+            from patch_ov_artifact_textonly import apply_textonly_patch
+            n_patch = apply_textonly_patch(lm)
+            print(f"[O3p] applied runtime text-only patch to {n_patch} visual-branch Adds")
         pre_name, norm_name = find_prenorm_anchor(lm)
         lops = layer_output_ops(lm)
         pre_op = next(op for op in lm.get_ordered_ops() if op.get_friendly_name() == pre_name)
@@ -126,7 +136,7 @@ def main():
         lm.add_outputs(extra)
         emb = core.read_model(os.path.join(art, "openvino_text_embeddings_model.xml"))
         is_wrapper = False
-    elif args.arm == "O3r":
+    elif args.arm in ("O3r", "O3q", "O3qL"):
         lm = core.read_model(os.path.join(art, "language_model_int8.xml"))
         emb = None
         is_wrapper = True
@@ -189,6 +199,7 @@ def main():
                     int8_tbl = (tz["q"], tz["zero_point"], tz["scale"])
                 embeds = embed_lookup_fp32(snap_path, input_ids, int8_table=int8_tbl)
             else:
+                # O0 / O1 / O3q / O3qL: exact fp32 embedding-table gather
                 embeds = embed_lookup_fp32(snap_path, input_ids)
         else:
             embeds = np.asarray(emb_compiled({0: input_ids})[0], dtype=np.float32)
@@ -275,8 +286,11 @@ def torch_from_bf16(a):
 
 def sha_art(art):
     from common import sha256_file
-    f = os.path.join(art, "openvino_language_model.xml")
-    return sha256_file(f) if os.path.exists(f) else None
+    for f in ("openvino_language_model.xml", "language_model_int8.xml", "language_model_fp32.xml"):
+        p = os.path.join(art, f)
+        if os.path.exists(p):
+            return {"file": f, "sha256": sha256_file(p)}
+    return None
 
 
 if __name__ == "__main__":
