@@ -1,0 +1,133 @@
+[C_BF16] loaded in 0.0s (quant layers=0, missing=0, unexpected=0)
+[C_BF16][C01] seq=32 cond=(1, 18, 4096) t=1.86s
+[C_BF16][C02] seq=42 cond=(1, 28, 4096) t=0.31s
+[C_BF16][C03] seq=41 cond=(1, 27, 4096) t=0.30s
+[C_BF16][C04] seq=33 cond=(1, 19, 4096) t=0.30s
+[C_BF16][C05] seq=39 cond=(1, 25, 4096) t=0.29s
+[C_BF16][C06] seq=34 cond=(1, 20, 4096) t=0.29s
+[C_BF16][C07] seq=39 cond=(1, 25, 4096) t=0.30s
+[C_BF16][C08] seq=79 cond=(1, 65, 4096) t=0.69s
+[C_BF16][C09] seq=41 cond=(1, 27, 4096) t=0.30s
+[C_BF16][C10] seq=48 cond=(1, 34, 4096) t=0.34s
+done C_BF16
+[C_INT8] loaded in 0.1s (quant layers=0, missing=0, unexpected=0)
+[C_INT8][C01] seq=32 cond=(1, 18, 4096) t=1.82s
+[C_INT8][C02] seq=42 cond=(1, 28, 4096) t=0.41s
+[C_INT8][C03] seq=41 cond=(1, 27, 4096) t=0.40s
+[C_INT8][C04] seq=33 cond=(1, 19, 4096) t=0.39s
+[C_INT8][C05] seq=39 cond=(1, 25, 4096) t=0.45s
+[C_INT8][C06] seq=34 cond=(1, 20, 4096) t=0.39s
+[C_INT8][C07] seq=39 cond=(1, 25, 4096) t=0.39s
+[C_INT8][C08] seq=79 cond=(1, 65, 4096) t=0.78s
+[C_INT8][C09] seq=41 cond=(1, 27, 4096) t=0.44s
+[C_INT8][C10] seq=48 cond=(1, 34, 4096) t=0.38s
+done C_INT8
+[C_W4A8] loaded in 0.0s (quant layers=0, missing=0, unexpected=0)
+[C_W4A8][C01] seq=32 cond=(1, 18, 4096) t=2.64s
+[C_W4A8][C02] seq=42 cond=(1, 28, 4096) t=1.35s
+[C_W4A8][C03] seq=41 cond=(1, 27, 4096) t=1.34s
+[C_W4A8][C04] seq=33 cond=(1, 19, 4096) t=1.44s
+[C_W4A8][C05] seq=39 cond=(1, 25, 4096) t=1.34s
+[C_W4A8][C06] seq=34 cond=(1, 20, 4096) t=1.69s
+[C_W4A8][C07] seq=39 cond=(1, 25, 4096) t=1.94s
+[C_W4A8][C08] seq=79 cond=(1, 65, 4096) t=2.02s
+[C_W4A8][C09] seq=41 cond=(1, 27, 4096) t=1.98s
+[C_W4A8][C10] seq=48 cond=(1, 34, 4096) t=1.65s
+done C_W4A8
+[C_INT8] loaded in 0.0s (quant layers=0, missing=0, unexpected=0)
+[C_INT8][C01_r0] seq=32 cond=(1, 18, 4096) t=1.81s
+[C_INT8][C01_r1] seq=32 cond=(1, 18, 4096) t=0.37s
+[C_INT8][C01_r2] seq=32 cond=(1, 18, 4096) t=0.35s
+[C_INT8][C02_r0] seq=42 cond=(1, 28, 4096) t=0.39s
+[C_INT8][C02_r1] seq=42 cond=(1, 28, 4096) t=0.39s
+[C_INT8][C02_r2] seq=42 cond=(1, 28, 4096) t=0.39s
+[C_INT8][C03_r0] seq=41 cond=(1, 27, 4096) t=0.39s
+[C_INT8][C03_r1] seq=41 cond=(1, 27, 4096) t=0.45s
+[C_INT8][C03_r2] seq=41 cond=(1, 27, 4096) t=0.38s
+[C_INT8][C04_r0] seq=33 cond=(1, 19, 4096) t=0.44s
+[C_INT8][C04_r1] seq=33 cond=(1, 19, 4096) t=0.38s
+[C_INT8][C04_r2] seq=33 cond=(1, 19, 4096) t=0.44s
+[C_INT8][C05_r0] seq=39 cond=(1, 25, 4096) t=0.43s
+[C_INT8][C05_r1] seq=39 cond=(1, 25, 4096) t=0.43s
+[C_INT8][C05_r2] seq=39 cond=(1, 25, 4096) t=0.38s
+[C_INT8][C06_r0] seq=34 cond=(1, 20, 4096) t=0.42s
+[C_INT8][C06_r1] seq=34 cond=(1, 20, 4096) t=0.42s
+[C_INT8][C06_r2] seq=34 cond=(1, 20, 4096) t=0.38s
+[C_INT8][C07_r0] seq=39 cond=(1, 25, 4096) t=0.44s
+[C_INT8][C07_r1] seq=39 cond=(1, 25, 4096) t=0.44s
+[C_INT8][C07_r2] seq=39 cond=(1, 25, 4096) t=0.44s
+[C_INT8][C08_r0] seq=79 cond=(1, 65, 4096) t=0.78s
+[C_INT8][C08_r1] seq=79 cond=(1, 65, 4096) t=0.82s
+[C_INT8][C08_r2] seq=79 cond=(1, 65, 4096) t=0.75s
+[C_INT8][C09_r0] seq=41 cond=(1, 27, 4096) t=0.39s
+[C_INT8][C09_r1] seq=41 cond=(1, 27, 4096) t=0.38s
+[C_INT8][C09_r2] seq=41 cond=(1, 27, 4096) t=0.42s
+[C_INT8][C10_r0] seq=48 cond=(1, 34, 4096) t=0.38s
+[C_INT8][C10_r1] seq=48 cond=(1, 34, 4096) t=0.38s
+[C_INT8][C10_r2] seq=48 cond=(1, 34, 4096) t=0.38s
+done C_INT8
+[C_W4A8] loaded in 0.0s (quant layers=0, missing=0, unexpected=0)
+[C_W4A8][C01_r0] seq=32 cond=(1, 18, 4096) t=2.73s
+[C_W4A8][C01_r1] seq=32 cond=(1, 18, 4096) t=1.31s
+[C_W4A8][C01_r2] seq=32 cond=(1, 18, 4096) t=1.30s
+[C_W4A8][C02_r0] seq=42 cond=(1, 28, 4096) t=1.34s
+[C_W4A8][C02_r1] seq=42 cond=(1, 28, 4096) t=1.40s
+[C_W4A8][C02_r2] seq=42 cond=(1, 28, 4096) t=1.38s
+[C_W4A8][C03_r0] seq=41 cond=(1, 27, 4096) t=1.48s
+[C_W4A8][C03_r1] seq=41 cond=(1, 27, 4096) t=1.42s
+[C_W4A8][C03_r2] seq=41 cond=(1, 27, 4096) t=1.46s
+[C_W4A8][C04_r0] seq=33 cond=(1, 19, 4096) t=1.33s
+[C_W4A8][C04_r1] seq=33 cond=(1, 19, 4096) t=1.33s
+[C_W4A8][C04_r2] seq=33 cond=(1, 19, 4096) t=2.58s
+[C_W4A8][C05_r0] seq=39 cond=(1, 25, 4096) t=1.33s
+[C_W4A8][C05_r1] seq=39 cond=(1, 25, 4096) t=1.34s
+[C_W4A8][C05_r2] seq=39 cond=(1, 25, 4096) t=1.39s
+[C_W4A8][C06_r0] seq=34 cond=(1, 20, 4096) t=1.34s
+[C_W4A8][C06_r1] seq=34 cond=(1, 20, 4096) t=1.44s
+[C_W4A8][C06_r2] seq=34 cond=(1, 20, 4096) t=1.42s
+[C_W4A8][C07_r0] seq=39 cond=(1, 25, 4096) t=1.40s
+[C_W4A8][C07_r1] seq=39 cond=(1, 25, 4096) t=1.42s
+[C_W4A8][C07_r2] seq=39 cond=(1, 25, 4096) t=1.50s
+[C_W4A8][C08_r0] seq=79 cond=(1, 65, 4096) t=1.79s
+[C_W4A8][C08_r1] seq=79 cond=(1, 65, 4096) t=1.68s
+[C_W4A8][C08_r2] seq=79 cond=(1, 65, 4096) t=1.67s
+[C_W4A8][C09_r0] seq=41 cond=(1, 27, 4096) t=1.34s
+[C_W4A8][C09_r1] seq=41 cond=(1, 27, 4096) t=1.33s
+[C_W4A8][C09_r2] seq=41 cond=(1, 27, 4096) t=1.33s
+[C_W4A8][C10_r0] seq=48 cond=(1, 34, 4096) t=1.33s
+[C_W4A8][C10_r1] seq=48 cond=(1, 34, 4096) t=1.33s
+[C_W4A8][C10_r2] seq=48 cond=(1, 34, 4096) t=1.33s
+done C_W4A8
+[C_BF16] loaded in 0.0s (quant layers=0, missing=0, unexpected=0)
+[C_BF16][C01_r0] seq=32 cond=(1, 18, 4096) t=1.50s
+[C_BF16][C01_r1] seq=32 cond=(1, 18, 4096) t=0.27s
+[C_BF16][C01_r2] seq=32 cond=(1, 18, 4096) t=0.26s
+[C_BF16][C02_r0] seq=42 cond=(1, 28, 4096) t=0.30s
+[C_BF16][C02_r1] seq=42 cond=(1, 28, 4096) t=0.31s
+[C_BF16][C02_r2] seq=42 cond=(1, 28, 4096) t=0.29s
+[C_BF16][C03_r0] seq=41 cond=(1, 27, 4096) t=0.29s
+[C_BF16][C03_r1] seq=41 cond=(1, 27, 4096) t=0.29s
+[C_BF16][C03_r2] seq=41 cond=(1, 27, 4096) t=0.29s
+[C_BF16][C04_r0] seq=33 cond=(1, 19, 4096) t=0.29s
+[C_BF16][C04_r1] seq=33 cond=(1, 19, 4096) t=0.30s
+[C_BF16][C04_r2] seq=33 cond=(1, 19, 4096) t=0.29s
+[C_BF16][C05_r0] seq=39 cond=(1, 25, 4096) t=0.29s
+[C_BF16][C05_r1] seq=39 cond=(1, 25, 4096) t=0.29s
+[C_BF16][C05_r2] seq=39 cond=(1, 25, 4096) t=0.29s
+[C_BF16][C06_r0] seq=34 cond=(1, 20, 4096) t=0.29s
+[C_BF16][C06_r1] seq=34 cond=(1, 20, 4096) t=0.37s
+[C_BF16][C06_r2] seq=34 cond=(1, 20, 4096) t=0.44s
+[C_BF16][C07_r0] seq=39 cond=(1, 25, 4096) t=0.73s
+[C_BF16][C07_r1] seq=39 cond=(1, 25, 4096) t=0.55s
+[C_BF16][C07_r2] seq=39 cond=(1, 25, 4096) t=1.04s
+[C_BF16][C08_r0] seq=79 cond=(1, 65, 4096) t=1.99s
+[C_BF16][C08_r1] seq=79 cond=(1, 65, 4096) t=1.89s
+[C_BF16][C08_r2] seq=79 cond=(1, 65, 4096) t=1.88s
+[C_BF16][C09_r0] seq=41 cond=(1, 27, 4096) t=1.00s
+[C_BF16][C09_r1] seq=41 cond=(1, 27, 4096) t=1.30s
+[C_BF16][C09_r2] seq=41 cond=(1, 27, 4096) t=1.09s
+[C_BF16][C10_r0] seq=48 cond=(1, 34, 4096) t=1.01s
+[C_BF16][C10_r1] seq=48 cond=(1, 34, 4096) t=1.25s
+[C_BF16][C10_r2] seq=48 cond=(1, 34, 4096) t=1.06s
+done C_BF16
+REPEATS_ALL_DONE

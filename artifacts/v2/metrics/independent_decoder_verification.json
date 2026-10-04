@@ -1,0 +1,62 @@
+{
+  "w4a8:model.layers.0.self_attn.q_proj": {
+    "shape": [
+      4096,
+      4096
+    ],
+    "cosine": 0.9999999999994937,
+    "rel_l2": 0.0,
+    "rmse": 0.0,
+    "mean_abs": 0.0,
+    "allclose_1e_5": true,
+    "max_abs_diff_vs_kitchen": 0.0
+  },
+  "w4a8:model.layers.17.mlp.down_proj": {
+    "shape": [
+      4096,
+      12288
+    ],
+    "cosine": 0.9999999999989662,
+    "rel_l2": 0.0,
+    "rmse": 0.0,
+    "mean_abs": 0.0,
+    "allclose_1e_5": true,
+    "max_abs_diff_vs_kitchen": 0.0
+  },
+  "w4a8:model.layers.35.mlp.gate_proj": {
+    "shape": [
+      12288,
+      4096
+    ],
+    "cosine": 0.9999999999989643,
+    "rel_l2": 0.0,
+    "rmse": 0.0,
+    "mean_abs": 0.0,
+    "allclose_1e_5": true,
+    "max_abs_diff_vs_kitchen": 0.0
+  },
+  "int8:model.layers.0.self_attn.q_proj": {
+    "shape": [
+      4096,
+      4096
+    ],
+    "cosine": 0.9999999999994249,
+    "rel_l2": 0.0,
+    "rmse": 0.0,
+    "mean_abs": 0.0,
+    "allclose_1e_5": true,
+    "max_abs_diff_vs_kitchen": 0.0
+  },
+  "int8:model.layers.17.mlp.down_proj": {
+    "shape": [
+      4096,
+      12288
+    ],
+    "cosine": 0.9999999999989865,
+    "rel_l2": 0.0,
+    "rmse": 0.0,
+    "mean_abs": 0.0,
+    "allclose_1e_5": true,
+    "max_abs_diff_vs_kitchen": 0.0
+  }
+}
