@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 reports/blind_package/*.png
 reports/gallery/*.png
+artifacts/v2/tensors/
+artifacts/v2/images/
