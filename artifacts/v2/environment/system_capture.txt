@@ -1,0 +1,724 @@
+=== uname ===
+Linux j-ywqny2nuwfmbn5jeo3wff4j6vc 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+=== os-release ===
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+=== lscpu ===
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        52 bits physical, 57 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               128
+On-line CPU(s) list:                  0-127
+Vendor ID:                            AuthenticAMD
+Model name:                           AMD EPYC 9334 32-Core Processor
+CPU family:                           25
+Model:                                17
+Thread(s) per core:                   2
+Core(s) per socket:                   32
+Socket(s):                            2
+Stepping:                             1
+BogoMIPS:                             5399.85
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd amd_ppin cppc amd_ibpb_ret arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid overflow_recov succor smca fsrm flush_l1d debug_swap
+Virtualization:                       AMD-V
+L1d cache:                            2 MiB (64 instances)
+L1i cache:                            2 MiB (64 instances)
+L2 cache:                             64 MiB (64 instances)
+L3 cache:                             256 MiB (8 instances)
+NUMA node(s):                         2
+NUMA node0 CPU(s):                    0-31,64-95
+NUMA node1 CPU(s):                    32-63,96-127
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Not affected
+Vulnerability Spec rstack overflow:   Mitigation; Safe RET
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+=== rocminfo (agent section) ===
+[37mROCk module version 6.16.13 is loaded[0m
+=====================    
+HSA System Attributes    
+=====================    
+Runtime Version:         1.21
+Runtime Ext Version:     1.26
+System Timestamp Freq.:  1000.000000MHz
+Sig. Max Wait Duration:  18446744073709551615 (0xFFFFFFFFFFFFFFFF) (timestamp count)
+Machine Model:           LARGE                              
+System Endianness:       LITTLE                             
+Mwaitx:                  ENABLED
+XNACK enabled:           NO
+DMAbuf Support:          YES
+VMM Support:             YES
+Fabric Support:          NO
+
+==========               
+HSA Agents               
+==========               
+*******                  
+Agent 1                  
+*******                  
+  Name:                    AMD EPYC 9334 32-Core Processor    
+  Uuid:                    CPU-XX                             
+  Marketing Name:          AMD EPYC 9334 32-Core Processor    
+  Vendor Name:             CPU                                
+  Feature:                 None specified                     
+  Profile:                 FULL_PROFILE                       
+  Float Round Mode:        NEAR                               
+  Max Queue Number:        0(0x0)                             
+  Queue Min Size:          0(0x0)                             
+  Queue Max Size:          0(0x0)                             
+  Queue Type:              MULTI                              
+  Node:                    0                                  
+  Device Type:             CPU                                
+  Cache Info:              
+    L1:                      32768(0x8000) KB                   
+  Chip ID:                 0(0x0)                             
+  ASIC Revision:           0(0x0)                             
+  Cacheline Size:          64(0x40)                           
+  Max Clock Freq. (MHz):   0                                  
+  BDFID:                   0                                  
+  Internal Node ID:        0                                  
+  Compute Unit:            64                                 
+  SIMDs per CU:            0                                  
+  Shader Engines:          0                                  
+  Shader Arrs. per Eng.:   0                                  
+  WatchPts on Addr. Ranges:1                                  
+  Memory Properties:       
+  Features:                None
+  Pool Info:               
+    Pool 1                   
+      Segment:                 GLOBAL; FLAGS: FINE GRAINED        
+      Size:                    263896980(0xfbabf94) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 2                   
+      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+      Size:                    263896980(0xfbabf94) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 3                   
+      Segment:                 GLOBAL; FLAGS: KERNARG, FINE GRAINED
+      Size:                    263896980(0xfbabf94) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 4                   
+      Segment:                 GLOBAL; FLAGS: COARSE GRAINED      
+      Size:                    263896980(0xfbabf94) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+  ISA Info:                
+*******                  
+Agent 2                  
+*******                  
+  Name:                    AMD EPYC 9334 32-Core Processor    
+  Uuid:                    CPU-XX                             
+  Marketing Name:          AMD EPYC 9334 32-Core Processor    
+  Vendor Name:             CPU                                
+  Feature:                 None specified                     
+  Profile:                 FULL_PROFILE                       
+  Float Round Mode:        NEAR                               
+  Max Queue Number:        0(0x0)                             
+  Queue Min Size:          0(0x0)                             
+  Queue Max Size:          0(0x0)                             
+  Queue Type:              MULTI                              
+  Node:                    1                                  
+  Device Type:             CPU                                
+  Cache Info:              
+    L1:                      32768(0x8000) KB                   
+  Chip ID:                 0(0x0)                             
+  ASIC Revision:           0(0x0)                             
+  Cacheline Size:          64(0x40)                           
+  Max Clock Freq. (MHz):   0                                  
+  BDFID:                   0                                  
+  Internal Node ID:        1                                  
+  Compute Unit:            64                                 
+  SIMDs per CU:            0                                  
+  Shader Engines:          0                                  
+  Shader Arrs. per Eng.:   0                                  
+  WatchPts on Addr. Ranges:1                                  
+  Memory Properties:       
+  Features:                None
+  Pool Info:               
+    Pool 1                   
+      Segment:                 GLOBAL; FLAGS: FINE GRAINED        
+      Size:                    264126940(0xfbe41dc) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 2                   
+      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+      Size:                    264126940(0xfbe41dc) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 3                   
+      Segment:                 GLOBAL; FLAGS: KERNARG, FINE GRAINED
+      Size:                    264126940(0xfbe41dc) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+    Pool 4                   
+      Segment:                 GLOBAL; FLAGS: COARSE GRAINED      
+      Size:                    264126940(0xfbe41dc) KB            
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:4KB                                
+      Alloc Alignment:         4KB                                
+      Accessible by all:       TRUE                               
+  ISA Info:                
+*******                  
+Agent 3                  
+*******                  
+  Name:                    gfx1100                            
+  Uuid:                    GPU-e6b08d392cd543aa               
+  Marketing Name:          AMD Radeon Pro W7900D              
+  Vendor Name:             AMD                                
+  Feature:                 KERNEL_DISPATCH                    
+  Profile:                 BASE_PROFILE                       
+  Float Round Mode:        NEAR                               
+  Max Queue Number:        128(0x80)                          
+  Queue Min Size:          64(0x40)                           
+  Queue Max Size:          131072(0x20000)                    
+  Queue Type:              MULTI                              
+  Node:                    2                                  
+  Device Type:             GPU                                
+  Cache Info:              
+    L1:                      32(0x20) KB                        
+    L2:                      6144(0x1800) KB                    
+    L3:                      98304(0x18000) KB                  
+  Chip ID:                 29771(0x744b)                      
+  ASIC Revision:           0(0x0)                             
+  Cacheline Size:          128(0x80)                          
+  Max Clock Freq. (MHz):   1760                               
+  BDFID:                   768                                
+  Internal Node ID:        2                                  
+  Compute Unit:            96                                 
+  SIMDs per CU:            2                                  
+  Shader Engines:          6                                  
+  Shader Arrs. per Eng.:   2                                  
+  WatchPts on Addr. Ranges:4                                  
+  Coherent Host Access:    FALSE                              
+  Memory Properties:       
+  Features:                KERNEL_DISPATCH 
+  Fast F16 Operation:      TRUE                               
+  Wavefront Size:          32(0x20)                           
+  Workgroup Max Size:      1024(0x400)                        
+  Workgroup Max Size per Dimension:
+    x                        1024(0x400)                        
+    y                        1024(0x400)                        
+    z                        1024(0x400)                        
+  Max Waves Per CU:        32(0x20)                           
+  Max Work-item Per CU:    1024(0x400)                        
+  Grid Max Size:           4294967295(0xffffffff)             
+  Grid Max Size per Dimension:
+    x                        4294967295(0xffffffff)             
+    y                        65535(0xffff)                      
+    z                        65535(0xffff)                      
+  Max fbarriers/Workgrp:   32                                 
+  Packet Processor uCode:: 602                                
+  SDMA engine uCode::      27                                 
+  IOMMU Support::          None                               
+  Pool Info:               
+    Pool 1                   
+      Segment:                 GLOBAL; FLAGS: COARSE GRAINED      
+      Size:                    50315264(0x2ffc000) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:2048KB                             
+      Alloc Alignment:         4KB                                
+      Accessible by all:       FALSE                              
+    Pool 2                   
+      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+      Size:                    50315264(0x2ffc000) KB             
+      Allocatable:             TRUE                               
+      Alloc Granule:           4KB                                
+      Alloc Recommended Granule:2048KB                             
+      Alloc Alignment:         4KB                                
+      Accessible by all:       FALSE                              
+    Pool 3                   
+      Segment:                 GROUP                              
+      Size:                    64(0x40) KB                        
+      Allocatable:             FALSE                              
+      Alloc Granule:           0KB                                
+      Alloc Recommended Granule:0KB                                
+      Alloc Alignment:         0KB                                
+      Accessible by all:       FALSE                              
+  ISA Info:                
+    ISA 1                    
+      Name:                    amdgcn-amd-amdhsa--gfx1100         
+      Machine Models:          HSA_MACHINE_MODEL_LARGE            
+      Profiles:                HSA_PROFILE_BASE                   
+      Default Rounding Mode:   NEAR                               
+      Default Rounding Mode:   NEAR                               
+      Fast f16:                TRUE                               
+      Workgroup Max Size:      1024(0x400)                        
+      Workgroup Max Size per Dimension:
+        x                        1024(0x400)                        
+        y                        1024(0x400)                        
+        z                        1024(0x400)                        
+      Grid Max Size:           4294967295(0xffffffff)             
+      Grid Max Size per Dimension:
+        x                        2147483647(0x7fffffff)             
+        y                        65535(0xffff)                      
+        z                        65535(0xffff)                      
+      FBarrier Max Size:       32                                 
+    ISA 2                    
+      Name:                    amdgcn-amd-amdhsa--gfx11-generic   
+      Machine Models:          HSA_MACHINE_MODEL_LARGE            
+      Profiles:                HSA_PROFILE_BASE                   
+      Default Rounding Mode:   NEAR                               
+      Default Rounding Mode:   NEAR                               
+      Fast f16:                TRUE                               
+      Workgroup Max Size:      1024(0x400)                        
+      Workgroup Max Size per Dimension:
+        x                        1024(0x400)                        
+        y                        1024(0x400)                        
+        z                        1024(0x400)                        
+      Grid Max Size:           4294967295(0xffffffff)             
+      Grid Max Size per Dimension:
+        x                        2147483647(0x7fffffff)             
+        y                        65535(0xffff)                      
+        z                        65535(0xffff)                      
+      FBarrier Max Size:       32                                 
+*** Done ***             
+=== rocm-smi ===
+
+
+======================================== ROCm System Management Interface ========================================
+================================================== Concise Info ==================================================
+Device  Node  IDs              Temp    Power  Partitions          SCLK  MCLK   Fan    Perf  PwrCap  VRAM%  GPU%  
+[3m              (DID,     GUID)  (Edge)  (Avg)  (Mem, Compute, ID)                                                 [0m
+==================================================================================================================
+0       2     0x744b,   6853   28.0°C  12.0W  N/A, N/A, 0         0Mhz  96Mhz  20.0%  auto  241.0W  0%     0%    
+==================================================================================================================
+============================================== End of ROCm SMI Log ===============================================
+=== python ===
+Python 3.12.3
+=== pip freeze ===
+absl-py==2.4.0
+accelerate==1.13.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.3
+aiosignal==1.4.0
+amd-aiter @ file:///install/amd_aiter-0.1.7.post6.dev50%2Bgf4bb76d29-cp312-cp312-linux_x86_64.whl#sha256=76e65f1fd734921f8b56c0926d94bb218eb7421a8ae5344f7d8b5ecd6cacc61f
+amd-torch-device-gfx1100==2.13.0+rocm7.14.0
+amd-torch-device-gfx110x==2.13.0+rocm7.14.0
+amdsmi @ file:///opt/rocm-7.2.1/share/amd_smi
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anthropic==0.85.0
+anyio==4.12.1
+apache-tvm-ffi==0.1.14.post1
+apex @ file:///apex-1.9.0%2Brocm7.2.1.git355db9b8-cp312-cp312-linux_x86_64.whl#sha256=ac3b8f3ab8f95ac2ecf8943148451f25d21fcbaae0504a98a6e74509eb52d11d
+argon2-cffi==25.1.0
+argon2-cffi-bindings==25.1.0
+arrow==1.4.0
+astor==0.8.1
+asttokens==3.0.1
+async-lru==2.3.0
+attrs==25.4.0
+audioread==3.1.0
+babel==2.18.0
+beautifulsoup4==4.14.3
+blake3==1.0.8
+bleach==6.3.0
+boto3==1.35.42
+botocore==1.35.99
+build==1.4.0
+cachetools==7.0.5
+cattrs==26.1.0
+cbor2==5.8.0
+certifi==2026.2.25
+cffi==2.0.0
+chardet==6.0.0.post1
+charset-normalizer==3.4.5
+clang-format==21.1.2
+click==8.5.0
+cloudpickle==3.1.2
+cmake==3.31.10
+colorama==0.4.6
+comm==0.2.3
+compressed-tensors==0.17.0
+conch-triton-kernels==1.2.1
+contourpy==1.3.3
+coremltools==8.3.0
+cryptography==46.0.5
+cuda-bindings==12.9.6
+cuda-pathfinder==1.4.2
+cupy-cuda12x==14.0.1
+cxxfilt==0.3.0
+cycler==0.12.1
+Cython==3.2.4
+dataclasses-json==0.6.7
+DataProperty==1.1.1
+datasets==4.8.2
+debugpy==1.8.20
+decorator==5.2.1
+defusedxml==0.7.1
+Deprecated==1.3.1
+depyf==0.20.0
+diffusers==0.40.0
+dill==0.4.1
+diskcache==5.6.3
+distro==1.9.0
+dnspython==2.8.0
+docstring_parser==0.17.0
+editdistance==0.8.1
+einops==0.8.2
+email-validator==2.3.0
+evaluate==0.4.6
+execnet==2.1.2
+executing==2.2.1
+expecttest==0.3.0
+fastapi==0.135.1
+fastapi-cli==0.0.24
+fastapi-cloud-cli==0.15.0
+fastar==0.8.0
+fastjsonschema==2.21.2
+fbscribelogger==0.1.7
+filelock==3.20.0
+flash_attn @ file:///install/flash_attn-2.8.3-py3-none-any.whl#sha256=91f94fa5431dc5489c4442680f473437b36907dcb200dd997426e8599acd3fc4
+flatbuffers==24.12.23
+fonttools==4.62.1
+fqdn==1.5.1
+frozenlist==1.8.0
+fsspec==2025.9.0
+future==1.0.0
+gguf==0.18.0
+ghstack==0.8.0
+google-api-core==2.30.0
+google-auth==2.49.1
+google-cloud-core==2.5.0
+google-cloud-storage==3.9.0
+google-crc32c==1.8.0
+google-resumable-media==2.8.0
+googleapis-common-protos==1.73.0
+grpcio==1.78.0
+grpcio-reflection==1.78.0
+grpcio-tools==1.78.0
+h11==0.16.0
+hf-xet==1.6.0
+hiredis==3.3.1
+httpcore==1.0.9
+httptools==0.7.1
+httpx==0.28.1
+httpx-sse==0.4.3
+huggingface_hub==1.33.0
+humanize==4.15.0
+hypothesis==5.35.1
+idna==3.20
+ihighlight==1.0.0
+ijson==3.5.0
+ImageIO==2.37.3
+importlib_metadata==9.0.1
+iniconfig==2.3.0
+interegular==0.3.3
+ipykernel==7.2.0
+ipython==9.12.0
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.8
+isoduration==20.11.0
+jedi==0.19.2
+Jinja2==3.1.6
+jiter==0.13.0
+jmespath==1.1.0
+joblib==1.5.3
+json5==0.14.0
+jsonlines==4.0.0
+jsonpointer==3.1.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+junitparser==2.1.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.3.1
+jupyter_client==8.8.0
+jupyter_core==5.9.1
+jupyter_server==2.17.0
+jupyter_server_terminals==0.5.4
+jupyterlab==4.5.6
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.28.0
+jupyterlab_widgets==3.0.16
+kiwisolver==1.5.0
+lark==1.2.2
+lazy-loader==0.5
+libnacl==2.1.0
+librosa==0.10.2
+lintrunner==0.12.7
+llguidance==1.3.0
+llvmlite==0.44.0
+lm-format-enforcer==0.11.3
+lm_eval==0.4.13
+loguru==0.7.3
+lpips==0.1.4
+lxml==5.3.0
+Markdown==3.10.2
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+marshmallow==3.26.2
+matplotlib==3.10.8
+matplotlib-inline==0.2.1
+mbstrdecoder==1.1.5
+mcp==1.26.0
+mdurl==0.1.2
+mistral_common==1.10.0
+mistune==3.2.0
+ml_dtypes==0.5.4
+model-hosting-container-standards==0.1.13
+more-itertools==11.1.0
+mpmath==1.3.0
+msgpack==1.1.2
+msgspec==0.20.0
+multidict==6.7.1
+multiprocess==0.70.19
+mypy==1.16.0
+mypy_extensions==1.1.0
+narwhals==2.19.0
+nbclient==0.10.4
+nbconvert==7.17.1
+nbformat==5.10.4
+nest-asyncio==1.6.0
+networkx==3.7
+ninja==1.13.0
+nltk==3.10.3
+nncf==3.4.0
+notebook==7.5.5
+notebook_shim==0.2.4
+numba==0.61.2
+numexpr==2.14.2
+numpy==2.1.2
+onnx==1.19.1
+onnx-ir==0.1.15
+onnxruntime==1.30.0
+onnxscript==0.5.4
+openai==2.29.0
+openai-harmony==0.0.8
+opencv-python==5.0.0.93
+opencv-python-headless==4.13.0.92
+openvino==2026.4.1
+openvino-telemetry==2025.2.0
+openvino-tokenizers==2026.4.1.0
+opt-einsum==3.3.0
+optimum==2.3.0
+optimum-intel==2.2.0
+optree==0.13.0
+outlines_core==0.2.11
+packaging==26.0
+pandas==2.2.3
+pandocfilters==1.5.1
+parameterized==0.8.1
+parso==0.8.6
+partial-json-parser==0.2.1.1.post7
+pathspec==1.0.4
+pathvalidate==3.3.1
+peft==0.18.1
+pexpect==4.9.0
+pillow==11.0.0
+platformdirs==4.9.4
+plotly==6.7.0
+pluggy==1.6.0
+ply==3.11
+pooch==1.9.0
+portalocker==4.4.0
+prometheus-fastapi-instrumentator==7.1.0
+prometheus_client==0.24.1
+prompt_toolkit==3.0.52
+propcache==0.4.1
+proto-plus==1.27.1
+protobuf==6.33.5
+psutil==7.1.0
+ptyprocess==0.7.0
+PuLP==2.9.0
+pure_eval==0.2.3
+pwlf==2.2.1
+py-cpuinfo==9.0.0
+pyaml==26.2.1
+pyarrow==23.0.1
+pyasn1==0.6.3
+pyasn1_modules==0.4.2
+pybase64==1.4.3
+pybind11==3.0.2
+pyclipper==1.4.0
+pycountry==26.2.16
+pycparser==3.0
+pydantic==2.12.5
+pydantic-extra-types==2.11.1
+pydantic-settings==2.13.1
+pydantic_core==2.41.5
+pyDOE==0.9.3
+pydot==4.0.1
+PyGithub==2.3.0
+Pygments==2.15.0
+PyJWT==2.12.1
+PyNaCl==1.6.2
+pyparsing==3.3.2
+pyproject_hooks==1.2.0
+pyre-extensions==0.0.32
+pytablewriter==1.2.1
+pytest==9.0.2
+pytest-asyncio==1.3.0
+pytest-cpp==2.3.0
+pytest-flakefinder==1.1.0
+pytest-rerunfailures==14.0
+pytest-shard==0.1.2
+pytest-subtests==0.13.1
+pytest-xdist==3.3.1
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.2
+python-json-logger==4.0.0
+python-multipart==0.0.22
+pytz==2026.1.post1
+PyWavelets==1.7.0
+PyYAML==6.0.3
+pyzmq==27.1.0
+pyzstd==0.18.0
+rapidocr-onnxruntime==1.4.4
+ratelimiter==1.2.0.post0
+ray==2.54.0
+redis==6.4.0
+referencing==0.37.0
+regex==2026.2.28
+requests==2.34.2
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rich==14.3.3
+rich-toolkit==0.19.7
+rignore==0.7.6
+rocm==7.14.0
+rocm-bootstrap==0.1.0
+rocm-sdk-core==7.14.0
+rocm-sdk-device-gfx1100==7.14.0
+rocm-sdk-libraries==7.14.0
+rouge_score==0.1.2
+rpds-py==0.30.0
+ruff==0.16.9
+runai-model-streamer==0.15.3
+runai-model-streamer-gcs==0.15.3
+runai-model-streamer-s3==0.15.3
+s3transfer==0.10.4
+sacrebleu==2.6.0
+safetensors==0.8.0
+scikit-build==0.18.1
+scikit-image==0.25.2
+scikit-learn==1.8.0
+scipy==1.14.1
+seaborn==0.13.2
+semantic-version==2.10.0
+Send2Trash==2.1.0
+sentencepiece==0.2.1
+sentry-sdk==2.55.0
+setproctitle==1.3.7
+setuptools==79.0.1
+setuptools-git-versioning==2.1.0
+setuptools-rust==1.13.0
+setuptools-scm==9.2.2
+shapely==2.1.2
+shellingham==1.5.4
+six==1.17.0
+sniffio==1.3.1
+sortedcontainers==2.4.0
+soundfile==0.13.1
+soupsieve==2.8.3
+soxr==1.0.0
+sqlitedict==2.1.0
+sse-starlette==3.3.3
+stack-data==0.6.3
+starlette==0.52.1
+supervisor==4.3.0
+sympy==1.13.3
+tabledata==1.3.5
+tabulate==0.9.0
+tblib==3.2.2
+tcolorpy==0.1.7
+tenacity==9.1.4
+tensorboard==2.18.0
+tensorboard-data-server==0.7.2
+tensorizer==2.10.1
+terminado==0.18.1
+threadpoolctl==3.6.0
+thriftpy2==0.5.3
+tifffile==2026.3.3
+tiktoken==0.12.0
+timm==1.0.25
+tinycss2==1.4.0
+tlparse==0.4.0
+tokenizers==0.23.2
+torch==2.13.0+rocm7.14.0
+torchvision==0.28.0+rocm7.14.0
+tornado==6.5.5
+tqdm==4.67.3
+traitlets==5.14.3
+transformers==5.18.0
+triton==3.8.0+git4cff872c.rocm7.14.0
+triton_kernels @ file:///install/triton_kernels-1.0.0-py3-none-any.whl#sha256=1bef720c01a9059250be3e90e18a3cc22d34ccb42b677468ee5abe3287f85e60
+typepy==1.3.5
+typer==0.24.1
+typing-inspect==0.9.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.3
+unittest-xml-reporting==3.2.0
+uri-template==1.3.0
+urllib3==2.6.3
+uv==0.10.9
+uvicorn==0.42.0
+uvloop==0.22.1
+-e git+https://github.com/AIwork4me/vllm.git@16ce8ac88955bc230793462d1c1b6ac77eea0e04#egg=vllm&subdirectory=../../../wt-e2e-pr
+vllm-gfx1100-rocm-platform-plugin @ file:///tmp/opencode/vllm-gfx1100-rocm-platform-plugin
+watchfiles==1.1.1
+wcwidth==0.6.0
+webcolors==25.10.0
+webencodings==0.5.1
+websocket-client==1.9.0
+websockets==16.0
+Werkzeug==3.1.6
+wheel==0.46.3
+widgetsnbextension==4.0.15
+word2number==1.1
+wrapt==2.1.2
+xdoctest==1.1.0
+xgrammar==0.2.8
+xxhash==3.6.0
+yarl==1.23.0
+z3-solver==4.15.1.0
+zipp==4.1.0
