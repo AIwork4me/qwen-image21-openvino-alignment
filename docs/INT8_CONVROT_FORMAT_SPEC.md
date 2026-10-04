@@ -32,12 +32,14 @@ The concept matches the published QuaRot/SpinQuant family of Hadamard rotations
     the format string says "tensorwise" but convrot implies per-channel scales — see §4)
   - `<layer>.comfy_quant` : U8 (JSON bytes) — for all 254 layers identically:
     `{"convrot": true, "convrot_groupsize": 256, "format": "int8_tensorwise"}`
-- 496 BF16 tensors remain: all RMSNorm weights (input/post_attention layernorm,
-  q_norm, k_norm — 4+2 per block ×36, `model.norm`), attention biases
-  (q/k/v/o `bias` — Qwen3-VL attention QKV bias is retained), and equivalent keys.
+- 496 BF16 tensors remain unquantized: 145 language-model tensors (the four RMSNorm
+  weights per block — input_layernorm, post_attention_layernorm, q_norm, k_norm —
+  for 36 blocks = 144, plus `model.norm`) **and the complete 351-tensor vision tower
+  (`model.visual.*`), which is present but unquantized**. The language model has no
+  bias tensors. **[CHECKPOINT]**
 - Quantized module list (complete): `model.embed_tokens`, `lm_head`, and for each of
   the 36 blocks `self_attn.{q,k,v,o}_proj` + `mlp.{gate,up,down}_proj` (7 × 36 = 252).
-  **No layer is excluded**; the vision tower is absent (text-only artifact).
+  No language-model layer is excluded; the vision tower is excluded from quantization.
 
 ## 3. Exact quantization / dequantization math **[SOURCE]**
 
@@ -68,13 +70,17 @@ Let `W ∈ R^{N×K}` be the original bf16 weight, `g = 256` (convrot_groupsize),
   `sd1_clip` builds `comfy.ops.mixed_precision_ops(..., full_precision_mm=True)`.
 - **Conditioning encode path** (`CLIP.encode_from_tokens`, used by
   CLIPTextEncode for Qwen-Image 2.1): `_full_precision_mm = True` ⇒ every quantized
-  Linear/Embedding **dequantizes to bf16 and runs a regular matmul** — i.e. the
-  stock ComfyUI conditioning path executes INT8 ConvRot as *weight-only quantization
-  with bf16 activations*. The dynamic per-row INT8 **activation** quantization
-  ("A8") exists only behind `comfy.ops.use_quantized_matmul(...)`, which
-  `encode_from_tokens` does NOT enter (only `CLIP.generate` and diffusion-model
-  paths do). Verified by profiler trace: 252 × `dequantize_int8_convrot_weight_dtype`
-  + bf16 `aten::mm` per encode, zero int8 GEMM kernels. **[CHECKPOINT via profile]**
+  Linear/Embedding **dequantizes its effective weight and runs a regular matmul** —
+  i.e. the stock ComfyUI conditioning path executes INT8 ConvRot as *weight-only
+  quantization*. Moreover, `sd1_clip` forces an **FP32 activation stream**
+  (`embed_tokens(..., out_dtype=torch.float32)`, `transformer(..., dtype=torch.float32)`),
+  so the stock path computes quantized-effective weights against FP32 activations.
+  The dynamic per-row INT8 **activation** quantization ("A8") exists only behind
+  `comfy.ops.use_quantized_matmul(...)`, which `encode_from_tokens` does NOT enter
+  (only `CLIP.generate` and diffusion-model paths do). Evidence: committed profiler
+  traces `artifacts/v2/metrics/stock_path_profile*.json` (252 ×
+  `dequantize_int8_convrot_weight_dtype` + regular mm per encode, zero int8 GEMM
+  kernels on the stock path; int8 GEMM kernels appear only in the fastk profile).
 - Fast-kernel path (supplementary arm `C_INT8` `--fast-kernels`): activation rotated
   online `x_rot = x_blk @ H`, per-row dynamic INT8 quant, INT8×INT8 GEMM with fp32
   accum, scales applied in the epilogue (`int8_linear(convrot=True, g=256)`).
@@ -82,9 +88,10 @@ Let `W ∈ R^{N×K}` be the original bf16 weight, `g = 256` (convrot_groupsize),
 ## 5. Numerical expectations **[INFERENCE]**
 
 - Weight-space: `W_eff` differs from `W` by INT8 per-row quantization noise in the
-  rotated basis (measured in `int8_weight_parity.csv`).
+  rotated basis (measured in `int8_weight_parity.csv`, median rel L2 ≈ 0.87%).
 - Execution in the stock path: error ≈ weight-dequantization error only (no activation
-  quantization), computed in bf16.
+  quantization), computed against FP32 activations (empirically: conditioning
+  rel L2 ≈ 4.6% vs C_BF16 on the canary suite, fp32 activation stream both sides).
 - Embedding row exactness: the embedding lookup is exact dequant of quantized rows
   (no rotation error in exact arithmetic; H @ H^T = I).
 

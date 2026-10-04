@@ -62,10 +62,12 @@ format and must be reproduced exactly for bit-level weight parity.** **[SOURCE]*
 
 - Same loader chain as INT8 (format string `asym_w4a8_int8` → `AsymW4A8Int8Layout`).
 - Stock conditioning path (`encode_from_tokens`, `full_precision_mm=True`):
-  each W4 layer **dequantizes to bf16 via the exact formula above and runs a regular
-  matmul** — activations are bf16, not int8, in the path that produces
-  Qwen-Image 2.1 conditioning. Profiler-verified: `dequantize_w4a8_int8_weight` calls
-  per layer per encode, no W4A8 GEMM kernel.
+  each W4 layer **dequantizes to its effective weight via the exact formula above
+  and runs a regular matmul** — with the **FP32 activation stream** that `sd1_clip`
+  forces (`out_dtype`/`dtype=torch.float32`). The "A8" INT8 activation quantization
+  does NOT execute in the path that produces Qwen-Image 2.1 conditioning. Evidence:
+  committed profiler traces `artifacts/v2/metrics/stock_path_profile_C_W4A8.json`
+  (`dequantize_w4a8_int8_weight` per layer per encode, no W4A8 GEMM kernel).
 - Fast-kernel path (`--fast-kernels` / `use_quantized_matmul`, used by `CLIP.generate`
   and diffusion models): codes decoded to the INT8 grid in-kernel, activation rotated +
   per-row INT8-quantized, shared INT8 GEMM, `s_channel` epilogue (`w4a8_int8_linear`).
@@ -79,8 +81,8 @@ format and must be reproduced exactly for bit-level weight parity.** **[SOURCE]*
 | Codebook | none | F32[16] per layer |
 | Rotation | Hadamard-256 offline | Hadamard-256 offline (same) |
 | embed/lm_head | INT8 ConvRot | INT8 ConvRot (identical treatment) |
-| Norms/biases | BF16 | BF16 |
-| Stock-path activation dtype | BF16 (dequant + mm) | BF16 (dequant + mm) |
+| Norms/biases | BF16 (vision tower BF16, unquantized) | BF16 (same) |
+| Stock-path activation dtype | FP32 activation stream (weight-only dequant + mm) | FP32 activation stream (same) |
 | Fast-path activation dtype | INT8 per-row dynamic | INT8 per-row dynamic |
 
 ## 6. Open questions **[UNKNOWN]**

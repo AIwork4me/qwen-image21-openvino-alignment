@@ -40,12 +40,14 @@ def dequant_artifact(src, out_dir, tag):
     print(f"[{tag}] {len(quant_names)} quantized layers, {len(plain)} plain tensors")
 
     from safetensors.torch import save_file
-    # process plain tensors (bf16 passthrough)
+    # process plain tensors (bf16 passthrough); skip the raw .weight of quantized
+    # layers (they are replaced by dequantized versions below)
+    quant_weight_keys = {f"{l}.weight" for l in comfy_quant_layers}
     for i in range(0, len(plain), 500):
         chunk = plain[i:i + 500]
         t = get_tensors(src, chunk)
         for k, v in t.items():
-            if k in comfy_quant_layers:
+            if k in quant_weight_keys:
                 continue
             out_sd[k] = v
     # quantized layers, in chunks to bound RAM
@@ -71,7 +73,7 @@ def dequant_artifact(src, out_dir, tag):
                 n_w4 += 1
             else:
                 raise ValueError(conf)
-            out_sd[l] = w.to(torch.bfloat16)
+            out_sd[f"{l}.weight"] = w.to(torch.bfloat16)
         del t
         if (i // 7) % 24 == 0:
             print(f"[{tag}] {i + len(chunk)}/{len(quant_names)} layers dequantized", flush=True)

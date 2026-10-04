@@ -1,15 +1,15 @@
 {
   "O_INT8_EXACT_src": {
     "path": "/valdata/models/v2_dequant_exact/O_INT8_EXACT/model.safetensors",
-    "bytes": 25724804584,
-    "sha256": "17e92c39f5a6a01ad9edb0b77d838372f22ee9dcd51946e13558ba1d04168703",
+    "bytes": 17534345856,
+    "sha256": "133503bf4344744ceaec24fda2faaf92da10909abf93e94f51339f6663265fb9",
     "n_int8_layers": 254,
     "n_w4_layers": 0
   },
   "O_W4A8_EXACT_src": {
     "path": "/valdata/models/v2_dequant_exact/O_W4A8_EXACT/model.safetensors",
-    "bytes": 22251920840,
-    "sha256": "cf2b8eea95101c7a4d7b77e48b0df6aee838a4d1ecec2e3aae864dd170307fec",
+    "bytes": 17534345856,
+    "sha256": "ce2ffe8e6023a9093c9cea472b60b3ca15c969e83d30f505ac9df0d8c6e08e26",
     "n_int8_layers": 2,
     "n_w4_layers": 252
   }

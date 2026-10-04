@@ -31,8 +31,7 @@ from common import ROOT, load_cfg, save_json, tensor_hash
 _DEVICE = "cuda"
 
 COMFY_SRC = os.environ.get("V2_COMFYUI_SRC", "/valdata/comfyui-src")
-ARTIFACT_DIR = os.environ.get("V2_ENCODER_DIR", "/valdata/v2models/text_encensors") \
-    if False else os.environ.get("V2_ENCODER_DIR", "/valdata/v2models/text_encoders")
+ARTIFACT_DIR = os.environ.get("V2_ENCODER_DIR", "/valdata/v2models/text_encoders")
 
 ARMS = {
     "C_BF16": "qwen3vl_8b_bf16.safetensors",
@@ -51,6 +50,29 @@ def import_comfy():
     import comfy.text_encoders.qwen_image21
     import comfy.text_encoders.hunyuan_video
     return comfy
+
+
+def probe_compute_dtype(te_model):
+    """Empirically record the activation dtype of the stock path (review finding:
+    sd1_clip forces fp32 embedding out_dtype and transformer dtype)."""
+    clip_model = getattr(te_model, te_model.clip)
+    transformer = clip_model.transformer
+    llama = transformer.model
+    dtypes = {}
+
+    def hook(mod, args, kwargs, output):
+        dtypes["embedding_out"] = str(output.dtype)
+
+    h = llama.embed_tokens.register_forward_hook(hook, with_kwargs=True)
+    try:
+        toks = clip_model.tokenizer if hasattr(clip_model, "tokenizer") else None
+        twp = _TOK_STATE["tok"].tokenize_with_weights("probe")
+        clip_model.set_clip_options({"execution_device": torch.device(_DEVICE)})
+        with torch.no_grad():
+            te_model.encode_token_weights(twp)
+    finally:
+        h.remove()
+    return dtypes
 
 
 def load_comfy_te(arm, device="cuda", dtype=None):
@@ -99,10 +121,26 @@ def encode_with_capture(te_model, prompt, fast_kernels=False):
 
     Mirrors comfy.sd.CLIP.encode_from_tokens: sets execution_device, and (unless
     --fast-kernels) does NOT enter comfy.ops.use_quantized_matmul -- matching the
-    stock ComfyUI conditioning path (dequantize-to-compute-dtype + regular matmul).
+    stock ComfyUI conditioning path. NOTE (verified empirically + sd1_clip source):
+    the stock path runs an FP32 activation stream (embedding out_dtype and
+    transformer dtype forced to torch.float32) with dequantized weights.
     """
     tok = _TOK_STATE["tok"]
-    token_weight_pairs = tok.tokenize_with_weights(prompt)
+    # capture the llama-formatted text the tokenizer actually builds, by recording
+    # the final string handed to the base SDTokenizer entry point
+    import comfy.sd1_clip as sd1c
+    captured_text = {}
+    _orig = sd1c.SDTokenizer.tokenize_with_weights
+
+    def patched(self, text, *a, **kw):
+        captured_text.setdefault("llama_text", text)
+        return _orig(self, text, *a, **kw)
+
+    sd1c.SDTokenizer.tokenize_with_weights = patched
+    try:
+        token_weight_pairs = tok.tokenize_with_weights(prompt)
+    finally:
+        sd1c.SDTokenizer.tokenize_with_weights = _orig
 
     clip_model = getattr(te_model, te_model.clip)
     clip_model.set_clip_options({"execution_device": torch.device(_DEVICE)})
@@ -153,6 +191,7 @@ def encode_with_capture(te_model, prompt, fast_kernels=False):
     toks = [t[0] if not isinstance(t[0], dict) else "<image>" for t in token_weight_pairs[key][0]]
     return {
         "token_ids": toks,
+        "llama_text": captured_text.get("llama_text"),
         "seq_len": len(toks),
         "cond": out.detach().float().cpu(),
         "attention_mask": extra.get("attention_mask"),
@@ -185,6 +224,7 @@ def main():
     dtype = torch.float32 if args.dtype == "fp32" else None
     te_model, tok, info = load_comfy_te(args.arm, device=args.device, dtype=dtype)
     _TOK_STATE["tok"] = tok
+    info["compute_dtype_probe"] = probe_compute_dtype(te_model)
     if args.device.startswith("cuda"):
         info["vram_alloc_gib_after_load"] = torch.cuda.memory_allocated() / 2 ** 30
         info["vram_reserved_gib_after_load"] = torch.cuda.memory_reserved() / 2 ** 30
@@ -217,6 +257,7 @@ def main():
             np.savez_compressed(npz_path, **arrays)
             entry = {
                 "pid": pid, "repeat": rep, "text": p["text"],
+                "llama_text": res.get("llama_text"),
                 "seq_len": res["seq_len"], "token_ids": res["token_ids"],
                 "cond_shape": list(res["cond"].shape),
                 "cond_sha256": tensor_hash(res["cond"]),

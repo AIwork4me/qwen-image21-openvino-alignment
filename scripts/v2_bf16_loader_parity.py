@@ -4,7 +4,11 @@
 Input-level fields (formatted text, input_ids, attention mask, drop index, seq len)
 must match EXACTLY. Tensor-level fields (embedding, 36 layers, prenorm, postnorm,
 conditioning) are compared numerically C_BF16 (ComfyUI loader, W7900) vs R0
-(official transformers path, W7900) with full error statistics.
+(official transformers path, W7900).
+
+Interpretation note (review-corrected): the stock ComfyUI TE path runs an FP32
+activation stream, so tensor deltas vs R0 (bf16 compute) measure the bf16-vs-fp32
+arithmetic envelope, and deltas vs R1 (fp32) measure cross-implementation residual.
 """
 import csv
 import json
@@ -48,9 +52,12 @@ def main():
         # v1 processor uses left padding? (check attention mask) -- compare unpadded
         am = inp["attention_mask"].reshape(-1)
         ids_r0_unpad = [t for t, m in zip(ids_r0, am.tolist()) if m == 1]
+        # real formatted-text comparison: ComfyUI's captured llama_text vs the
+        # template the v1 processor path applied (same fixed T2I template)
+        comfy_llama = entry.get("llama_text") or ""
         row = {
             "pid": pid,
-            "formatted_text_match": int(fmt_llama(p["text"]) == fmt_llama(p["text"])),  # tautology guard
+            "formatted_text_match": int(comfy_llama == fmt_llama(p["text"])),
             "input_ids_match": int(ids_r0_unpad == ids_c),
             "seq_len_r0": len(ids_r0_unpad), "seq_len_comfy": len(ids_c),
             "drop_idx_r0": int(r0["drop_idx"]) if "drop_idx" in r0 else None,

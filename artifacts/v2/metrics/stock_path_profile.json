@@ -1,0 +1,32 @@
+{
+  "C_INT8_stock": {
+    "dequantize_int8_convrot_weight_dtype": 504,
+    "dequantize_w4a8_int8_weight": 0,
+    "dequantize_int8_embedding": 1,
+    "dequant_grouped_to_int8_kernel_w4": 0,
+    "int8_linear_kernel": 0,
+    "w4a8_int8_linear_kernel": 0,
+    "cpu_attention": 0,
+    "aten_mm": 253
+  },
+  "C_W4A8_stock": {
+    "dequantize_int8_convrot_weight_dtype": 0,
+    "dequantize_w4a8_int8_weight": 0,
+    "dequantize_int8_embedding": 1,
+    "dequant_grouped_to_int8_kernel_w4": 252,
+    "int8_linear_kernel": 0,
+    "w4a8_int8_linear_kernel": 0,
+    "cpu_attention": 0,
+    "aten_mm": 505
+  },
+  "C_INT8_fastk": {
+    "dequantize_int8_convrot_weight_dtype": 0,
+    "dequantize_w4a8_int8_weight": 0,
+    "dequantize_int8_embedding": 1,
+    "dequant_grouped_to_int8_kernel_w4": 0,
+    "int8_linear_kernel": 252,
+    "w4a8_int8_linear_kernel": 0,
+    "cpu_attention": 0,
+    "aten_mm": 253
+  }
+}
