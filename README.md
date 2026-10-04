@@ -1,5 +1,7 @@
 # Qwen-Image 2.1 — OpenVINO(CPU) vs ROCm(GPU) Text Encoder Alignment Validation
 
+> **结论、证据与复现入口：[CONCLUSIONS.md](CONCLUSIONS.md)**
+
 Customer-grade, reproducible investigation of whether the OpenVINO Qwen3-VL-8B text
 encoder is numerically aligned with the AMD GPU (W7900D / gfx1100 / ROCm 7.14.0)
 PyTorch reference for Qwen-Image 2.1, and why 25-step images look similar while
