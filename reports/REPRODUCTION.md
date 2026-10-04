@@ -7,7 +7,7 @@ ROCm userspace 7.14.0 (therock dist), torch 2.13.0+rocm7.14.0, Python 3.12.
 ## 0. Environment
 
 ```bash
-bash scripts/collect_environment.py          # captures system/ROCm/python metadata
+python scripts/collect_environment.py     # captures system/ROCm/python metadata
 ```
 
 ROCm 7.14.0 userspace correction performed once (reversible):
@@ -111,5 +111,5 @@ python scripts/build_report.py
 ## Everything
 
 ```bash
-bash run_all_validation.sh
+bash scripts/run_all_validation.sh
 ```
