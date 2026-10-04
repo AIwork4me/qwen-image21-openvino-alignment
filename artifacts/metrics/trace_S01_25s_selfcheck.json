@@ -1,0 +1,310 @@
+{
+  "suite": "smoke",
+  "pid": "S01",
+  "steps": 25,
+  "resolution": 1024,
+  "arms": [
+    "R0",
+    "R0"
+  ],
+  "controls": {
+    "latent_hash": "976e549d9a6fbed7eff278b37b5514677e6292b9cf35cdb879babd0e7f5ae6d5",
+    "pe_hashes": {
+      "R0": "596230d9b19133362c5c99ce512d2ba012e4d4fcfd625b93fe7877b1887346fd"
+    },
+    "timesteps": [
+      1000.0,
+      978.3411865234375,
+      955.779541015625,
+      932.2574462890625,
+      907.7120971679688,
+      882.0755004882812,
+      855.27294921875,
+      827.2233276367188,
+      797.8372802734375,
+      767.0169677734375,
+      734.655029296875,
+      700.632568359375,
+      664.8184204101562,
+      627.0675048828125,
+      587.2180786132812,
+      545.0902709960938,
+      500.48291015625,
+      453.1702880859375,
+      402.8988342285156,
+      349.3819885253906,
+      292.29498291015625,
+      231.2682342529297,
+      165.87924194335938,
+      95.64310455322266,
+      19.999980926513672
+    ],
+    "mu": 0.6935483870967742,
+    "true_cfg": 1.0,
+    "negative": null
+  },
+  "gen_s": {
+    "R0": 25.48674726486206
+  },
+  "n_steps": {
+    "R0": 25
+  },
+  "step_stats": [
+    {
+      "vs": "R0",
+      "step": 0,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 1,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999998,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 2,
+      "latent.cosine": 1.0000000000000002,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 3,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 4,
+      "latent.cosine": 0.9999999999999999,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 5,
+      "latent.cosine": 0.9999999999999999,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 6,
+      "latent.cosine": 0.9999999999999999,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999998,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 7,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 8,
+      "latent.cosine": 1.0000000000000002,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999998,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 9,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 10,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 11,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999998,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 12,
+      "latent.cosine": 1.0000000000000002,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 13,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 14,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 15,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 16,
+      "latent.cosine": 0.9999999999999998,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 17,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 18,
+      "latent.cosine": 0.9999999999999998,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999999,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 19,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999999,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 20,
+      "latent.cosine": 0.9999999999999999,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 21,
+      "latent.cosine": 1.0000000000000002,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 0.9999999999999999,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 22,
+      "latent.cosine": 1.0000000000000002,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 23,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0000000000000002,
+      "model_out.rel_l2": 0.0
+    },
+    {
+      "vs": "R0",
+      "step": 24,
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0,
+      "latent.rmse": 0.0,
+      "latent.max_abs": 0.0,
+      "model_out.cosine": 1.0,
+      "model_out.rel_l2": 0.0
+    }
+  ],
+  "final": {
+    "R0": {
+      "latent.cosine": 1.0,
+      "latent.rel_l2": 0.0
+    }
+  }
+}

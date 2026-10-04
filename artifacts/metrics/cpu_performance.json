@@ -1,0 +1,130 @@
+[
+  {
+    "arm": "O0",
+    "read_s": 0.08956294599920511,
+    "compile_s": 34.603948562406,
+    "load_s": 34.69351150840521,
+    "props": {
+      "EXECUTION_MODE_HINT": "PERFORMANCE",
+      "INFERENCE_PRECISION_HINT": "f32"
+    },
+    "prompts": {
+      "P_short": {
+        "n_tokens": 25,
+        "cold_s": 7.9381262101233006,
+        "warm_median_s": 0.8335188599303365,
+        "warm_p90_s": 0.8939206978306175,
+        "warm_p95_s": 0.8958270175382494,
+        "warm_mean_s": 0.8305417320691049,
+        "emb_lookup_s_excluded": true
+      },
+      "P_med": {
+        "n_tokens": 67,
+        "cold_s": 1.3297318471595645,
+        "warm_median_s": 1.0737398974597454,
+        "warm_p90_s": 1.108130794018507,
+        "warm_p95_s": 1.1288107261061668,
+        "warm_mean_s": 1.068686309736222,
+        "emb_lookup_s_excluded": true
+      },
+      "P_long": {
+        "n_tokens": 171,
+        "cold_s": 2.3393809758126736,
+        "warm_median_s": 2.491544966585934,
+        "warm_p90_s": 2.514813881460577,
+        "warm_p95_s": 2.516328864777461,
+        "warm_mean_s": 2.475135441776365,
+        "emb_lookup_s_excluded": true
+      }
+    },
+    "peak_rss_gib": 42.62649154663086,
+    "base_rss_gib_before_load": 40.93336486816406
+  },
+  {
+    "arm": "O1",
+    "read_s": 0.09033851511776447,
+    "compile_s": 12.464884744025767,
+    "load_s": 12.555223259143531,
+    "props": {
+      "EXECUTION_MODE_HINT": "PERFORMANCE",
+      "INFERENCE_PRECISION_HINT": "bf16"
+    },
+    "prompts": {
+      "P_short": {
+        "n_tokens": 25,
+        "cold_s": 5.135452040471137,
+        "warm_median_s": 0.3870977349579334,
+        "warm_p90_s": 0.395704051759094,
+        "warm_p95_s": 0.39995242063887415,
+        "warm_mean_s": 0.37265586499124764,
+        "emb_lookup_s_excluded": true
+      },
+      "P_med": {
+        "n_tokens": 67,
+        "cold_s": 0.948687857016921,
+        "warm_median_s": 0.9187502083368599,
+        "warm_p90_s": 0.9592337228357792,
+        "warm_p95_s": 0.9654937773942948,
+        "warm_mean_s": 0.9238819051533937,
+        "emb_lookup_s_excluded": true
+      },
+      "P_long": {
+        "n_tokens": 171,
+        "cold_s": 1.398581551387906,
+        "warm_median_s": 1.3301336523145437,
+        "warm_p90_s": 1.3701724552549421,
+        "warm_p95_s": 1.3721367513295264,
+        "warm_mean_s": 1.3225815161131322,
+        "emb_lookup_s_excluded": true
+      }
+    },
+    "peak_rss_gib": 42.62649154663086,
+    "base_rss_gib_before_load": 42.62649154663086
+  },
+  {
+    "arm": "O3r",
+    "read_s": 0.10127362981438637,
+    "compile_s": 1.3075981996953487,
+    "load_s": 1.408871829509735,
+    "props": {
+      "EXECUTION_MODE_HINT": "PERFORMANCE",
+      "INFERENCE_PRECISION_HINT": "f32"
+    },
+    "prompts": {
+      "P_short": {
+        "n_tokens": 25,
+        "cold_s": 3.5871289437636733,
+        "warm_median_s": 0.21781501732766628,
+        "warm_p90_s": 0.2752684843726456,
+        "warm_p95_s": 0.2758508862461895,
+        "warm_mean_s": 0.23188283396884798,
+        "emb_lookup_s_excluded": true
+      },
+      "P_med": {
+        "n_tokens": 67,
+        "cold_s": 0.7959792353212833,
+        "warm_median_s": 0.7107090172357857,
+        "warm_p90_s": 0.7884290901944041,
+        "warm_p95_s": 0.7921635775826872,
+        "warm_mean_s": 0.7299324316903949,
+        "emb_lookup_s_excluded": true
+      },
+      "P_long": {
+        "n_tokens": 171,
+        "cold_s": 1.3076442247256637,
+        "warm_median_s": 1.0802376540377736,
+        "warm_p90_s": 1.1977229183539748,
+        "warm_p95_s": 1.2084380290471017,
+        "warm_mean_s": 1.0875980829820038,
+        "emb_lookup_s_excluded": true
+      }
+    },
+    "peak_rss_gib": 42.62649154663086,
+    "base_rss_gib_before_load": 42.62649154663086
+  },
+  {
+    "arm": "O3",
+    "status": "FAILED",
+    "error": "Exception from src/inference/src/cpp/infer_request.cpp:224:\nException from src/plugins/intel_cpu/src/node.cpp:794:\n[CPU] Add node with name '__module.model.language_model/aten::add/Add_3' Check 'input_shape[j] == 1' failed at src/plugins/intel_cpu/src/shape_inference/custom/eltwise.cpp:52:\nEltwise s"
+  }
+]

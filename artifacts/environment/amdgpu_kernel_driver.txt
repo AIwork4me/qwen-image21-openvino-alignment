@@ -1,0 +1,5 @@
+$ cat /proc/driver/amdgpu/version 2>/dev/null; cat /sys/module/amdgpu/version 2>/dev/null
+--- stdout ---
+6.16.13
+
+--- stderr ---

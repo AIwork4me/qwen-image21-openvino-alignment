@@ -1,0 +1,11 @@
+pid,ref_len,ov_len,len_equal,input_ids_exact,attention_mask_exact,ref_drop_idx,ov_second_im_start,first_mismatch_pos,drop_point_equal
+C01,32,32,True,True,True,14,14,,True
+C02,42,42,True,True,True,14,14,,True
+C03,41,41,True,True,True,14,14,,True
+C04,33,33,True,True,True,14,14,,True
+C05,39,39,True,True,True,14,14,,True
+C06,34,34,True,True,True,14,14,,True
+C07,39,39,True,True,True,14,14,,True
+C08,79,79,True,True,True,14,14,,True
+C09,41,41,True,True,True,14,14,,True
+C10,48,48,True,True,True,14,14,,True

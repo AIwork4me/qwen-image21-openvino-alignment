@@ -1,0 +1,19 @@
+{
+  "prompts": [
+    {
+      "id": "S01",
+      "category": "simple_object",
+      "text": "A red apple on a wooden table."
+    },
+    {
+      "id": "S02",
+      "category": "text_en",
+      "text": "A white coffee mug with the text \"GOOD MORNING\" printed in bold black letters."
+    },
+    {
+      "id": "S03",
+      "category": "text_zh",
+      "text": "\u4e00\u5f20\u84dd\u8272\u8def\u724c\uff0c\u4e0a\u9762\u5199\u7740\u767d\u8272\u7684\u4e2d\u6587\u6c49\u5b57\u201c\u4eba\u6c11\u8def\u201d\u3002"
+    }
+  ]
+}

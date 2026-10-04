@@ -1,0 +1,504 @@
+{
+  "prompts": [
+    {
+      "id": "A001",
+      "category": "simple_object",
+      "text": "A red apple on a wooden table."
+    },
+    {
+      "id": "A002",
+      "category": "simple_object",
+      "text": "A blue ceramic vase holding three tulips."
+    },
+    {
+      "id": "A003",
+      "category": "simple_object",
+      "text": "A pair of brown leather hiking boots."
+    },
+    {
+      "id": "A004",
+      "category": "simple_object",
+      "text": "A stack of plain white paper on a desk."
+    },
+    {
+      "id": "A005",
+      "category": "simple_object",
+      "text": "A silver wristwatch with a black leather strap."
+    },
+    {
+      "id": "A006",
+      "category": "simple_object",
+      "text": "A ripe orange cut in half on a white plate."
+    },
+    {
+      "id": "A007",
+      "category": "simple_object",
+      "text": "A green glass bottle standing on gravel."
+    },
+    {
+      "id": "A008",
+      "category": "simple_object",
+      "text": "A yellow tennis ball on a clay court."
+    },
+    {
+      "id": "A009",
+      "category": "simple_object",
+      "text": "A black cast-iron frying pan on a stove."
+    },
+    {
+      "id": "A010",
+      "category": "simple_object",
+      "text": "A folded gray wool blanket on a chair."
+    },
+    {
+      "id": "A011",
+      "category": "multi_object",
+      "text": "A wooden desk with a laptop, a coffee cup, two books and a small potted plant."
+    },
+    {
+      "id": "A012",
+      "category": "multi_object",
+      "text": "A picnic blanket with a wicker basket, grapes, cheese and a checkered napkin."
+    },
+    {
+      "id": "A013",
+      "category": "multi_object",
+      "text": "A kitchen counter holding a toaster, a blender and a bowl of fruit."
+    },
+    {
+      "id": "A014",
+      "category": "multi_object",
+      "text": "A bookshelf with novels, a clock, a small cactus and framed photo."
+    },
+    {
+      "id": "A015",
+      "category": "multi_object",
+      "text": "A workbench with a hammer, nails, a saw and a toolbox."
+    },
+    {
+      "id": "A016",
+      "category": "multi_object",
+      "text": "A dining table set with plates, glasses, candles and cutlery for four."
+    },
+    {
+      "id": "A017",
+      "category": "multi_object",
+      "text": "A camping scene with a tent, lantern, backpack and campfire."
+    },
+    {
+      "id": "A018",
+      "category": "multi_object",
+      "text": "A bathroom sink with a mirror, soap dispenser and folded towels."
+    },
+    {
+      "id": "A019",
+      "category": "multi_object",
+      "text": "A music room with a piano, violin on a chair and sheet music stand."
+    },
+    {
+      "id": "A020",
+      "category": "multi_object",
+      "text": "A nightstand with an alarm clock, a lamp, a book and reading glasses."
+    },
+    {
+      "id": "A021",
+      "category": "spatial",
+      "text": "A red car parked to the left of a blue mailbox, with a tall tree behind them."
+    },
+    {
+      "id": "A022",
+      "category": "spatial",
+      "text": "A cat sitting on top of a washing machine next to a stack of towels."
+    },
+    {
+      "id": "A023",
+      "category": "spatial",
+      "text": "A bridge over a river with a small boat passing underneath it."
+    },
+    {
+      "id": "A024",
+      "category": "spatial",
+      "text": "A mug in front of a teapot, both on a tray, kitchen in the background."
+    },
+    {
+      "id": "A025",
+      "category": "spatial",
+      "text": "A bird flying above two fishermen standing at the edge of a pier."
+    },
+    {
+      "id": "A026",
+      "category": "spatial",
+      "text": "A lamp standing between two armchairs, a rug beneath all three."
+    },
+    {
+      "id": "A027",
+      "category": "spatial",
+      "text": "Mountains in the distance behind a lake, a cabin at the near shore."
+    },
+    {
+      "id": "A028",
+      "category": "spatial",
+      "text": "A bicycle leaning against the right side of a red brick wall."
+    },
+    {
+      "id": "A029",
+      "category": "spatial",
+      "text": "A bowl of soup in the center of the table with bread on both sides."
+    },
+    {
+      "id": "A030",
+      "category": "spatial",
+      "text": "A kite high in the sky above children playing on a beach."
+    },
+    {
+      "id": "A031",
+      "category": "counting",
+      "text": "Exactly five white sheep standing in a green meadow."
+    },
+    {
+      "id": "A032",
+      "category": "counting",
+      "text": "Three red balloons tied to a park bench."
+    },
+    {
+      "id": "A033",
+      "category": "counting",
+      "text": "Seven colorful macarons arranged in a circle on a marble slab."
+    },
+    {
+      "id": "A034",
+      "category": "counting",
+      "text": "Two overlapping coffee cups, one behind the other."
+    },
+    {
+      "id": "A035",
+      "category": "counting",
+      "text": "Four chairs around a square wooden table."
+    },
+    {
+      "id": "A036",
+      "category": "counting",
+      "text": "Six orange koi fish swimming in a pond."
+    },
+    {
+      "id": "A037",
+      "category": "counting",
+      "text": "Nine candles of different heights on a birthday cake."
+    },
+    {
+      "id": "A038",
+      "category": "counting",
+      "text": "One lonely streetlight at a foggy intersection."
+    },
+    {
+      "id": "A039",
+      "category": "counting",
+      "text": "Twelve eggs in an open carton, one cracked."
+    },
+    {
+      "id": "A040",
+      "category": "counting",
+      "text": "Five runners crossing a finish line side by side."
+    },
+    {
+      "id": "A041",
+      "category": "people",
+      "text": "A young woman in a red raincoat holding a transparent umbrella on a rainy street."
+    },
+    {
+      "id": "A042",
+      "category": "people",
+      "text": "An elderly man with a gray beard reading a newspaper in a park."
+    },
+    {
+      "id": "A043",
+      "category": "people",
+      "text": "A chef in a white uniform plating a dessert with tweezers."
+    },
+    {
+      "id": "A044",
+      "category": "people",
+      "text": "Two children building a sandcastle at the beach."
+    },
+    {
+      "id": "A045",
+      "category": "people",
+      "text": "A dancer mid-leap in a dim rehearsal studio."
+    },
+    {
+      "id": "A046",
+      "category": "people",
+      "text": "A barista smiling behind an espresso machine."
+    },
+    {
+      "id": "A047",
+      "category": "people",
+      "text": "A firefighter carrying a coil of hose over one shoulder."
+    },
+    {
+      "id": "A048",
+      "category": "people",
+      "text": "A group of friends taking a selfie at a mountain overlook."
+    },
+    {
+      "id": "A049",
+      "category": "people",
+      "text": "A painter standing back to look at a large canvas in a sunlit atelier."
+    },
+    {
+      "id": "A050",
+      "category": "people",
+      "text": "A commuter asleep on a train, city lights passing the window."
+    },
+    {
+      "id": "A051",
+      "category": "style",
+      "text": "A watercolor painting of a small harbor village at sunrise."
+    },
+    {
+      "id": "A052",
+      "category": "style",
+      "text": "An oil painting of stormy seas in the style of romanticism."
+    },
+    {
+      "id": "A053",
+      "category": "style",
+      "text": "A pencil sketch of a mountain bicycle, crosshatched shading."
+    },
+    {
+      "id": "A054",
+      "category": "style",
+      "text": "A retro 1950s travel poster of a coastal town."
+    },
+    {
+      "id": "A055",
+      "category": "style",
+      "text": "A minimalist flat illustration of a city skyline, three colors only."
+    },
+    {
+      "id": "A056",
+      "category": "style",
+      "text": "An ukiyo-e woodblock print of waves and a sailing boat."
+    },
+    {
+      "id": "A057",
+      "category": "style",
+      "text": "A stained-glass window design of a peacock."
+    },
+    {
+      "id": "A058",
+      "category": "style",
+      "text": "A cyberpunk neon-lit alley in the rain."
+    },
+    {
+      "id": "A059",
+      "category": "style",
+      "text": "A child's crayon drawing of a family house and sun."
+    },
+    {
+      "id": "A060",
+      "category": "style",
+      "text": "An art-deco poster advertising a transatlantic flight."
+    },
+    {
+      "id": "A061",
+      "category": "lighting",
+      "text": "A glass sphere on black velvet lit by a single dramatic spotlight from the upper left."
+    },
+    {
+      "id": "A062",
+      "category": "lighting",
+      "text": "A portrait with soft window light from the right and deep shadow falloff."
+    },
+    {
+      "id": "A063",
+      "category": "lighting",
+      "text": "A forest path with god rays cutting through morning mist."
+    },
+    {
+      "id": "A064",
+      "category": "lighting",
+      "text": "A night market stall glowing with string lights."
+    },
+    {
+      "id": "A065",
+      "category": "lighting",
+      "text": "A still life with strong chiaroscuro, single candle lighting."
+    },
+    {
+      "id": "A066",
+      "category": "lighting",
+      "text": "A backlit silhouette of a person standing on a dune at sunset."
+    },
+    {
+      "id": "A067",
+      "category": "lighting",
+      "text": "A studio product shot of a perfume bottle with rim lighting."
+    },
+    {
+      "id": "A068",
+      "category": "lighting",
+      "text": "A snowy street at dusk under blue hour lighting."
+    },
+    {
+      "id": "A069",
+      "category": "lighting",
+      "text": "A stage performance lit by magenta and teal spotlights."
+    },
+    {
+      "id": "A070",
+      "category": "lighting",
+      "text": "A kitchen interior flooded with harsh midday sunlight."
+    },
+    {
+      "id": "A071",
+      "category": "long_detail",
+      "text": "An overhead flat-lay photograph of a craftsman's workbench: scattered brass screws, a vintage caliper, walnut wood shavings, a chisel with a worn handle, a folded blueprint, and a cup of black coffee, warm tungsten light, shallow depth of field."
+    },
+    {
+      "id": "A072",
+      "category": "long_detail",
+      "text": "A detailed cutaway illustration of a nineteenth-century steam locomotive showing the boiler, firebox, pistons and driver's cab, with hand-lettered labels."
+    },
+    {
+      "id": "A073",
+      "category": "long_detail",
+      "text": "A bustling ramen shop interior at night: steaming bowls on the counter, a chef slicing chashu, neon reflections on wet windows, chalkboard menu in Japanese."
+    },
+    {
+      "id": "A074",
+      "category": "long_detail",
+      "text": "A cross-section of a medieval castle with courtyards, armory, great hall, kitchen with turning spits, and banners hanging from stone walls."
+    },
+    {
+      "id": "A075",
+      "category": "long_detail",
+      "text": "An annotated botanical plate of a sunflower with root system, stem cross-section, leaf venation and seed head spiral, watercolor on cream paper."
+    },
+    {
+      "id": "A076",
+      "category": "long_detail",
+      "text": "A vintage control room filled with dials, toggle switches, paper gauges and a wall of status lamps, two engineers in shirtsleeves taking notes."
+    },
+    {
+      "id": "A077",
+      "category": "long_detail",
+      "text": "A floating used-book market on canal boats: crates of novels, hanging lanterns, a cat asleep on a stack of atlases, morning fog lifting."
+    },
+    {
+      "id": "A078",
+      "category": "long_detail",
+      "text": "A detailed map of a fictional island republic with compass rose, sea monsters, trade routes, three harbors and a snowcapped volcano."
+    },
+    {
+      "id": "A079",
+      "category": "long_detail",
+      "text": "A repair bay for vintage arcade machines: oscilloscope, soldering station, pixel-art posters, a half-open cabinet showing a CRT monitor."
+    },
+    {
+      "id": "A080",
+      "category": "long_detail",
+      "text": "A rooftop greenhouse restaurant at dusk: glass panels, hanging herbs, long communal table, city skyline glowing beyond, waiter carrying a tray."
+    },
+    {
+      "id": "A081",
+      "category": "text_en",
+      "text": "A white coffee mug with the text \"GOOD MORNING\" printed in bold black letters."
+    },
+    {
+      "id": "A082",
+      "category": "text_en",
+      "text": "A storefront sign that says \"FRESH BAKERY DAILY\" in large red letters."
+    },
+    {
+      "id": "A083",
+      "category": "text_en",
+      "text": "A motivational poster with the words \"STAY FOCUSED\" in white on a blue background."
+    },
+    {
+      "id": "A084",
+      "category": "text_en",
+      "text": "A vintage suitcase with a luggage tag reading \"PARIS 1937\"."
+    },
+    {
+      "id": "A085",
+      "category": "text_en",
+      "text": "A chalkboard menu that reads \"Today's Special: Tomato Soup -- $6\"."
+    },
+    {
+      "id": "A086",
+      "category": "text_en",
+      "text": "A delivery truck painted with the company name \"SWIFT LOGISTICS\"."
+    },
+    {
+      "id": "A087",
+      "category": "text_en",
+      "text": "A neon sign in a bar window that says \"OPEN LATE\"."
+    },
+    {
+      "id": "A088",
+      "category": "text_en",
+      "text": "A book cover with the title \"The Silent Observatory\" in silver serif font."
+    },
+    {
+      "id": "A089",
+      "category": "text_en",
+      "text": "A road work warning sign with the text \"DETOUR AHEAD\" in orange."
+    },
+    {
+      "id": "A090",
+      "category": "text_en",
+      "text": "A receipt lying on a counter showing the words \"TOTAL DUE: $42.50\"."
+    },
+    {
+      "id": "A091",
+      "category": "text_zh",
+      "text": "一张蓝色路牌，上面写着白色的中文汉字“人民路”。"
+    },
+    {
+      "id": "A092",
+      "category": "text_zh",
+      "text": "一张红色喜庆的海报，中间是大号金色汉字“开业大酬宾”，下方写着“全场八折”。"
+    },
+    {
+      "id": "A093",
+      "category": "text_zh",
+      "text": "一个白色马克杯，杯身印着黑色汉字“早安”。"
+    },
+    {
+      "id": "A094",
+      "category": "text_zh",
+      "text": "一块木制茶馆招牌，写着书法字“清心茶舍”。"
+    },
+    {
+      "id": "A095",
+      "category": "text_zh",
+      "text": "一张电影海报，标题是大字“星际旅人”，下方小字“10月1日全国上映”。"
+    },
+    {
+      "id": "A096",
+      "category": "text_zh",
+      "text": "一个地铁站指示牌，写着“1号线 人民广场方向”。"
+    },
+    {
+      "id": "A097",
+      "category": "text_zh",
+      "text": "一张书店橱窗贴纸，上面写着“新书推荐：时间的形状”。"
+    },
+    {
+      "id": "A098",
+      "category": "text_zh",
+      "text": "一块餐厅菜单黑板，写着“今日特价：红烧牛肉面 18元”。"
+    },
+    {
+      "id": "A099",
+      "category": "text_zh",
+      "text": "一张学校公告，标题是“期中考试安排”，日期写着“11月5日”。"
+    },
+    {
+      "id": "A100",
+      "category": "text_zh",
+      "text": "一个礼品盒上的金色标签，写着“生日快乐，小明”。"
+    }
+  ]
+}

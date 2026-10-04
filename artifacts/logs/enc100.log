@@ -1,0 +1,207 @@
+[O3r] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.5s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=39
+[O3r] output names (first/last): ['hidden_states.1', 'hidden_states.45', '547'] ... ['6093', '6093', 'out_38']
+[O3r][A001] seq=30 kept=16 emb=0.528s infer=1.415s
+[O3r][A002] seq=31 kept=17 emb=0.486s infer=0.515s
+[O3r][A003] seq=30 kept=16 emb=0.616s infer=0.495s
+[O3r][A004] seq=32 kept=18 emb=0.706s infer=0.494s
+[O3r][A005] seq=32 kept=18 emb=0.720s infer=0.469s
+[O3r][A006] seq=33 kept=19 emb=0.708s infer=0.480s
+[O3r][A007] seq=30 kept=16 emb=0.804s infer=0.436s
+[O3r][A008] seq=31 kept=17 emb=0.783s infer=0.507s
+[O3r][A009] seq=33 kept=19 emb=0.717s infer=0.498s
+[O3r][A010] seq=31 kept=17 emb=0.759s infer=0.517s
+[O3r][A011] seq=42 kept=28 emb=0.756s infer=0.636s
+[O3r][A012] seq=41 kept=27 emb=0.725s infer=0.604s
+[O3r][A013] seq=37 kept=23 emb=0.697s infer=0.529s
+[O3r][A014] seq=39 kept=25 emb=0.576s infer=0.577s
+[O3r][A015] seq=37 kept=23 emb=0.581s infer=0.516s
+[O3r][A016] seq=39 kept=25 emb=0.564s infer=0.564s
+[O3r][A017] seq=36 kept=22 emb=0.563s infer=0.528s
+[O3r][A018] seq=35 kept=21 emb=0.570s infer=0.533s
+[O3r][A019] seq=38 kept=24 emb=0.574s infer=0.539s
+[O3r][A020] seq=39 kept=25 emb=0.529s infer=0.529s
+[O3r][A021] seq=41 kept=27 emb=0.556s infer=0.538s
+[O3r][A022] seq=38 kept=24 emb=0.533s infer=0.513s
+[O3r][A023] seq=35 kept=21 emb=0.570s infer=0.505s
+[O3r][A024] seq=41 kept=27 emb=0.538s infer=0.590s
+[O3r][A025] seq=36 kept=22 emb=0.561s infer=0.529s
+[O3r][A026] seq=37 kept=23 emb=0.550s infer=0.599s
+[O3r][A027] seq=38 kept=24 emb=0.563s infer=0.538s
+[O3r][A028] seq=35 kept=21 emb=0.534s infer=0.524s
+[O3r][A029] seq=38 kept=24 emb=0.561s infer=0.536s
+[O3r][A030] seq=35 kept=21 emb=0.536s infer=0.506s
+[O3r][A031] seq=33 kept=19 emb=0.565s infer=0.479s
+[O3r][A032] seq=31 kept=17 emb=0.552s infer=0.452s
+[O3r][A033] seq=36 kept=22 emb=0.567s infer=0.520s
+[O3r][A034] seq=32 kept=18 emb=0.537s infer=0.452s
+[O3r][A035] seq=30 kept=16 emb=0.555s infer=0.431s
+[O3r][A036] seq=32 kept=18 emb=0.536s infer=0.438s
+[O3r][A037] seq=32 kept=18 emb=0.576s infer=0.432s
+[O3r][A038] seq=32 kept=18 emb=0.550s infer=0.437s
+[O3r][A039] seq=34 kept=20 emb=0.558s infer=0.501s
+[O3r][A040] seq=32 kept=18 emb=0.540s infer=0.463s
+[O3r][A041] seq=39 kept=25 emb=0.558s infer=0.585s
+[O3r][A042] seq=36 kept=22 emb=0.551s infer=0.535s
+[O3r][A043] seq=37 kept=23 emb=0.571s infer=0.530s
+[O3r][A044] seq=32 kept=18 emb=0.542s infer=0.454s
+[O3r][A045] seq=33 kept=19 emb=0.557s infer=0.525s
+[O3r][A046] seq=31 kept=17 emb=0.540s infer=0.473s
+[O3r][A047] seq=33 kept=19 emb=0.570s infer=0.469s
+[O3r][A048] seq=34 kept=20 emb=0.555s infer=0.441s
+[O3r][A049] seq=39 kept=25 emb=0.551s infer=0.474s
+[O3r][A050] seq=35 kept=21 emb=0.549s infer=0.438s
+[O3r][A051] seq=34 kept=20 emb=0.570s infer=0.436s
+[O3r][A052] seq=36 kept=22 emb=0.558s infer=0.437s
+[O3r][A053] seq=35 kept=21 emb=0.556s infer=0.439s
+[O3r][A054] seq=37 kept=23 emb=0.557s infer=0.464s
+[O3r][A055] seq=35 kept=21 emb=0.567s infer=0.439s
+[O3r][A056] seq=37 kept=23 emb=0.554s infer=0.500s
+[O3r][A057] seq=33 kept=19 emb=0.564s infer=0.436s
+[O3r][A058] seq=33 kept=19 emb=0.547s infer=0.395s
+[O3r][A059] seq=35 kept=21 emb=0.567s infer=0.493s
+[O3r][A060] seq=34 kept=20 emb=0.548s infer=0.493s
+[O3r][A061] seq=39 kept=25 emb=0.595s infer=0.554s
+[O3r][A062] seq=37 kept=23 emb=0.562s infer=0.530s
+[O3r][A063] seq=33 kept=19 emb=0.576s infer=0.514s
+[O3r][A064] seq=31 kept=17 emb=0.557s infer=0.440s
+[O3r][A065] seq=35 kept=21 emb=0.561s infer=0.452s
+[O3r][A066] seq=37 kept=23 emb=0.537s infer=0.507s
+[O3r][A067] seq=34 kept=20 emb=0.578s infer=0.452s
+[O3r][A068] seq=32 kept=18 emb=0.539s infer=0.428s
+[O3r][A069] seq=34 kept=20 emb=0.575s infer=0.467s
+[O3r][A070] seq=32 kept=18 emb=0.560s infer=0.429s
+[O3r][A071] seq=79 kept=65 emb=0.574s infer=0.944s
+[O3r][A072] seq=54 kept=40 emb=0.545s infer=0.651s
+[O3r][A073] seq=57 kept=43 emb=0.576s infer=0.701s
+[O3r][A074] seq=53 kept=39 emb=0.551s infer=0.631s
+[O3r][A075] seq=52 kept=38 emb=0.557s infer=0.593s
+[O3r][A076] seq=53 kept=39 emb=0.534s infer=0.626s
+[O3r][A077] seq=53 kept=39 emb=0.550s infer=0.612s
+[O3r][A078] seq=50 kept=36 emb=0.540s infer=0.603s
+[O3r][A079] seq=51 kept=37 emb=0.553s infer=0.597s
+[O3r][A080] seq=49 kept=35 emb=0.541s infer=0.591s
+[O3r][A081] seq=40 kept=26 emb=0.548s infer=0.518s
+[O3r][A082] seq=41 kept=27 emb=0.553s infer=0.516s
+[O3r][A083] seq=42 kept=28 emb=0.552s infer=0.516s
+[O3r][A084] seq=39 kept=25 emb=0.537s infer=0.459s
+[O3r][A085] seq=39 kept=25 emb=0.552s infer=0.491s
+[O3r][A086] seq=36 kept=22 emb=0.537s infer=0.437s
+[O3r][A087] seq=36 kept=22 emb=0.551s infer=0.437s
+[O3r][A088] seq=38 kept=24 emb=0.539s infer=0.488s
+[O3r][A089] seq=40 kept=26 emb=0.555s infer=0.513s
+[O3r][A090] seq=43 kept=29 emb=0.544s infer=0.543s
+[O3r][A091] seq=36 kept=22 emb=0.559s infer=0.440s
+[O3r][A092] seq=48 kept=34 emb=0.535s infer=0.547s
+[O3r][A093] seq=37 kept=23 emb=0.545s infer=0.487s
+[O3r][A094] seq=38 kept=24 emb=0.534s infer=0.464s
+[O3r][A095] seq=47 kept=33 emb=0.545s infer=0.554s
+[O3r][A096] seq=37 kept=23 emb=0.535s infer=0.443s
+[O3r][A097] seq=40 kept=26 emb=0.548s infer=0.481s
+[O3r][A098] seq=42 kept=28 emb=0.534s infer=0.533s
+[O3r][A099] seq=43 kept=29 emb=0.559s infer=0.538s
+[O3r][A100] seq=37 kept=23 emb=0.535s infer=0.506s
+done O3r
+O3R_100_DONE
+Loading weights:   0%|                                                                                                           | 0/750 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 750/750 [00:00<00:00, 9645.48it/s]
+[R0] loaded in 35.0s, VRAM alloc 16.34 GiB
+[R0][A001] seq=30 kept=16 t=1.850s
+[R0][A002] seq=31 kept=17 t=0.041s
+[R0][A003] seq=30 kept=16 t=0.040s
+[R0][A004] seq=32 kept=18 t=0.043s
+[R0][A005] seq=32 kept=18 t=0.039s
+[R0][A006] seq=33 kept=19 t=0.069s
+[R0][A007] seq=30 kept=16 t=0.047s
+[R0][A008] seq=31 kept=17 t=0.040s
+[R0][A009] seq=33 kept=19 t=0.043s
+[R0][A010] seq=31 kept=17 t=0.040s
+[R0][A011] seq=42 kept=28 t=0.043s
+[R0][A012] seq=41 kept=27 t=0.043s
+[R0][A013] seq=37 kept=23 t=0.043s
+[R0][A014] seq=39 kept=25 t=0.043s
+[R0][A015] seq=37 kept=23 t=0.073s
+[R0][A016] seq=39 kept=25 t=0.043s
+[R0][A017] seq=36 kept=22 t=0.043s
+[R0][A018] seq=35 kept=21 t=0.043s
+[R0][A019] seq=38 kept=24 t=0.043s
+[R0][A020] seq=39 kept=25 t=0.090s
+[R0][A021] seq=41 kept=27 t=0.081s
+[R0][A022] seq=38 kept=24 t=0.105s
+[R0][A023] seq=35 kept=21 t=0.091s
+[R0][A024] seq=41 kept=27 t=0.073s
+[R0][A025] seq=36 kept=22 t=0.090s
+[R0][A026] seq=37 kept=23 t=0.083s
+[R0][A027] seq=38 kept=24 t=0.087s
+[R0][A028] seq=35 kept=21 t=0.067s
+[R0][A029] seq=38 kept=24 t=0.044s
+[R0][A030] seq=35 kept=21 t=0.043s
+[R0][A031] seq=33 kept=19 t=0.082s
+[R0][A032] seq=31 kept=17 t=0.080s
+[R0][A033] seq=36 kept=22 t=0.073s
+[R0][A034] seq=32 kept=18 t=0.101s
+[R0][A035] seq=30 kept=16 t=0.097s
+[R0][A036] seq=32 kept=18 t=0.064s
+[R0][A037] seq=32 kept=18 t=0.061s
+[R0][A038] seq=32 kept=18 t=0.044s
+[R0][A039] seq=34 kept=20 t=0.043s
+[R0][A040] seq=32 kept=18 t=0.072s
+[R0][A041] seq=39 kept=25 t=0.116s
+[R0][A042] seq=36 kept=22 t=0.046s
+[R0][A043] seq=37 kept=23 t=0.068s
+[R0][A044] seq=32 kept=18 t=0.077s
+[R0][A045] seq=33 kept=19 t=0.043s
+[R0][A046] seq=31 kept=17 t=0.099s
+[R0][A047] seq=33 kept=19 t=0.058s
+[R0][A048] seq=34 kept=20 t=0.066s
+[R0][A049] seq=39 kept=25 t=0.059s
+[R0][A050] seq=35 kept=21 t=0.082s
+[R0][A051] seq=34 kept=20 t=0.080s
+[R0][A052] seq=36 kept=22 t=0.080s
+[R0][A053] seq=35 kept=21 t=0.075s
+[R0][A054] seq=37 kept=23 t=0.116s
+[R0][A055] seq=35 kept=21 t=0.100s
+[R0][A056] seq=37 kept=23 t=0.103s
+[R0][A057] seq=33 kept=19 t=0.098s
+[R0][A058] seq=33 kept=19 t=0.055s
+[R0][A059] seq=35 kept=21 t=0.089s
+[R0][A060] seq=34 kept=20 t=0.135s
+[R0][A061] seq=39 kept=25 t=0.094s
+[R0][A062] seq=37 kept=23 t=0.080s
+[R0][A063] seq=33 kept=19 t=0.100s
+[R0][A064] seq=31 kept=17 t=0.077s
+[R0][A065] seq=35 kept=21 t=0.085s
+[R0][A066] seq=37 kept=23 t=0.058s
+[R0][A067] seq=34 kept=20 t=0.102s
+[R0][A068] seq=32 kept=18 t=0.089s
+[R0][A069] seq=34 kept=20 t=0.080s
+[R0][A070] seq=32 kept=18 t=0.142s
+[R0][A071] seq=79 kept=65 t=0.060s
+[R0][A072] seq=54 kept=40 t=0.108s
+[R0][A073] seq=57 kept=43 t=0.132s
+[R0][A074] seq=53 kept=39 t=0.105s
+[R0][A075] seq=52 kept=38 t=0.122s
+[R0][A076] seq=53 kept=39 t=0.116s
+[R0][A077] seq=53 kept=39 t=0.059s
+[R0][A078] seq=50 kept=36 t=0.108s
+[R0][A079] seq=51 kept=37 t=0.052s
+[R0][A080] seq=49 kept=35 t=0.056s
+[R0][A081] seq=40 kept=26 t=0.104s
+[R0][A082] seq=41 kept=27 t=0.059s
+[R0][A083] seq=42 kept=28 t=0.102s
+[R0][A084] seq=39 kept=25 t=0.061s
+[R0][A085] seq=39 kept=25 t=0.061s
+[R0][A086] seq=36 kept=22 t=0.084s
+[R0][A087] seq=36 kept=22 t=0.089s
+[R0][A088] seq=38 kept=24 t=0.087s
+[R0][A089] seq=40 kept=26 t=0.064s
+[R0][A090] seq=43 kept=29 t=0.064s
+[R0][A091] seq=36 kept=22 t=0.061s
+[R0][A092] seq=48 kept=34 t=0.094s
+[R0][A093] seq=37 kept=23 t=0.066s
+[R0][A094] seq=38 kept=24 t=0.044s
+[R0][A095] seq=47 kept=33 t=0.044s
+[R0][A096] seq=37 kept=23 t=0.048s
+[R0][A097] seq=40 kept=26 t=0.074s
+[R0][A098] seq=42 kept=28 t=0.082s
+[R0][A099] seq=43 kept=29 t=0.098s
+[R0][A100] seq=37 kept=23 t=0.143s
+done R0

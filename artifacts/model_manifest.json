@@ -1,0 +1,177 @@
+{
+  "repo_id": "Qwen/Qwen-Image-2.1",
+  "snapshot_revision": "d26bb61231c349cf6b7896fa83353113880e1ba3",
+  "snapshot_path": "/valdata/hf/hub/models--Qwen--Qwen-Image-2.1/snapshots/d26bb61231c349cf6b7896fa83353113880e1ba3",
+  "source": "huggingface_hub snapshot_download via hf-mirror (proxy environment)",
+  "configs": {
+    "model_index.json": "cf1ecd104ea090855d60d8cec0895c1e9d6ee41b2f87e231b678beecd1cf7809",
+    "scheduler/scheduler_config.json": "5895f3a167c14a967fe9ac70c64924ae5acc79799e0679fd12907e594a713cd1",
+    "text_encoder/config.json": "6001331949f7f86ab6d791a80b12246d4f8da5159fa08c3e62368a39f36d63a9",
+    "text_encoder/generation_config.json": "4d9818c3d27895c0058828a5f68bc7a4de80c3ae1bcdac90936ce24178063f59",
+    "transformer/config.json": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+    "vae/config.json": "9785d527b278cb8b210e9f48a8028d92a4190968ce7e24c8fc85d9d1b82f6ba2",
+    "processor/tokenizer_config.json": "81ec7bb9530159b326c0bef1d0b6c33d392090524014ea3f0123a3c1eb9c2af5",
+    "processor/preprocessor_config.json": "93585062a80db5e8ca038efc7726a3e6411d9db948472d81d63c6303993be8c5",
+    "processor/special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "processor/tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "processor/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "processor/added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+    "processor/chat_template.jinja": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4"
+  },
+  "openvino_artifacts": {
+    "customer_int8": {
+      "path": "/workspace/qwen3vl-cpu-benchmark/models/qwen3vl-openvino-int8",
+      "files": {
+        "config.json": {
+          "sha256": "d0218965e48969b339f2f0e13002d34917d092a8cddeda7952d43a42f58dbd1d",
+          "bytes": 1513
+        },
+        "dl.log": {
+          "sha256": "703e6e1067e2aea84c9081ab97e146d3f30e12384acdb034ddb17709419428f8",
+          "bytes": 230
+        },
+        "openvino_config.json": {
+          "sha256": "7d91a227c3259a86eb59ae4dddfbd3996aa923af0d8463256b29162660438e89",
+          "bytes": 1176
+        },
+        "openvino_language_model.bin": {
+          "bytes": 7573989065,
+          "sha256": "755ff48c68db08a571aed331f0558f75be1d9ddb0fdeb95506a8a5eafc54b64d"
+        },
+        "openvino_language_model.xml": {
+          "sha256": "e09c1469532cbd83646f12deb7d3ca3085b159d84eba990b1b3da40d59915cbc",
+          "bytes": 3626340
+        },
+        "openvino_text_embeddings_model.bin": {
+          "bytes": 622633732,
+          "sha256": "391a745c125520cc3e7c29270017fccdc32f73135401229546a52c62a5c6b4d7"
+        },
+        "openvino_text_embeddings_model.xml": {
+          "sha256": "a75283a7e68c5c7b7c063a1426500e487d065c1b8cb66c915b86abf33ccdae45",
+          "bytes": 5742
+        },
+        "tokenizer_config.json": {
+          "sha256": "2f5750f0005aa83359351b68f1d6a07bca3caac443d572d39d269f1d437a7fd4",
+          "bytes": 10939
+        }
+      }
+    },
+    "customer_fp16": {
+      "path": "/root/models/qwen3vl-openvino-fp16",
+      "files": {
+        "config.json": {
+          "sha256": "d0218965e48969b339f2f0e13002d34917d092a8cddeda7952d43a42f58dbd1d",
+          "bytes": 1513
+        },
+        "dl.log": {
+          "sha256": "b95334c08a6d1825fd27e8895ba8fcab19816f8fc30951a7317c96d0fb1c44f6",
+          "bytes": 213
+        },
+        "openvino_language_model.bin": {
+          "bytes": 15136811461,
+          "sha256": "98cda0315dc7effaec34b74c047307602559abaa9ba71d9861016cfe57f305a4"
+        },
+        "openvino_language_model.xml": {
+          "sha256": "c6458ae3872bc797b235ce79b46e4f2cc3c29bd87d4c6d140fef539957e2a85b",
+          "bytes": 3253636
+        },
+        "openvino_text_embeddings_model.bin": {
+          "bytes": 1244659716,
+          "sha256": "cc9e4c1eb754709e6a82a2565694f2c1727461bd84e0fd3d4384a5d4d9d0f3fe"
+        },
+        "openvino_text_embeddings_model.xml": {
+          "sha256": "0ef337d632c48122f9a505436e5c472c1c66fc0731093917edd5e3d093d7a45d",
+          "bytes": 3191
+        }
+      }
+    },
+    "clean_fp32_export": {
+      "path": "/valdata/models/ov_clean_fp32",
+      "files": {
+        "conversion_manifest.json": {
+          "sha256": "63296c80f29d77e1c2537da2a2cd09caa624ed9e4f4ff805920135708168263b",
+          "bytes": 357
+        },
+        "language_model_fp32.bin": {
+          "bytes": 27784303597,
+          "sha256": "55852cbf8562603828af1e294db15843376d0033c1e56ecd14cbe7f41531bb10"
+        },
+        "language_model_fp32.xml": {
+          "sha256": "43e0ecf8f0011c61386c834d09692a9669a996df1ce2468589457ab5ebae77d2",
+          "bytes": 2756490
+        }
+      }
+    }
+  },
+  "text_encoder_weights": {
+    "config.json": {
+      "sha256": "6001331949f7f86ab6d791a80b12246d4f8da5159fa08c3e62368a39f36d63a9",
+      "bytes": 1517,
+      "hashed": true
+    },
+    "generation_config.json": {
+      "sha256": "4d9818c3d27895c0058828a5f68bc7a4de80c3ae1bcdac90936ce24178063f59",
+      "bytes": 213,
+      "hashed": true
+    },
+    "model-00001-of-00004.safetensors": {
+      "sha256": "dde00291b5f7fb92013895310a3da0ddba78674df9f10d505d375243dc01fc6f",
+      "bytes": 4998056552,
+      "hashed": true
+    },
+    "model-00002-of-00004.safetensors": {
+      "sha256": "9047faccc0a6d98496a52d55f27be1c94a9c259d1e283fbea0128d054a948d42",
+      "bytes": 4915962464,
+      "hashed": true
+    },
+    "model-00003-of-00004.safetensors": {
+      "sha256": "8c54187654c0176b73ae73785bf791dc9a14c9df7fb4310083a09d42048cb57e",
+      "bytes": 4915962496,
+      "hashed": true
+    },
+    "model-00004-of-00004.safetensors": {
+      "sha256": "5311532aaaeae3259eb6a7b2c600636be1159adf7ded35f53579f7d0e7d43cdd",
+      "bytes": 2704357976,
+      "hashed": true
+    },
+    "model.safetensors.index.json": {
+      "sha256": "859146bff8db1d617fca8b457a5223edff963bb70076b3645f2189fe0540a147",
+      "bytes": 67795,
+      "hashed": true
+    }
+  },
+  "transformer_weights": {
+    "config.json": {
+      "sha256": "56ae3281c4e6c2d1aa3658252d187488071815fd79bef15808bb0205fc1a2241",
+      "bytes": 370,
+      "hashed": true
+    },
+    "diffusion_pytorch_model-00001-of-00002.safetensors": {
+      "sha256": "9e6bc2d641e67bf277895ea8777141044a38f3edb7101bc469b2961dd7c36b4b",
+      "bytes": 9968332504,
+      "hashed": true
+    },
+    "diffusion_pytorch_model-00002-of-00002.safetensors": {
+      "sha256": "3aaf234dcbe128530479735854a346b5e3e66283b7c11db56f836bbd1c13ebaa",
+      "bytes": 4261951904,
+      "hashed": true
+    },
+    "diffusion_pytorch_model.safetensors.index.json": {
+      "sha256": "17987f6623b1c814d0ef55a137d99142b7b3b040eb1bf241b5575dd35af803a2",
+      "bytes": 30283,
+      "hashed": true
+    }
+  },
+  "vae_weights": {
+    "config.json": {
+      "sha256": "9785d527b278cb8b210e9f48a8028d92a4190968ce7e24c8fc85d9d1b82f6ba2",
+      "bytes": 2079,
+      "hashed": true
+    },
+    "diffusion_pytorch_model.safetensors": {
+      "sha256": "a07a1b7c4ee2966a1b3bdc37de9b4f983d56937e46619f709a80b6e490675417",
+      "bytes": 1350989512,
+      "hashed": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[O3r] openvino=2026.4.1-22982-e213a147257-releases/2026/4 read=0.1s compile=1.5s perf_hint=LATENCY exec_mode=ExecutionMode.ACCURACY inference_precision=<Type: 'float32'> outputs=39
+[O3r] output names (first/last): ['hidden_states.1', '384', 'hidden_states.91'] ... ['hidden_states.1657', 'hidden_states.1657', 'out_38']
+[O3r][C01] seq=32 kept=18 emb=0.519s infer=1.397s
+[O3r][C02] seq=42 kept=28 emb=0.503s infer=0.562s
+[O3r][C03] seq=41 kept=27 emb=0.560s infer=0.532s
+[O3r][C04] seq=33 kept=19 emb=0.535s infer=0.426s
+[O3r][C05] seq=39 kept=25 emb=0.555s infer=0.492s
+[O3r][C06] seq=34 kept=20 emb=0.541s infer=0.429s
+[O3r][C07] seq=39 kept=25 emb=0.549s infer=0.507s
+[O3r][C08] seq=79 kept=65 emb=0.552s infer=0.938s
+[O3r][C09] seq=41 kept=27 emb=0.554s infer=0.517s
+[O3r][C10] seq=48 kept=34 emb=0.548s infer=0.586s
+done O3r

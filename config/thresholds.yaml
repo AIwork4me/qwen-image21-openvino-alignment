@@ -1,0 +1,34 @@
+# Empirically calibrated thresholds — derived from measured reference distributions
+# (Section 26 policy: no arbitrary thresholds; these document the measured bands).
+#
+# Measured facts (smoke+canary suites, 13 prompts):
+#   R0 vs R0R (ROCm repeatability)        : rel_l2 = 0.0            (bitwise exact)
+#   R1 vs O0 (fp32 GPU vs fp32 OV)        : rel_l2 ~ 8e-6           (conversion/runtime aligned)
+#   O0 vs O1F (fp16 storage)              : rel_l2 ~ 5.7e-5
+#   O0 vs O1 (runtime bf16)               : rel_l2 ~ 1.3e-2
+#   R0 vs R1 (GPU bf16 vs fp32)           : rel_l2 ~ 5.3e-2  cos ~ 0.9987
+#   O0 vs O3/O3r (INT8 quantization)      : rel_l2 ~ 7.0e-2  cos ~ 0.9976
+#   R0 vs O3/O3r (reference vs INT8)      : rel_l2 ~ 9.7e-2  cos ~ 0.9958
+#
+# Engineering interpretation bands (documented judgment, not measured fact):
+embedding_rel_l2:
+  aligned_bitwise: 0.0
+  conversion_level: 1.0e-4       # < 0.01% : conversion/runtime equivalence
+  precision_level: 2.0e-2        # < 2%    : floating-point precision effects
+  quantization_level: 1.5e-1     # < 15%   : quantization noise (bf16-ref envelope included)
+  regression_suspect: 3.0e-1     # > 30%   : exceeds all measured reference deltas
+
+diffusion_final_latent_rel_l2:
+  note: >
+    Final-image divergence is NOT a linear function of embedding error (trajectory
+    sensitivity). Calibrated by perturbation experiment: random norm-matched
+    embedding deltas of the same magnitude as the OV-INT8 delta produce comparable
+    or larger final-image divergence. Interpret image differences jointly with
+    semantic/quality metrics, never alone.
+
+text_rendering:
+  cer_regression_if: "median CER(OV) - median CER(ROCm) > 0.05 on text prompts"
+
+quality_regression_if: >
+  (median LPIPS worsening > 0.05) OR (median CLIPScore drop > 2 points) OR
+  (median CER worsening > 0.05) on the 100-prompt suite — none observed in canary.

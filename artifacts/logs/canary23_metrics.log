@@ -1,0 +1,104 @@
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+{'tag': 'canary_C01_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.8351', 'ssim': '0.9934', 'lpips': '0.0044'}
+{'tag': 'canary_C02_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.9835', 'ssim': '0.9224', 'lpips': '0.0753'}
+{'tag': 'canary_C03_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.7919', 'ssim': '0.9722', 'lpips': '0.0277'}
+{'tag': 'canary_C04_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.6212', 'ssim': '0.9412', 'lpips': '0.0530'}
+{'tag': 'canary_C05_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '34.3915', 'ssim': '0.9840', 'lpips': '0.0149'}
+{'tag': 'canary_C06_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.5480', 'ssim': '0.9589', 'lpips': '0.0570'}
+{'tag': 'canary_C07_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.2639', 'ssim': '0.9822', 'lpips': '0.0173'}
+{'tag': 'canary_C08_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.0278', 'ssim': '0.9186', 'lpips': '0.0880'}
+{'tag': 'canary_C09_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '19.8725', 'ssim': '0.8279', 'lpips': '0.1418'}
+{'tag': 'canary_C10_s20261002_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.7867', 'ssim': '0.9482', 'lpips': '0.0289'}
+{
+  "psnr": {
+    "count": 10,
+    "mean": 28.412209455722415,
+    "std": 5.631082286728957,
+    "median": 28.66734703318251,
+    "p5": 21.10942662054684,
+    "p25": 23.99456577230317,
+    "p75": 32.991584494018525,
+    "p95": 36.678085142612765,
+    "min": 19.87250870843188,
+    "max": 37.83511412673348
+  },
+  "ssim": {
+    "count": 10,
+    "mean": 0.9449112888659478,
+    "std": 0.04595937404082518,
+    "median": 0.9535840619926084,
+    "p5": 0.8687241443208984,
+    "p25": 0.9271149637067417,
+    "p75": 0.9796798068334664,
+    "p95": 0.989167229472125,
+    "min": 0.8278963090809944,
+    "max": 0.9933704906343932
+  },
+  "lpips": {
+    "count": 10,
+    "mean": 0.05081267175264657,
+    "std": 0.03985051464525758,
+    "median": 0.040929174050688744,
+    "p5": 0.009119147225283087,
+    "p25": 0.019889866467565298,
+    "p75": 0.07072525937110186,
+    "p95": 0.11755902022123331,
+    "min": 0.0043902830220758915,
+    "max": 0.1417701542377472
+  }
+}
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+{'tag': 'canary_C01_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.6778', 'ssim': '0.9278', 'lpips': '0.1215'}
+{'tag': 'canary_C02_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.8402', 'ssim': '0.9259', 'lpips': '0.0897'}
+{'tag': 'canary_C03_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.0387', 'ssim': '0.9192', 'lpips': '0.0613'}
+{'tag': 'canary_C04_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.6402', 'ssim': '0.9662', 'lpips': '0.0330'}
+{'tag': 'canary_C05_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.9312', 'ssim': '0.9541', 'lpips': '0.0473'}
+{'tag': 'canary_C06_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '39.3216', 'ssim': '0.9904', 'lpips': '0.0079'}
+{'tag': 'canary_C07_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '42.3837', 'ssim': '0.9882', 'lpips': '0.0047'}
+{'tag': 'canary_C08_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.8990', 'ssim': '0.8914', 'lpips': '0.1098'}
+{'tag': 'canary_C09_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.9251', 'ssim': '0.8830', 'lpips': '0.0542'}
+{'tag': 'canary_C10_s20261003_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.3888', 'ssim': '0.9750', 'lpips': '0.0199'}
+{
+  "psnr": {
+    "count": 10,
+    "mean": 28.704646277991934,
+    "std": 6.464172702452054,
+    "median": 27.782646905282423,
+    "p5": 22.750886387364417,
+    "p25": 23.933945691144473,
+    "p75": 28.27443402391306,
+    "p95": 41.00577697373592,
+    "min": 22.6778181866676,
+    "max": 42.383724344177686
+  },
+  "ssim": {
+    "count": 10,
+    "mean": 0.9421333655219378,
+    "std": 0.03650332501519596,
+    "median": 0.9409959086621686,
+    "p5": 0.8867588301324949,
+    "p25": 0.9209020324858904,
+    "p75": 0.9728184050438587,
+    "p95": 0.9894239430139005,
+    "min": 0.8829547563643337,
+    "max": 0.9904129389582724
+  },
+  "lpips": {
+    "count": 10,
+    "mean": 0.05491610667668283,
+    "std": 0.03897422060724241,
+    "median": 0.0507508609443903,
+    "p5": 0.006115468428470194,
+    "p25": 0.023189805448055267,
+    "p75": 0.08256890065968037,
+    "p95": 0.11621162071824073,
+    "min": 0.004688981454819441,
+    "max": 0.12148140370845795
+  }
+}

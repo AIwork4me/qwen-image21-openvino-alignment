@@ -1,0 +1,6 @@
+torch: 2.13.0+rocm7.14.0
+torch.version.hip: 7.14.60850
+cuda available: True
+device: AMD Radeon Pro W7900D
+gcnArchName: gfx1100
+total_memory_GiB: 47.984375

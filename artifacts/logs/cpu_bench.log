@@ -1,0 +1,11 @@
+[O0][P_short] n=25 cold=7.938s warm_p50=0.834s p95=0.896s
+[O0][P_med] n=67 cold=1.330s warm_p50=1.074s p95=1.129s
+[O0][P_long] n=171 cold=2.339s warm_p50=2.492s p95=2.516s
+[O1][P_short] n=25 cold=5.135s warm_p50=0.387s p95=0.400s
+[O1][P_med] n=67 cold=0.949s warm_p50=0.919s p95=0.965s
+[O1][P_long] n=171 cold=1.399s warm_p50=1.330s p95=1.372s
+[O3r][P_short] n=25 cold=3.587s warm_p50=0.218s p95=0.276s
+[O3r][P_med] n=67 cold=0.796s warm_p50=0.711s p95=0.792s
+[O3r][P_long] n=171 cold=1.308s warm_p50=1.080s p95=1.208s
+saved cpu_performance.json
+CPU_BENCH_DONE

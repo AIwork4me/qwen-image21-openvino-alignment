@@ -1,0 +1,20 @@
+{
+  "torch": "2.13.0+rocm7.14.0",
+  "torch_hip": "7.14.60850",
+  "cuda_available": true,
+  "gpu_name": "AMD Radeon Pro W7900D",
+  "gcn_arch": "gfx1100",
+  "vram_gib": 47.984375,
+  "openvino": "2026.4.1-22982-e213a147257-releases/2026/4",
+  "transformers": "5.18.0",
+  "diffusers": "0.40.0",
+  "optimum": "?",
+  "nncf": "3.4.0",
+  "numpy": "2.1.2",
+  "safetensors": "0.8.0",
+  "PIL": "11.0.0",
+  "tokenizers": "0.23.2",
+  "accelerate": "1.13.0",
+  "huggingface_hub": "1.33.0",
+  "rocm_userspace": "$ readlink -f /opt/rocm\n--- stdout ---\n/opt/rocm-7.14.0\n\n--- stderr ---"
+}

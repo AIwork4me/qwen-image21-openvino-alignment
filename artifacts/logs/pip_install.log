@@ -1,0 +1,169 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting nncf
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/16/8b/4c1f567ae289c36e48557ec9889c0d3b153e05cf8b043e342939e494a5d9/nncf-3.4.0-py3-none-any.whl (797 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.3/797.3 kB 11.4 MB/s  0:00:00
+Collecting diffusers
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/db/df/ffb593ebed2a068d2d6be44261283f39a6b809c0fcdfdcafbd448cbeec77/diffusers-0.40.0-py3-none-any.whl (5.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 53.9 MB/s  0:00:00
+Collecting lpips
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9b/13/1df50c7925d9d2746702719f40e864f51ed66f307b20ad32392f1ad2bb87/lpips-0.1.4-py3-none-any.whl (53 kB)
+Collecting optimum[openvino]
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8c/f9/a16609b4e4fc592653d9f2a0413689da686a94d0040f3a2fabfff5b5894c/optimum-2.3.0-py3-none-any.whl (160 kB)
+Requirement already satisfied: transformers>=4.29 in /opt/venv/lib/python3.12/site-packages (from optimum[openvino]) (5.18.0)
+Requirement already satisfied: torch>=1.11 in /opt/venv/lib/python3.12/site-packages (from optimum[openvino]) (2.13.0+rocm7.14.0)
+Requirement already satisfied: packaging in /opt/venv/lib/python3.12/site-packages (from optimum[openvino]) (26.0)
+Requirement already satisfied: numpy in /opt/venv/lib/python3.12/site-packages (from optimum[openvino]) (2.1.2)
+Requirement already satisfied: huggingface_hub>=0.8.0 in /opt/venv/lib/python3.12/site-packages (from optimum[openvino]) (1.33.0)
+Collecting optimum-intel>=1.23.0 (from optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/76/02/ab4c4d7efb1799ac1f86f790f37e541c4dac3d6e39c6c248fbce560e0c4b/optimum_intel-2.2.0-py3-none-any.whl (479 kB)
+Requirement already satisfied: networkx<=3.6.1,>=2.6 in /opt/venv/lib/python3.12/site-packages (from nncf) (2.8.8)
+Requirement already satisfied: ninja<1.14,>=1.10.0.post2 in /opt/venv/lib/python3.12/site-packages (from nncf) (1.13.0)
+Collecting openvino-telemetry>=2023.2.0 (from nncf)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/3b/ac/5ab0ca0aa269ad3c73f7bfc3801b10e5f56f75a31bf68c1ae8bd51cf70a4/openvino_telemetry-2025.2.0-py3-none-any.whl (25 kB)
+Requirement already satisfied: psutil in /opt/venv/lib/python3.12/site-packages (from nncf) (7.1.0)
+Collecting pydot<=4.0.1,>=1.4.1 (from nncf)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7e/32/a7125fb28c4261a627f999d5fb4afff25b523800faed2c30979949d6facd/pydot-4.0.1-py3-none-any.whl (37 kB)
+Requirement already satisfied: rich>=13.5.2 in /opt/venv/lib/python3.12/site-packages (from nncf) (14.3.3)
+Requirement already satisfied: safetensors>=0.4.1 in /opt/venv/lib/python3.12/site-packages (from nncf) (0.8.0)
+Requirement already satisfied: scikit-learn>=0.24.0 in /opt/venv/lib/python3.12/site-packages (from nncf) (1.8.0)
+Requirement already satisfied: scipy>=1.3.2 in /opt/venv/lib/python3.12/site-packages (from nncf) (1.14.1)
+Requirement already satisfied: tabulate>=0.9.0 in /opt/venv/lib/python3.12/site-packages (from nncf) (0.9.0)
+Requirement already satisfied: pyparsing>=3.1.0 in /opt/venv/lib/python3.12/site-packages (from pydot<=4.0.1,>=1.4.1->nncf) (3.3.2)
+Collecting importlib_metadata (from diffusers)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b3/55/ecca97ae19075f1fac62def77731e7f535e6c1fb8f92ff08160c5e6dade8/importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Requirement already satisfied: filelock in /opt/venv/lib/python3.12/site-packages (from diffusers) (3.20.0)
+Requirement already satisfied: httpx<1.0.0 in /opt/venv/lib/python3.12/site-packages (from diffusers) (0.28.1)
+Requirement already satisfied: regex!=2019.12.17 in /opt/venv/lib/python3.12/site-packages (from diffusers) (2026.2.28)
+Requirement already satisfied: requests in /opt/venv/lib/python3.12/site-packages (from diffusers) (2.32.5)
+Requirement already satisfied: Pillow in /opt/venv/lib/python3.12/site-packages (from diffusers) (11.0.0)
+Requirement already satisfied: anyio in /opt/venv/lib/python3.12/site-packages (from httpx<1.0.0->diffusers) (4.12.1)
+Requirement already satisfied: certifi in /opt/venv/lib/python3.12/site-packages (from httpx<1.0.0->diffusers) (2026.2.25)
+Requirement already satisfied: httpcore==1.* in /opt/venv/lib/python3.12/site-packages (from httpx<1.0.0->diffusers) (1.0.9)
+Requirement already satisfied: idna in /opt/venv/lib/python3.12/site-packages (from httpx<1.0.0->diffusers) (3.20)
+Requirement already satisfied: h11>=0.16 in /opt/venv/lib/python3.12/site-packages (from httpcore==1.*->httpx<1.0.0->diffusers) (0.16.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (8.5.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (2025.9.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (1.6.0)
+Requirement already satisfied: pyyaml>=5.1 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (6.0.3)
+Requirement already satisfied: tqdm>=4.42.1 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (4.67.3)
+Requirement already satisfied: typing-extensions>=4.1.0 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (4.15.0)
+Requirement already satisfied: torchvision>=0.2.1 in /opt/venv/lib/python3.12/site-packages (from lpips) (0.28.0+rocm7.14.0)
+Collecting transformers>=4.29 (from optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/29/fb/162a66789c65e5afa3b051309240c26bf37fbc8fea285b4546ae747995a2/transformers-5.5.4-py3-none-any.whl (10.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 104.0 MB/s  0:00:00
+Requirement already satisfied: setuptools in /opt/venv/lib/python3.12/site-packages (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino]) (79.0.1)
+INFO: pip is looking at multiple versions of optimum-intel to determine which version is compatible with other requirements. This could take a while.
+Collecting optimum-intel>=1.23.0 (from optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/66/a4/d969866a78e854dcf231f2007f6bca9947f684b83bf72ed8ff5825a21c65/optimum_intel-2.1.0-py3-none-any.whl (414 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c3/c2/5dd4d694f536cd181c6df25e054aaa5f00e6691bd1d816d05be909c4c105/optimum_intel-2.0.0-py3-none-any.whl (389 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e7/f9/5f11670f3f92a9ec23e100c44abb65361045d118e0b7d2989a74598fbd62/optimum_intel-1.27.0-py3-none-any.whl (371 kB)
+Collecting optimum-onnx~=0.1.0 (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/41/89/4be9d226bc74fd0eb405d1efea62e86d6f0f31841dae9c5898ee12eb482f/optimum_onnx-0.1.0-py3-none-any.whl (194 kB)
+Collecting transformers>=4.29 (from optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/03/b8/e484ef633af3887baeeb4b6ad12743363af7cce68ae51e938e00aaa0529d/transformers-4.57.6-py3-none-any.whl (12.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 90.2 MB/s  0:00:00
+INFO: pip is looking at multiple versions of optimum-onnx to determine which version is compatible with other requirements. This could take a while.
+Collecting optimum-intel>=1.23.0 (from optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9d/78/b146d7d3d06d6d7ff52e8b7dfa0d06215f786bc7b37319bfa6e854ed5c38/optimum_intel-1.26.1-py3-none-any.whl (359 kB)
+Collecting optimum-onnx==0.0.* (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/cd/e10e57554e97853182aacca1eb00352b2e4b8479eb3100291d5f6327db72/optimum_onnx-0.0.3-py3-none-any.whl (192 kB)
+Collecting transformers>=4.29 (from optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fa/0a/8791a6ee0529c45f669566969e99b75e2ab20eb0bfee8794ce295c18bdad/transformers-4.55.4-py3-none-any.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 87.9 MB/s  0:00:00
+Collecting optimum-onnx==0.0.* (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9d/74/dac954f6f639ed1631ad3ce8bd50cfe34194cbcd982c828dbf7a043874e7/optimum_onnx-0.0.2-py3-none-any.whl (192 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8a/f3/ff8eca0121415c8057229dba7f1c839cc78bc3f03687c7cfc6230b32311f/optimum_onnx-0.0.1-py3-none-any.whl (192 kB)
+INFO: pip is still looking at multiple versions of optimum-intel to determine which version is compatible with other requirements. This could take a while.
+Collecting optimum-intel>=1.23.0 (from optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6d/91/9faea54fad67a1c3e5e2085bc5389319626c2a65f654f3743978bac30166/optimum_intel-1.26.0-py3-none-any.whl (359 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/de/ba/b5c56e042ea9930e829e337ebf8a3d85155a4186a55f8198b030fa238741/optimum_intel-1.25.2-py3-none-any.whl (359 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a6/4e/a1e5f439309d9b2cfb3bf966542d655aa819cd7e5738b5b42d5b4121bee3/optimum_intel-1.25.1-py3-none-any.whl (359 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fb/7c/6d32b30ddbca07ede52e070bd4ae07b303acb2f2d9b8ee642028cc0ee5d6/optimum_intel-1.25.0-py3-none-any.whl (358 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/69/9f/05439d5db0794095a64b37adc522020bc201fe8f8cf4d2c3b1cd4dde4f38/optimum_intel-1.24.0-py3-none-any.whl (348 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f2/9b/bb5252fb5b9416a600cc2b91787751011a22316f43e79bc8eecb6c105643/optimum_intel-1.23.1-py3-none-any.whl (342 kB)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0f/09/e1a957c433a78a204da7e566999b00184a1e6fdf28197e3299a40b844a34/optimum_intel-1.23.0-py3-none-any.whl (342 kB)
+Collecting diffusers
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3f/3f/7469c46e9d22307ea686bab687d70e6bf328722952f9d10339f5e913e608/diffusers-0.39.0-py3-none-any.whl (5.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 100.4 MB/s  0:00:00
+Collecting huggingface_hub>=0.8.0 (from optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4f/85/b505a99a133d9f99d21af182af416e9baef70bdeef019983479651e494c2/huggingface_hub-1.21.0-py3-none-any.whl (721 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 721.1/721.1 kB 127.4 MB/s  0:00:00
+Collecting openvino>=2026.0 (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ec/3a/2a173ac1ad749ff0b041788eefc1ade0d410231fedfc43f77474f3b806cc/openvino-2026.4.1-22982-cp312-cp312-manylinux_2_28_x86_64.whl (59.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.1/59.1 MB 89.7 MB/s  0:00:00
+Collecting openvino-tokenizers>=2026.0 (from optimum-intel>=1.23.0->optimum-intel[openvino]>=1.23.0; extra == "openvino"->optimum[openvino])
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8d/63/03b056370f6fa951256a1190b56e582b9315cab559e5338b3133b6eb87b1/openvino_tokenizers-2026.4.1.0-py3-none-manylinux_2_28_x86_64.whl (1.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 162.1 MB/s  0:00:00
+Collecting requests (from diffusers)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl (73 kB)
+Requirement already satisfied: typer<0.26.0,>=0.20.0 in /opt/venv/lib/python3.12/site-packages (from huggingface_hub>=0.8.0->optimum[openvino]) (0.24.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/venv/lib/python3.12/site-packages (from requests->diffusers) (3.4.5)
+Requirement already satisfied: urllib3<3,>=1.26 in /opt/venv/lib/python3.12/site-packages (from requests->diffusers) (2.6.3)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers>=4.29->optimum[openvino])
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/2e/76/932be4b50ef6ccedf9d3c6639b056a967a86258c6d9200643f01269211ca/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+Requirement already satisfied: shellingham>=1.3.0 in /opt/venv/lib/python3.12/site-packages (from typer<0.26.0,>=0.20.0->huggingface_hub>=0.8.0->optimum[openvino]) (1.5.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/venv/lib/python3.12/site-packages (from typer<0.26.0,>=0.20.0->huggingface_hub>=0.8.0->optimum[openvino]) (0.0.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /opt/venv/lib/python3.12/site-packages (from rich>=13.5.2->nncf) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/venv/lib/python3.12/site-packages (from rich>=13.5.2->nncf) (2.15.0)
+Requirement already satisfied: mdurl~=0.1 in /opt/venv/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.5.2->nncf) (0.1.2)
+Requirement already satisfied: joblib>=1.3.0 in /opt/venv/lib/python3.12/site-packages (from scikit-learn>=0.24.0->nncf) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.2.0 in /opt/venv/lib/python3.12/site-packages (from scikit-learn>=0.24.0->nncf) (3.6.0)
+Requirement already satisfied: sympy>=1.13.3 in /opt/venv/lib/python3.12/site-packages (from torch>=1.11->optimum[openvino]) (1.13.3)
+Requirement already satisfied: jinja2 in /opt/venv/lib/python3.12/site-packages (from torch>=1.11->optimum[openvino]) (3.1.6)
+Requirement already satisfied: rocm==7.14.0 in /opt/venv/lib/python3.12/site-packages (from rocm[libraries]==7.14.0->torch>=1.11->optimum[openvino]) (7.14.0)
+Requirement already satisfied: triton==3.8.0+git4cff872c.rocm7.14.0 in /opt/venv/lib/python3.12/site-packages (from torch>=1.11->optimum[openvino]) (3.8.0+git4cff872c.rocm7.14.0)
+Requirement already satisfied: rocm-bootstrap in /opt/venv/lib/python3.12/site-packages (from torch>=1.11->optimum[openvino]) (0.1.0)
+Requirement already satisfied: rocm-sdk-core==7.14.0 in /opt/venv/lib/python3.12/site-packages (from rocm==7.14.0->rocm[libraries]==7.14.0->torch>=1.11->optimum[openvino]) (7.14.0)
+Requirement already satisfied: rocm-sdk-libraries==7.14.0 in /opt/venv/lib/python3.12/site-packages (from rocm[libraries]==7.14.0->torch>=1.11->optimum[openvino]) (7.14.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/venv/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=1.11->optimum[openvino]) (1.3.0)
+Collecting zipp>=3.20 (from importlib_metadata->diffusers)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3a/13/547360d81e6d88d58492968ffda9f9542854f11310ee556fef14260cc886/zipp-4.1.0-py3-none-any.whl (10 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/venv/lib/python3.12/site-packages (from jinja2->torch>=1.11->optimum[openvino]) (3.0.3)
+Installing collected packages: openvino-telemetry, zipp, requests, pydot, openvino, openvino-tokenizers, importlib_metadata, nncf, huggingface_hub, tokenizers, diffusers, transformers, optimum, optimum-intel, lpips
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.5
+    Uninstalling requests-2.32.5:
+      Successfully uninstalled requests-2.32.5
+  Attempting uninstall: huggingface_hub
+    Found existing installation: huggingface_hub 1.33.0
+    Uninstalling huggingface_hub-1.33.0:
+      Successfully uninstalled huggingface_hub-1.33.0
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.23.2
+    Uninstalling tokenizers-0.23.2:
+      Successfully uninstalled tokenizers-0.23.2
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.18.0
+    Uninstalling transformers-5.18.0:
+      Successfully uninstalled transformers-5.18.0
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires amd-quark==0.12.post1, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires fastsafetensors>=0.3.3, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires mooncake-transfer-engine-rocm>=0.3.13, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires opentelemetry-api>=1.27.0, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires opentelemetry-exporter-otlp>=1.27.0, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires opentelemetry-sdk>=1.27.0, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires opentelemetry-semantic-conventions-ai>=0.4.1, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires oss-harmony>=0.0.11, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires tilelang==0.1.10, which is not installed.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires aiohttp>=3.14.3, but you have aiohttp 3.13.3 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires apache-tvm-ffi==0.1.11, but you have apache-tvm-ffi 0.1.14.post1 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires filelock>=3.20.3, but you have filelock 3.20.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires huggingface_hub>=1.31.0, but you have huggingface-hub 1.21.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires llguidance<1.8.0,>=1.7.0; platform_machine == "x86_64" or platform_machine == "arm64" or platform_machine == "aarch64" or platform_machine == "ppc64le" or platform_machine == "s390x", but you have llguidance 1.3.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires mcp<3.0.0,>=2.0.0, but you have mcp 1.26.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires mistral_common[image]>=1.11.6, but you have mistral-common 1.10.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires model-hosting-container-standards<1.0.0,>=0.1.14, but you have model-hosting-container-standards 0.1.13 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires numba==0.65.0, but you have numba 0.61.2 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires outlines_core==0.2.14, but you have outlines-core 0.2.11 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires pillow>=12.3.0, but you have pillow 11.0.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires prometheus-fastapi-instrumentator>=8.0.0, but you have prometheus-fastapi-instrumentator 7.1.0 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires runai-model-streamer[azure,gcs,s3]==0.15.7, but you have runai-model-streamer 0.15.3 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires starlette>=1.0.1, but you have starlette 0.52.1 which is incompatible.
+vllm 0.30.1rc1.dev541+g16ce8ac88.rocm721 requires transformers>=5.10.4, but you have transformers 5.5.4 which is incompatible.
+Successfully installed diffusers-0.39.0 huggingface_hub-1.21.0 importlib_metadata-9.0.1 lpips-0.1.4 nncf-3.4.0 openvino-2026.4.1 openvino-telemetry-2025.2.0 openvino-tokenizers-2026.4.1.0 optimum-2.3.0 optimum-intel-2.2.0 pydot-4.0.1 requests-2.34.2 tokenizers-0.22.2 transformers-5.5.4 zipp-4.1.0
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip

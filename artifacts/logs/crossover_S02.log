@@ -1,0 +1,40 @@
+Multiple distributions found for package optimum. Picked distribution: optimum-intel
+/opt/venv/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|                                                                                              | 0/5 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|                                                                                                   | 0/2 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 154.51it/s]
+Loading pipeline components...:  60%|███████████████████████████████████████████████████▌                                  | 3/5 [00:00<00:00,  5.25it/s]Loading pipeline components...:  80%|████████████████████████████████████████████████████████████████████▊                 | 4/5 [00:00<00:00,  4.80it/s]
+Loading weights:   0%|                                                                                                           | 0/750 [00:00<?, ?it/s][ALoading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 750/750 [00:00<00:00, 10704.71it/s]
+Loading pipeline components...: 100%|██████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  4.78it/s]Loading pipeline components...: 100%|██████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  4.86it/s]
+[R0] ran to step 25
+[O3] ran to step 25
+[A_ref] continued 25->40
+[B_swap_cond] continued 25->40
+[C_swap_latent] continued 25->40
+[D_ov] continued 25->40
+{
+  "A_ref|B_swap_cond": {
+    "cosine": 0.9999944628773908,
+    "rel_l2": 0.00333071796948529
+  },
+  "A_ref|C_swap_latent": {
+    "cosine": 0.9828187051225891,
+    "rel_l2": 0.18518143325358083
+  },
+  "A_ref|D_ov": {
+    "cosine": 0.9828214626328353,
+    "rel_l2": 0.18516174758446938
+  },
+  "B_swap_cond|C_swap_latent": {
+    "cosine": 0.9828161312978259,
+    "rel_l2": 0.18520707897026426
+  },
+  "B_swap_cond|D_ov": {
+    "cosine": 0.9828189822258155,
+    "rel_l2": 0.1851868422425396
+  },
+  "C_swap_latent|D_ov": {
+    "cosine": 0.9999947240054152,
+    "rel_l2": 0.0032488370821718575
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "significant_jumps": [
+    [
+      36,
+      0.0685311740540819,
+      0.015970935143059917
+    ]
+  ],
+  "worst_layer_by_rel_l2": 36
+}
+saved /workspace/qwen-image21-openvino-alignment/artifacts/metrics/layer_alignment_O0_vs_O3r.csv
+{
+  "significant_jumps": [
+    [
+      36,
+      0.0953011549755606,
+      0.03279386792580521
+    ]
+  ],
+  "worst_layer_by_rel_l2": 36
+}
+saved /workspace/qwen-image21-openvino-alignment/artifacts/metrics/layer_alignment_R0_vs_O3r.csv
+{
+  "significant_jumps": [
+    [
+      36,
+      0.09666663447864404,
+      0.03285969512118361
+    ]
+  ],
+  "worst_layer_by_rel_l2": 36
+}
+saved /workspace/qwen-image21-openvino-alignment/artifacts/metrics/layer_alignment_R0_vs_O3r.csv
+COMPARE_MORE_DONE

@@ -1,0 +1,8 @@
+$ grep -E 'HIP_VERSION_(MAJOR|MINOR|PATCH)' /opt/rocm/include/hip/hip_version.h
+--- stdout ---
+#define HIP_VERSION_MAJOR 7
+#define HIP_VERSION_MINOR 14
+#define HIP_VERSION_PATCH 60850
+#define HIP_VERSION    (HIP_VERSION_MAJOR * 10000000 + HIP_VERSION_MINOR * 100000 + HIP_VERSION_PATCH)
+
+--- stderr ---

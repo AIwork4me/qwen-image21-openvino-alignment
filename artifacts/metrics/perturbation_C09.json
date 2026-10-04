@@ -1,0 +1,120 @@
+{
+  "pid": "C09",
+  "delta_norm": 478.0420227050781,
+  "delta_rel_l2": 0.09220235259008949,
+  "delta_cosine": 0.995740615714365,
+  "runs": [
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "E0.25xOVdelta",
+      "latent.cosine": 0.9859284667611405,
+      "latent.rel_l2": 0.16747794278404762,
+      "psnr": 21.798464651513466
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "E0.5xOVdelta",
+      "latent.cosine": 0.9963307899440329,
+      "latent.rel_l2": 0.08569900722950574,
+      "psnr": 27.109634075073767
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "E1xOVdelta",
+      "latent.cosine": 0.9921015471482932,
+      "latent.rel_l2": 0.1255501530891165,
+      "psnr": 23.917584158726804
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "E2xOVdelta",
+      "latent.cosine": 0.8809731176019383,
+      "latent.rel_l2": 0.4829437105155417,
+      "psnr": 14.962688993088316
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "R11_normmatched",
+      "latent.cosine": 0.8988342067598669,
+      "latent.rel_l2": 0.4465078698084005,
+      "psnr": 15.451629726015643
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "R22_normmatched",
+      "latent.cosine": 0.9617716753022556,
+      "latent.rel_l2": 0.2767031259520357,
+      "psnr": 18.31513686916628
+    },
+    {
+      "res": 1024,
+      "steps": 25,
+      "variant": "R33_normmatched",
+      "latent.cosine": 0.9723072185021872,
+      "latent.rel_l2": 0.2356321559083892,
+      "psnr": 19.982543821194277
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "E0.25xOVdelta",
+      "latent.cosine": 0.9896256704134058,
+      "latent.rel_l2": 0.14405251005481823,
+      "psnr": 23.148493360543117
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "E0.5xOVdelta",
+      "latent.cosine": 0.9884171396265106,
+      "latent.rel_l2": 0.15231846455033188,
+      "psnr": 22.425259845487837
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "E1xOVdelta",
+      "latent.cosine": 0.9830359373106778,
+      "latent.rel_l2": 0.18425459419997944,
+      "psnr": 21.106617896570125
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "E2xOVdelta",
+      "latent.cosine": 0.8352745976000887,
+      "latent.rel_l2": 0.5701133831850812,
+      "psnr": 13.909279201871392
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "R11_normmatched",
+      "latent.cosine": 0.8881966516457173,
+      "latent.rel_l2": 0.47154770244947397,
+      "psnr": 14.334342232220695
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "R22_normmatched",
+      "latent.cosine": 0.9216112328595119,
+      "latent.rel_l2": 0.394586907093702,
+      "psnr": 15.57952520983096
+    },
+    {
+      "res": 1024,
+      "steps": 40,
+      "variant": "R33_normmatched",
+      "latent.cosine": 0.9482524754078152,
+      "latent.rel_l2": 0.3205444304823471,
+      "psnr": 16.90119238887306
+    }
+  ]
+}

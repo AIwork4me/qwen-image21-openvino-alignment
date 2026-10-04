@@ -1,0 +1,128 @@
+[skip] O1F/C01 missing
+[skip] O1F/C02 missing
+[skip] O1F/C03 missing
+[skip] O1F/C04 missing
+[skip] O1F/C05 missing
+[skip] O1F/C06 missing
+[skip] O1F/C07 missing
+[skip] O1F/C08 missing
+[skip] O1F/C09 missing
+[skip] O1F/C10 missing
+[skip] O3/C01 missing
+[skip] O3/C02 missing
+[skip] O3/C03 missing
+[skip] O3/C04 missing
+[skip] O3/C05 missing
+[skip] O3/C06 missing
+[skip] O3/C07 missing
+[skip] O3/C08 missing
+[skip] O3/C09 missing
+[skip] O3/C10 missing
+[skip] O3/C01 missing
+[skip] O3/C02 missing
+[skip] O3/C03 missing
+[skip] O3/C04 missing
+[skip] O3/C05 missing
+[skip] O3/C06 missing
+[skip] O3/C07 missing
+[skip] O3/C08 missing
+[skip] O3/C09 missing
+[skip] O3/C10 missing
+[skip] O1F/C01 missing
+[skip] O1F/C02 missing
+[skip] O1F/C03 missing
+[skip] O1F/C04 missing
+[skip] O1F/C05 missing
+[skip] O1F/C06 missing
+[skip] O1F/C07 missing
+[skip] O1F/C08 missing
+[skip] O1F/C09 missing
+[skip] O1F/C10 missing
+{
+  "R0_vs_R0R": {
+    "prenorm.cos_median": 1.0,
+    "prenorm.rel_l2_median": 0.0,
+    "bf16_exact_median": 1.0
+  },
+  "R0_vs_R1": {
+    "prenorm.cos_median": 0.9987109744753859,
+    "prenorm.rel_l2_median": 0.0528322723242553,
+    "bf16_exact_median": 0.08592857047915459
+  },
+  "R1_vs_O0": {
+    "prenorm.cos_median": 0.9999999999765472,
+    "prenorm.rel_l2_median": 7.671471168552414e-06,
+    "bf16_exact_median": 0.9945631921291351
+  },
+  "R0_vs_O0": {
+    "prenorm.cos_median": 0.9987109081936997,
+    "prenorm.rel_l2_median": 0.052834482075201736,
+    "bf16_exact_median": 0.08594201132655144
+  },
+  "O0_vs_O1": {
+    "prenorm.cos_median": 0.9999277402001592,
+    "prenorm.rel_l2_median": 0.012805282750323676,
+    "bf16_exact_median": 0.14393115788698196
+  }
+}
+plots saved
+{
+  "significant_jumps": [
+    [
+      36,
+      7.671471168552414e-06,
+      3.5439592517211553e-06
+    ]
+  ],
+  "worst_layer_by_rel_l2": 36
+}
+saved /workspace/qwen-image21-openvino-alignment/artifacts/metrics/layer_alignment_R1_vs_O0.csv
+[skip] C01
+[skip] C02
+[skip] C03
+[skip] C04
+[skip] C05
+[skip] C06
+[skip] C07
+[skip] C08
+[skip] C09
+[skip] C10
+no data
+{
+  "significant_jumps": [
+    [
+      2,
+      0.003897109054485661,
+      0.0019351846871375573
+    ],
+    [
+      7,
+      0.022385871692706356,
+      0.006005725965828838
+    ],
+    [
+      8,
+      0.022341508648852426,
+      0.007180389603147189
+    ],
+    [
+      36,
+      0.0528322723242553,
+      0.025001034959749542
+    ]
+  ],
+  "worst_layer_by_rel_l2": 36
+}
+saved /workspace/qwen-image21-openvino-alignment/artifacts/metrics/layer_alignment_R0_vs_R1.csv
+[skip] C01
+[skip] C02
+[skip] C03
+[skip] C04
+[skip] C05
+[skip] C06
+[skip] C07
+[skip] C08
+[skip] C09
+[skip] C10
+no data
+CANARY_COMPARE_DONE

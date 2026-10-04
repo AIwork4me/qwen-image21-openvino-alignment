@@ -1,0 +1,8 @@
+artifacts/tensors/
+artifacts/images/
+artifacts/latents/*.safetensors
+artifacts/models/
+__pycache__/
+*.pyc
+reports/blind_package/*.png
+reports/gallery/*.png

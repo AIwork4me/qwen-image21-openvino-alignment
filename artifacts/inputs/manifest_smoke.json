@@ -1,0 +1,149 @@
+{
+  "suite": "smoke",
+  "prompts_file": "prompts/smoke.json",
+  "drop_idx": 14,
+  "img_token_id": 151655,
+  "im_start_id": 151644,
+  "template": "<|im_start|>system\nComprehend and analyze the provided prompt.<|im_end|>\n<|im_start|>user\n{}<|im_end|>\n<|im_start|>assistant\n",
+  "processor_dir": "/valdata/hf/hub/models--Qwen--Qwen-Image-2.1/snapshots/d26bb61231c349cf6b7896fa83353113880e1ba3/processor",
+  "entries": [
+    {
+      "pid": "S01",
+      "raw": "A red apple on a wooden table.",
+      "formatted": "<|im_start|>system\nComprehend and analyze the provided prompt.<|im_end|>\n<|im_start|>user\nA red apple on a wooden table.<|im_end|>\n<|im_start|>assistant\n",
+      "category": "simple_object",
+      "seq_len": 30,
+      "keys": [
+        "input_ids",
+        "attention_mask",
+        "mm_token_type_ids"
+      ],
+      "pixel_values_present": false,
+      "image_grid_thw_present": false,
+      "mm_token_type_ids_present": true,
+      "second_im_start_index": 14,
+      "second_im_start_equals_drop_idx": true,
+      "n_image_pad_tokens": 0,
+      "attention_all_ones": true,
+      "first_tokens": [
+        "<|im_start|>",
+        "system",
+        "\u010a",
+        "Com",
+        "preh",
+        "end",
+        "\u0120and",
+        "\u0120analyze",
+        "\u0120the",
+        "\u0120provided",
+        "\u0120prompt",
+        ".",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "user",
+        "\u010a"
+      ],
+      "last_tokens": [
+        ".",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "assistant",
+        "\u010a"
+      ]
+    },
+    {
+      "pid": "S02",
+      "raw": "A white coffee mug with the text \"GOOD MORNING\" printed in bold black letters.",
+      "formatted": "<|im_start|>system\nComprehend and analyze the provided prompt.<|im_end|>\n<|im_start|>user\nA white coffee mug with the text \"GOOD MORNING\" printed in bold black letters.<|im_end|>\n<|im_start|>assistant\n",
+      "category": "text_en",
+      "seq_len": 40,
+      "keys": [
+        "input_ids",
+        "attention_mask",
+        "mm_token_type_ids"
+      ],
+      "pixel_values_present": false,
+      "image_grid_thw_present": false,
+      "mm_token_type_ids_present": true,
+      "second_im_start_index": 14,
+      "second_im_start_equals_drop_idx": true,
+      "n_image_pad_tokens": 0,
+      "attention_all_ones": true,
+      "first_tokens": [
+        "<|im_start|>",
+        "system",
+        "\u010a",
+        "Com",
+        "preh",
+        "end",
+        "\u0120and",
+        "\u0120analyze",
+        "\u0120the",
+        "\u0120provided",
+        "\u0120prompt",
+        ".",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "user",
+        "\u010a"
+      ],
+      "last_tokens": [
+        ".",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "assistant",
+        "\u010a"
+      ]
+    },
+    {
+      "pid": "S03",
+      "raw": "\u4e00\u5f20\u84dd\u8272\u8def\u724c\uff0c\u4e0a\u9762\u5199\u7740\u767d\u8272\u7684\u4e2d\u6587\u6c49\u5b57\u201c\u4eba\u6c11\u8def\u201d\u3002",
+      "formatted": "<|im_start|>system\nComprehend and analyze the provided prompt.<|im_end|>\n<|im_start|>user\n\u4e00\u5f20\u84dd\u8272\u8def\u724c\uff0c\u4e0a\u9762\u5199\u7740\u767d\u8272\u7684\u4e2d\u6587\u6c49\u5b57\u201c\u4eba\u6c11\u8def\u201d\u3002<|im_end|>\n<|im_start|>assistant\n",
+      "category": "text_zh",
+      "seq_len": 36,
+      "keys": [
+        "input_ids",
+        "attention_mask",
+        "mm_token_type_ids"
+      ],
+      "pixel_values_present": false,
+      "image_grid_thw_present": false,
+      "mm_token_type_ids_present": true,
+      "second_im_start_index": 14,
+      "second_im_start_equals_drop_idx": true,
+      "n_image_pad_tokens": 0,
+      "attention_all_ones": true,
+      "first_tokens": [
+        "<|im_start|>",
+        "system",
+        "\u010a",
+        "Com",
+        "preh",
+        "end",
+        "\u0120and",
+        "\u0120analyze",
+        "\u0120the",
+        "\u0120provided",
+        "\u0120prompt",
+        ".",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "user",
+        "\u010a"
+      ],
+      "last_tokens": [
+        "\u00e2\u0122\u013f\u00e3\u0122\u0124",
+        "<|im_end|>",
+        "\u010a",
+        "<|im_start|>",
+        "assistant",
+        "\u010a"
+      ]
+    }
+  ]
+}

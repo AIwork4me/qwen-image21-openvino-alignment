@@ -1,0 +1,62 @@
+# Qwen-Image 2.1 OpenVINO-vs-ROCm Text Encoder Alignment Validation
+# Master experiment configuration. Single-source-of-truth for paths, seeds, schedules.
+
+model:
+  repo_id: "Qwen/Qwen-Image-2.1"
+  snapshot_revision: "d26bb61231c349cf6b7896fa83353113880e1ba3"
+  snapshot_path: "/valdata/hf/hub/models--Qwen--Qwen-Image-2.1/snapshots/d26bb61231c349cf6b7896fa83353113880e1ba3"
+  text_encoder_subpath: "text_encoder"          # Qwen3-VL-8B (36 layers, hidden 4096)
+  customer_ov_artifact: "/workspace/qwen3vl-cpu-benchmark/models/qwen3vl-openvino-int8"
+  ov_clean_export_dir: "/valdata/models/ov_clean_fp32"
+
+paths:
+  artifacts: "artifacts"
+  tensors: "artifacts/tensors"
+  latents: "artifacts/latents"
+  images: "artifacts/images"
+  metrics: "artifacts/metrics"
+  plots: "artifacts/plots"
+  logs: "artifacts/logs"
+
+# Encoder arms. R* = PyTorch/ROCm (W7900D gfx1100, ROCm 7.14.0), O* = OpenVINO/CPU (EPYC 9334).
+encoder_arms:
+  R0:  {impl: "rocm",  precision: "bf16", desc: "PyTorch ROCm BF16 reference (customer GPU path dtype)"}
+  R0R: {impl: "rocm",  precision: "bf16", desc: "R0 repeat under identical conditions (noise floor)"}
+  R1:  {impl: "rocm",  precision: "fp32", desc: "PyTorch ROCm FP32 (precision delta reference)"}
+  O0:  {impl: "ovcpu", precision: "f32",  desc: "OpenVINO CPU FP32 ACCURACY-mode clean export"}
+  O1:  {impl: "ovcpu", precision: "bf16", desc: "OpenVINO CPU BF16 (runtime inference_precision=bf16)"}
+  O3:  {impl: "ovcpu", precision: "int8", desc: "Customer INT8 weight-compressed artifact + add_outputs bridge"}
+  # O2 (customer optimized, non-quantized) not found on disk -> labeled unavailable unless located.
+
+diffusion:
+  device: "cuda"                    # W7900D, ROCm 7.14.0 userspace
+  dtype: "bfloat16"
+  height: 1024
+  width: 1024
+  height_2k: 2048
+  width_2k: 2048
+  steps_25: 25
+  steps_40: 40
+  guidance_scale: 4.0
+  negative_prompt: ""               # official default; encoded once from R0 and reused everywhere
+  max_sequence_length: 1024
+
+seeds: [20261001, 20261002, 20261003]   # fixed seeds for prompt suites
+latent_seed: &lseed 20261001               # seed used to pre-generate the frozen initial latent
+
+stages:
+  smoke_prompts_file: "prompts/smoke.json"
+  canary_prompts_file: "prompts/canary_10.json"
+  stat_prompts_file: "prompts/alignment_100.json"
+  production_prompts_file: "prompts/production_30.json"
+
+ov_runtime:
+  accuracy_props:                    # O0 forensic baseline
+    PERFORMANCE_HINT: "ACCURACY"
+    INFERENCE_NUM_THREADS: 0         # 0 = plugin default (all cores)
+  perf_props:                        # performance measurements only, never for accuracy arms
+    PERFORMANCE_HINT: "LATENCY"
+    INFERENCE_NUM_THREADS: 0
+
+resource_monitor:
+  sample_hz: 5

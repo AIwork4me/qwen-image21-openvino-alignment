@@ -1,0 +1,12 @@
+Loading weights:   0%|                                                                                                           | 0/750 [00:00<?, ?it/s]Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 750/750 [00:00<00:00, 11337.96it/s]
+[R0R] loaded in 103.9s, VRAM alloc 16.34 GiB
+[R0R][S01] seq=30 kept=16 t=13.384s
+[R0R][S02] seq=40 kept=26 t=0.047s
+[R0R][S03] seq=36 kept=22 t=0.042s
+[R0R][S01_rep1] seq=30 kept=16 t=0.039s
+[R0R][S02_rep1] seq=40 kept=26 t=0.042s
+[R0R][S03_rep1] seq=36 kept=22 t=0.042s
+[R0R][S01_rep2] seq=30 kept=16 t=0.039s
+[R0R][S02_rep2] seq=40 kept=26 t=0.042s
+[R0R][S03_rep2] seq=36 kept=22 t=0.042s
+done R0R

@@ -1,0 +1,142 @@
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+{'tag': 'alignment_100_A001_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '46.0285', 'ssim': '0.9958', 'lpips': '0.0029'}
+{'tag': 'alignment_100_A002_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.1715', 'ssim': '0.9819', 'lpips': '0.0106'}
+{'tag': 'alignment_100_A003_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.3968', 'ssim': '0.9881', 'lpips': '0.0069'}
+{'tag': 'alignment_100_A004_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '45.5365', 'ssim': '0.9948', 'lpips': '0.0016'}
+{'tag': 'alignment_100_A005_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.2801', 'ssim': '0.9802', 'lpips': '0.0168'}
+{'tag': 'alignment_100_A006_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '40.4097', 'ssim': '0.9939', 'lpips': '0.0051'}
+{'tag': 'alignment_100_A007_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.5078', 'ssim': '0.9921', 'lpips': '0.0067'}
+{'tag': 'alignment_100_A008_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '45.7311', 'ssim': '0.9965', 'lpips': '0.0016'}
+{'tag': 'alignment_100_A009_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '36.0181', 'ssim': '0.9869', 'lpips': '0.0097'}
+{'tag': 'alignment_100_A010_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '30.9382', 'ssim': '0.9728', 'lpips': '0.0507'}
+{'tag': 'alignment_100_A011_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.7918', 'ssim': '0.7486', 'lpips': '0.1961'}
+{'tag': 'alignment_100_A012_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.0348', 'ssim': '0.8876', 'lpips': '0.0889'}
+{'tag': 'alignment_100_A013_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.4927', 'ssim': '0.8852', 'lpips': '0.1252'}
+{'tag': 'alignment_100_A014_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '25.5541', 'ssim': '0.9404', 'lpips': '0.0525'}
+{'tag': 'alignment_100_A015_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.6687', 'ssim': '0.9765', 'lpips': '0.0293'}
+{'tag': 'alignment_100_A016_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '26.0131', 'ssim': '0.9133', 'lpips': '0.0725'}
+{'tag': 'alignment_100_A017_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '41.1450', 'ssim': '0.9930', 'lpips': '0.0070'}
+{'tag': 'alignment_100_A018_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.9749', 'ssim': '0.9671', 'lpips': '0.0458'}
+{'tag': 'alignment_100_A019_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.1790', 'ssim': '0.7295', 'lpips': '0.2616'}
+{'tag': 'alignment_100_A020_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.3533', 'ssim': '0.9683', 'lpips': '0.0261'}
+{'tag': 'alignment_100_A021_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.6688', 'ssim': '0.9906', 'lpips': '0.0061'}
+{'tag': 'alignment_100_A022_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.9691', 'ssim': '0.9801', 'lpips': '0.0153'}
+{'tag': 'alignment_100_A023_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.7545', 'ssim': '0.9618', 'lpips': '0.0375'}
+{'tag': 'alignment_100_A024_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.8411', 'ssim': '0.9195', 'lpips': '0.0907'}
+{'tag': 'alignment_100_A025_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.4734', 'ssim': '0.9665', 'lpips': '0.0334'}
+{'tag': 'alignment_100_A026_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.5683', 'ssim': '0.9473', 'lpips': '0.0459'}
+{'tag': 'alignment_100_A027_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '40.3143', 'ssim': '0.9926', 'lpips': '0.0047'}
+{'tag': 'alignment_100_A028_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '31.1846', 'ssim': '0.9775', 'lpips': '0.0149'}
+{'tag': 'alignment_100_A029_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '30.5236', 'ssim': '0.9692', 'lpips': '0.0375'}
+{'tag': 'alignment_100_A030_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.1394', 'ssim': '0.9930', 'lpips': '0.0059'}
+{'tag': 'alignment_100_A031_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.0474', 'ssim': '0.9610', 'lpips': '0.0441'}
+{'tag': 'alignment_100_A032_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.9089', 'ssim': '0.9763', 'lpips': '0.0190'}
+{'tag': 'alignment_100_A033_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '31.6146', 'ssim': '0.9698', 'lpips': '0.0257'}
+{'tag': 'alignment_100_A034_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '18.3540', 'ssim': '0.8346', 'lpips': '0.2589'}
+{'tag': 'alignment_100_A035_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.7172', 'ssim': '0.9810', 'lpips': '0.0088'}
+{'tag': 'alignment_100_A036_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '36.0383', 'ssim': '0.9879', 'lpips': '0.0145'}
+{'tag': 'alignment_100_A037_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.5600', 'ssim': '0.8660', 'lpips': '0.1619'}
+{'tag': 'alignment_100_A038_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '30.9955', 'ssim': '0.9889', 'lpips': '0.0164'}
+{'tag': 'alignment_100_A039_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.8651', 'ssim': '0.9796', 'lpips': '0.0192'}
+{'tag': 'alignment_100_A040_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.6639', 'ssim': '0.9614', 'lpips': '0.0305'}
+{'tag': 'alignment_100_A041_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.1978', 'ssim': '0.8432', 'lpips': '0.2117'}
+{'tag': 'alignment_100_A042_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.9022', 'ssim': '0.9740', 'lpips': '0.0234'}
+{'tag': 'alignment_100_A043_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.7841', 'ssim': '0.9014', 'lpips': '0.1205'}
+{'tag': 'alignment_100_A044_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.3114', 'ssim': '0.9895', 'lpips': '0.0107'}
+{'tag': 'alignment_100_A045_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '31.6462', 'ssim': '0.9759', 'lpips': '0.0353'}
+{'tag': 'alignment_100_A046_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.5483', 'ssim': '0.9748', 'lpips': '0.0258'}
+{'tag': 'alignment_100_A047_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.9209', 'ssim': '0.8166', 'lpips': '0.1885'}
+{'tag': 'alignment_100_A048_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '19.3717', 'ssim': '0.8009', 'lpips': '0.1802'}
+{'tag': 'alignment_100_A049_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.9784', 'ssim': '0.9011', 'lpips': '0.1035'}
+{'tag': 'alignment_100_A050_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.7183', 'ssim': '0.8720', 'lpips': '0.1818'}
+{'tag': 'alignment_100_A051_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.5783', 'ssim': '0.9856', 'lpips': '0.0153'}
+{'tag': 'alignment_100_A052_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '43.6221', 'ssim': '0.9943', 'lpips': '0.0045'}
+{'tag': 'alignment_100_A053_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '34.1068', 'ssim': '0.9901', 'lpips': '0.0060'}
+{'tag': 'alignment_100_A054_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.9086', 'ssim': '0.8229', 'lpips': '0.1657'}
+{'tag': 'alignment_100_A055_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.7871', 'ssim': '0.9906', 'lpips': '0.0117'}
+{'tag': 'alignment_100_A056_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.3805', 'ssim': '0.8871', 'lpips': '0.0683'}
+{'tag': 'alignment_100_A057_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '15.0268', 'ssim': '0.7206', 'lpips': '0.2174'}
+{'tag': 'alignment_100_A058_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '41.2395', 'ssim': '0.9939', 'lpips': '0.0032'}
+{'tag': 'alignment_100_A059_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.2720', 'ssim': '0.9775', 'lpips': '0.0227'}
+{'tag': 'alignment_100_A060_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.2681', 'ssim': '0.8862', 'lpips': '0.0885'}
+{'tag': 'alignment_100_A061_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '42.0545', 'ssim': '0.9904', 'lpips': '0.0105'}
+{'tag': 'alignment_100_A062_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '39.1345', 'ssim': '0.9907', 'lpips': '0.0086'}
+{'tag': 'alignment_100_A063_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '43.1483', 'ssim': '0.9949', 'lpips': '0.0043'}
+{'tag': 'alignment_100_A064_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '35.3256', 'ssim': '0.9870', 'lpips': '0.0185'}
+{'tag': 'alignment_100_A065_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '50.1255', 'ssim': '0.9967', 'lpips': '0.0012'}
+{'tag': 'alignment_100_A066_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '25.1655', 'ssim': '0.9768', 'lpips': '0.0371'}
+{'tag': 'alignment_100_A067_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.1892', 'ssim': '0.9626', 'lpips': '0.0395'}
+{'tag': 'alignment_100_A068_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.6440', 'ssim': '0.9672', 'lpips': '0.0292'}
+{'tag': 'alignment_100_A069_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.6876', 'ssim': '0.9269', 'lpips': '0.1030'}
+{'tag': 'alignment_100_A070_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.0687', 'ssim': '0.9306', 'lpips': '0.0687'}
+{'tag': 'alignment_100_A071_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.4000', 'ssim': '0.9876', 'lpips': '0.0109'}
+{'tag': 'alignment_100_A072_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '16.2562', 'ssim': '0.7770', 'lpips': '0.1554'}
+{'tag': 'alignment_100_A073_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '29.9573', 'ssim': '0.9513', 'lpips': '0.0539'}
+{'tag': 'alignment_100_A074_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '25.4878', 'ssim': '0.9164', 'lpips': '0.0707'}
+{'tag': 'alignment_100_A075_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.8936', 'ssim': '0.9578', 'lpips': '0.0308'}
+{'tag': 'alignment_100_A076_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '26.8267', 'ssim': '0.8952', 'lpips': '0.0830'}
+{'tag': 'alignment_100_A077_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.1059', 'ssim': '0.9395', 'lpips': '0.0498'}
+{'tag': 'alignment_100_A078_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '29.0943', 'ssim': '0.9516', 'lpips': '0.0542'}
+{'tag': 'alignment_100_A079_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '25.9078', 'ssim': '0.8867', 'lpips': '0.1044'}
+{'tag': 'alignment_100_A080_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.9047', 'ssim': '0.8332', 'lpips': '0.1172'}
+{'tag': 'alignment_100_A081_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.9578', 'ssim': '0.9458', 'lpips': '0.0438'}
+{'tag': 'alignment_100_A082_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.6684', 'ssim': '0.8974', 'lpips': '0.0596'}
+{'tag': 'alignment_100_A083_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.5392', 'ssim': '0.9744', 'lpips': '0.0242'}
+{'tag': 'alignment_100_A084_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '26.7896', 'ssim': '0.9169', 'lpips': '0.0719'}
+{'tag': 'alignment_100_A085_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.0140', 'ssim': '0.9516', 'lpips': '0.0537'}
+{'tag': 'alignment_100_A086_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '18.4319', 'ssim': '0.8082', 'lpips': '0.1331'}
+{'tag': 'alignment_100_A087_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.7193', 'ssim': '0.9271', 'lpips': '0.0557'}
+{'tag': 'alignment_100_A088_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.2141', 'ssim': '0.9879', 'lpips': '0.0092'}
+{'tag': 'alignment_100_A089_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.6628', 'ssim': '0.9684', 'lpips': '0.0157'}
+{'tag': 'alignment_100_A090_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.5620', 'ssim': '0.8966', 'lpips': '0.1853'}
+{'tag': 'alignment_100_A091_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '30.5214', 'ssim': '0.9780', 'lpips': '0.0129'}
+{'tag': 'alignment_100_A092_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '25.3096', 'ssim': '0.9517', 'lpips': '0.0325'}
+{'tag': 'alignment_100_A093_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.5086', 'ssim': '0.9937', 'lpips': '0.0042'}
+{'tag': 'alignment_100_A094_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '29.6131', 'ssim': '0.9430', 'lpips': '0.0471'}
+{'tag': 'alignment_100_A095_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.2723', 'ssim': '0.9393', 'lpips': '0.0501'}
+{'tag': 'alignment_100_A096_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '19.9161', 'ssim': '0.9159', 'lpips': '0.1069'}
+{'tag': 'alignment_100_A097_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '18.7207', 'ssim': '0.8549', 'lpips': '0.1116'}
+{'tag': 'alignment_100_A098_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.6307', 'ssim': '0.9903', 'lpips': '0.0072'}
+{'tag': 'alignment_100_A099_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '18.9330', 'ssim': '0.8473', 'lpips': '0.2141'}
+{'tag': 'alignment_100_A100_s20261001_25s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '21.1332', 'ssim': '0.8403', 'lpips': '0.2415'}
+{
+  "psnr": {
+    "count": 100,
+    "mean": 29.584926255493727,
+    "std": 7.368483347359921,
+    "median": 28.778210671930452,
+    "p5": 18.922349669150837,
+    "p25": 23.81062486138254,
+    "p75": 33.6982748998375,
+    "p95": 43.171995590172905,
+    "min": 15.02677626192714,
+    "max": 50.125450895013955
+  },
+  "ssim": {
+    "count": 100,
+    "mean": 0.937441685157376,
+    "std": 0.06476218442443887,
+    "median": 0.9667982185574022,
+    "p5": 0.8078026417943251,
+    "p25": 0.9013421419443051,
+    "p75": 0.9871093178507829,
+    "p95": 0.994320689059028,
+    "min": 0.7206184305939702,
+    "max": 0.9967344252915336
+  },
+  "lpips": {
+    "count": 100,
+    "mean": 0.06124337480869144,
+    "std": 0.06620550007758019,
+    "median": 0.03621399775147438,
+    "p5": 0.004146710620261729,
+    "p25": 0.011484476272016764,
+    "p75": 0.08857844024896622,
+    "p95": 0.21179332211613655,
+    "min": 0.0011721292976289988,
+    "max": 0.2615647315979004
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "prompts": [
+    {
+      "id": "C01",
+      "category": "simple_object",
+      "text": "A single yellow rubber duck floating on calm water."
+    },
+    {
+      "id": "C02",
+      "category": "multi_object",
+      "text": "A wooden desk with a laptop, a coffee cup, two books and a small potted plant."
+    },
+    {
+      "id": "C03",
+      "category": "spatial",
+      "text": "A red car parked to the left of a blue mailbox, with a tall tree behind them."
+    },
+    {
+      "id": "C04",
+      "category": "counting",
+      "text": "Exactly five white sheep standing in a green meadow."
+    },
+    {
+      "id": "C05",
+      "category": "people",
+      "text": "A young woman in a red raincoat holding a transparent umbrella on a rainy street."
+    },
+    {
+      "id": "C06",
+      "category": "style",
+      "text": "A watercolor painting of a small harbor village at sunrise."
+    },
+    {
+      "id": "C07",
+      "category": "lighting",
+      "text": "A glass sphere on black velvet lit by a single dramatic spotlight from the upper left."
+    },
+    {
+      "id": "C08",
+      "category": "long_detail",
+      "text": "An overhead flat-lay photograph of a craftsman's workbench: scattered brass screws, a vintage caliper, walnut wood shavings, a chisel with a worn handle, a folded blueprint, and a cup of black coffee, warm tungsten light, shallow depth of field."
+    },
+    {
+      "id": "C09",
+      "category": "text_en",
+      "text": "A storefront sign that says \"FRESH BAKERY DAILY\" in large red letters."
+    },
+    {
+      "id": "C10",
+      "category": "text_zh",
+      "text": "\u4e00\u5f20\u7ea2\u8272\u559c\u5e86\u7684\u6d77\u62a5\uff0c\u4e2d\u95f4\u662f\u5927\u53f7\u91d1\u8272\u6c49\u5b57\u201c\u5f00\u4e1a\u5927\u916c\u5bbe\u201d\uff0c\u4e0b\u65b9\u5199\u7740\u201c\u5168\u573a\u516b\u6298\u201d\u3002"
+    }
+  ]
+}

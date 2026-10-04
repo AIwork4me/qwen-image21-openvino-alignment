@@ -1,0 +1,5 @@
+$ rocm-smi --showmeminfo vram --json
+--- stdout ---
+{"card0": {"VRAM Total Memory (B)": "51522830336", "VRAM Total Used Memory (B)": "28004352"}}
+
+--- stderr ---

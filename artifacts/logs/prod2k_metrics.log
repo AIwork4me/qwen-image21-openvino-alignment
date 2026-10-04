@@ -1,0 +1,72 @@
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+{'tag': 'production_30_P01_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.9417', 'ssim': '0.9265', 'lpips': '0.1213'}
+{'tag': 'production_30_P02_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '30.0972', 'ssim': '0.9771', 'lpips': '0.0184'}
+{'tag': 'production_30_P03_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.4491', 'ssim': '0.9488', 'lpips': '0.0561'}
+{'tag': 'production_30_P04_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '28.4174', 'ssim': '0.9883', 'lpips': '0.0126'}
+{'tag': 'production_30_P05_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '23.5471', 'ssim': '0.9354', 'lpips': '0.0920'}
+{'tag': 'production_30_P06_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.8089', 'ssim': '0.9504', 'lpips': '0.0585'}
+{'tag': 'production_30_P07_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '31.6155', 'ssim': '0.9775', 'lpips': '0.0272'}
+{'tag': 'production_30_P08_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.3479', 'ssim': '0.9689', 'lpips': '0.0403'}
+{'tag': 'production_30_P09_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.8091', 'ssim': '0.9376', 'lpips': '0.0712'}
+{'tag': 'production_30_P10_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.3639', 'ssim': '0.9592', 'lpips': '0.0424'}
+{'tag': 'production_30_P11_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.5154', 'ssim': '0.9894', 'lpips': '0.0084'}
+{'tag': 'production_30_P12_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '24.5917', 'ssim': '0.9541', 'lpips': '0.0339'}
+{'tag': 'production_30_P13_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '44.3809', 'ssim': '0.9958', 'lpips': '0.0036'}
+{'tag': 'production_30_P14_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '26.1723', 'ssim': '0.9513', 'lpips': '0.0310'}
+{'tag': 'production_30_P15_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '33.5065', 'ssim': '0.9855', 'lpips': '0.0192'}
+{'tag': 'production_30_P16_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '40.7704', 'ssim': '0.9958', 'lpips': '0.0044'}
+{'tag': 'production_30_P17_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '37.7717', 'ssim': '0.9787', 'lpips': '0.0287'}
+{'tag': 'production_30_P18_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '29.9950', 'ssim': '0.9563', 'lpips': '0.0824'}
+{'tag': 'production_30_P19_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '40.9240', 'ssim': '0.9954', 'lpips': '0.0082'}
+{'tag': 'production_30_P20_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.7997', 'ssim': '0.9222', 'lpips': '0.1152'}
+{'tag': 'production_30_P21_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '20.8307', 'ssim': '0.7526', 'lpips': '0.2197'}
+{'tag': 'production_30_P22_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '27.8989', 'ssim': '0.9596', 'lpips': '0.0509'}
+{'tag': 'production_30_P23_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '38.4878', 'ssim': '0.9871', 'lpips': '0.0206'}
+{'tag': 'production_30_P24_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '32.2255', 'ssim': '0.9884', 'lpips': '0.0139'}
+{'tag': 'production_30_P25_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '17.8571', 'ssim': '0.8192', 'lpips': '0.1827'}
+{'tag': 'production_30_P26_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '38.3327', 'ssim': '0.9894', 'lpips': '0.0156'}
+{'tag': 'production_30_P27_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '26.3134', 'ssim': '0.9687', 'lpips': '0.0252'}
+{'tag': 'production_30_P28_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '34.9842', 'ssim': '0.9874', 'lpips': '0.0120'}
+{'tag': 'production_30_P29_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '22.8094', 'ssim': '0.9153', 'lpips': '0.1147'}
+{'tag': 'production_30_P30_s20261001_40s', 'arm_a': 'R0', 'arm_b': 'O3r', 'psnr': '18.9876', 'ssim': '0.8641', 'lpips': '0.1563'}
+{
+  "psnr": {
+    "count": 30,
+    "mean": 29.151754106376867,
+    "std": 6.95677097993172,
+    "median": 27.849308893452008,
+    "p5": 19.807309324159153,
+    "p25": 23.772614151739376,
+    "p75": 33.25875205179802,
+    "p95": 40.85485470701782,
+    "min": 17.857089144407194,
+    "max": 44.3808978742786
+  },
+  "ssim": {
+    "count": 30,
+    "mean": 0.9508580314089078,
+    "std": 0.05351102180564264,
+    "median": 0.9641600222181769,
+    "p5": 0.8394264514201509,
+    "p25": 0.9403627735649278,
+    "p75": 0.987301291925107,
+    "p95": 0.9955969008426775,
+    "min": 0.7526105172854178,
+    "max": 0.9958123182445101
+  },
+  "lpips": {
+    "count": 30,
+    "mean": 0.056215275342886645,
+    "std": 0.05527449978790154,
+    "median": 0.032437169924378395,
+    "p5": 0.006103371805511416,
+    "p25": 0.016269046580418944,
+    "p75": 0.07960614748299122,
+    "p95": 0.17080078274011604,
+    "min": 0.0036030523478984833,
+    "max": 0.21971137821674347
+  }
+}

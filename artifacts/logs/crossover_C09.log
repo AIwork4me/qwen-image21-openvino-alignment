@@ -1,0 +1,43 @@
+Multiple distributions found for package optimum. Picked distribution: optimum-intel
+/opt/venv/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|                                                                                              | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|█████████████████▏                                                                    | 1/5 [00:00<00:03,  1.02it/s]
+Loading checkpoint shards:   0%|                                                                                                   | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 12.19it/s][ALoading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 12.17it/s]
+Loading pipeline components...:  60%|███████████████████████████████████████████████████▌                                  | 3/5 [00:01<00:00,  2.74it/s]Loading pipeline components...:  80%|████████████████████████████████████████████████████████████████████▊                 | 4/5 [00:03<00:01,  1.08s/it]
+Loading weights:   0%|                                                                                                           | 0/750 [00:00<?, ?it/s][A
+Loading weights:  28%|██████████████████████████▊                                                                    | 212/750 [00:00<00:00, 2091.17it/s][A
+Loading weights:  65%|█████████████████████████████████████████████████████████████▎                                 | 484/750 [00:00<00:00, 2449.43it/s][ALoading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 750/750 [00:00<00:00, 2511.70it/s]
+Loading pipeline components...: 100%|██████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.13it/s]Loading pipeline components...: 100%|██████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.19it/s]
+[R0] ran to step 25
+[O3r] ran to step 25
+[A_ref] continued 25->40
+[B_swap_cond] continued 25->40
+[C_swap_latent] continued 25->40
+[D_ov] continued 25->40
+{
+  "A_ref|B_swap_cond": {
+    "cosine": 0.9999915085970028,
+    "rel_l2": 0.004124306808933821
+  },
+  "A_ref|C_swap_latent": {
+    "cosine": 0.9810119962611128,
+    "rel_l2": 0.19483539741004757
+  },
+  "A_ref|D_ov": {
+    "cosine": 0.9810055537984238,
+    "rel_l2": 0.19486035509510788
+  },
+  "B_swap_cond|C_swap_latent": {
+    "cosine": 0.981011332775825,
+    "rel_l2": 0.19485540734428106
+  },
+  "B_swap_cond|D_ov": {
+    "cosine": 0.9810051325523653,
+    "rel_l2": 0.19487904826621905
+  },
+  "C_swap_latent|D_ov": {
+    "cosine": 0.9999916173052922,
+    "rel_l2": 0.004095265231214929
+  }
+}

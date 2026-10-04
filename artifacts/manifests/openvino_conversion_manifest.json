@@ -1,0 +1,50 @@
+{
+  "customer_int8_artifact": {
+    "path": "/workspace/qwen3vl-cpu-benchmark/models/qwen3vl-openvino-int8",
+    "source": "OpenVINO/Qwen3-VL-8B-Instruct-int8-ov style export (ComfyUI-OV layout)",
+    "exporter": "optimum 2.1.0.dev0 (per artifact openvino_config.json)",
+    "source_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "source_dtype": "bfloat16",
+    "quantization": {
+      "method": "default weight compression",
+      "dtype": "int8",
+      "sym": false,
+      "ratio": 1.0,
+      "group_size": -1,
+      "runtime_activation_quant": "plugin dynamic (group 32, per prior forensic work)",
+      "embedding_table": "int8-compressed (blob 622,633,732 B ~= 151936*4096 int8)"
+    },
+    "calibration_dataset": "none (dataset: null, num_samples: null)",
+    "inputs": ["attention_mask", "position_ids[3,?,?]", "inputs_embeds", "visual_pos_masks", "deepstack_visual_embeds", "beam_idx"],
+    "outputs": ["logits"],
+    "instrumentation": "runtime-only add_outputs (36 layer outputs + pre-norm + post-norm); serialized files untouched (sha256 in model_manifest.json)",
+    "host_limitation": "IR eltwise shape bug >40 tokens on EPYC 9334/Zen4 with OpenVINO 2026.4.0/2026.4.1 (worked on prior Zen5 hosts)"
+  },
+  "clean_fp32_export_O0": {
+    "path": "/valdata/models/ov_clean_fp32",
+    "tool": "openvino 2026.4.1 pytorch-frontend convert_model (jit trace of instrumented wrapper)",
+    "source_model": "Qwen/Qwen-Image-2.1/text_encoder @ d26bb612 (same checkpoint as GPU reference)",
+    "source_dtype": "bfloat16 storage -> fp32 upcast (identical to R1 arm handling)",
+    "compress_to_fp16": false,
+    "outputs": ["37 hidden states", "prenorm", "postnorm"],
+    "seq_dims": "dynamic [1,2048]",
+    "embedding": "bit-exact fp32 numpy gather from checkpoint (traced embedding op unsupported on CPU plugin)",
+    "runtime": "EXECUTION_MODE_HINT=ACCURACY, INFERENCE_PRECISION_HINT=f32 (verified)"
+  },
+  "int8_reproduction_O3r": {
+    "path": "/valdata/models/ov_clean_int8",
+    "tool": "nncf 3.4.0 compress_weights on O0 export",
+    "mode": "INT8_ASYM", "ratio": 1.0, "group_size": -1,
+    "embedding_table": "row-wise int8 asym + numpy dequant (mirrors artifact)",
+    "equivalence_to_customer_artifact (smoke prompts)": {
+      "O0_vs_O3_relL2": 0.0698, "O0_vs_O3r_relL2": 0.0705,
+      "R0_vs_O3_relL2": 0.0974, "R0_vs_O3r_relL2": 0.0976,
+      "cosine_O0_vs_O3": 0.997622, "cosine_O0_vs_O3r": 0.997573
+    }
+  },
+  "fp16_storage_artifact_O1F": {
+    "path": "/root/models/qwen3vl-openvino-fp16",
+    "coverage": "smoke suite only (same host IR limitation)",
+    "delta_vs_O0": "rel L2 5.7e-5 (negligible)"
+  }
+}
