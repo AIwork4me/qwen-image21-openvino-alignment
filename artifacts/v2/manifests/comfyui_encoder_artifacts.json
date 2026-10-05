@@ -1,0 +1,59 @@
+{
+  "captured_utc": "2026-10-05T02:06:24Z",
+  "source_repo": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+  "source_url_template": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/{name}",
+  "artifacts": {
+    "C_BF16": {
+      "filename": "qwen3vl_8b_bf16.safetensors",
+      "path": "/valdata/comfyui_encoders/qwen3vl_8b_bf16.safetensors",
+      "size_bytes": 17534334616,
+      "safetensors_header_len": 87224,
+      "safetensors_metadata": {
+        "format": "pt"
+      },
+      "num_tensors": 750,
+      "dtype_histogram": {
+        "BF16": 750
+      },
+      "tensor_index_path": "artifacts/v2/manifests/tensor_index_c_bf16.json",
+      "sha256": "68bdc82bc1b66851162ae656225e7e2068166b603db19bd5d5a3b90eb12669a9"
+    },
+    "C_INT8": {
+      "filename": "qwen3vl_8b_int8_convrot.safetensors",
+      "path": "/valdata/comfyui_encoders/qwen3vl_8b_int8_convrot.safetensors",
+      "size_bytes": 9350798360,
+      "safetensors_header_len": 141000,
+      "safetensors_metadata": {
+        "format": "pt"
+      },
+      "num_tensors": 1258,
+      "dtype_histogram": {
+        "F32": 254,
+        "BF16": 496,
+        "I8": 254,
+        "U8": 254
+      },
+      "tensor_index_path": "artifacts/v2/manifests/tensor_index_c_int8.json",
+      "sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f"
+    },
+    "C_W4A8": {
+      "filename": "qwen3vl_8b_w4a8.safetensors",
+      "path": "/valdata/comfyui_encoders/qwen3vl_8b_w4a8.safetensors",
+      "size_bytes": 6312105364,
+      "safetensors_header_len": 200840,
+      "safetensors_metadata": {
+        "format": "pt"
+      },
+      "num_tensors": 1762,
+      "dtype_histogram": {
+        "F32": 506,
+        "BF16": 496,
+        "F8_E4M3": 252,
+        "I8": 254,
+        "U8": 254
+      },
+      "tensor_index_path": "artifacts/v2/manifests/tensor_index_c_w4a8.json",
+      "sha256": "7754425e55e7bea2bfde4dde59a4cc236cb44e5ee9c215ea66ef8d47012824eb"
+    }
+  }
+}
