@@ -21,6 +21,7 @@ from diffusers import FlowMatchEulerDiscreteScheduler
 from diffusers.pipelines.qwenimage21.pipeline_qwenimage21 import calculate_shift, retrieve_timesteps
 
 SEED = 20261001
+EXTRA_SEEDS = [20261002, 20261003]  # 3-seed subset support (§46)
 
 
 def main() -> int:
@@ -30,15 +31,18 @@ def main() -> int:
     sched = FlowMatchEulerDiscreteScheduler.from_pretrained(os.path.join(snap, "scheduler"))
     manifest = {"seed": SEED, "latents": {}, "schedules": {}}
     for res in (1024, 2048):
-        g = torch.Generator(device="cpu").manual_seed(SEED)
-        latent = torch.randn((1, 64, res // 16, res // 16), generator=g, dtype=torch.float32)
+        for seed in [SEED] + EXTRA_SEEDS:
+            suffix = "" if seed == SEED else f"_s{seed}"
+            g = torch.Generator(device="cpu").manual_seed(seed)
+            latent = torch.randn((1, 64, res // 16, res // 16), generator=g, dtype=torch.float32)
+            seq = (res // 16) * (res // 16)
+            packed = latent.reshape(1, 64, seq).permute(0, 2, 1).contiguous()  # [1, seq, 64] packed
+            p = os.path.join(ldir, f"v2_initial_latent_{res}{suffix}.safetensors")
+            save_file({"latent": packed}, p)
+            manifest["latents"][f"{res}{suffix}"] = {"path": p, "sha256": C.sha256_file(p),
+                                                     "tensor_sha256": C.tensor_sha256(packed),
+                                                     "shape": list(packed.shape), "seed": seed}
         seq = (res // 16) * (res // 16)
-        packed = latent.reshape(1, 64, seq).permute(0, 2, 1).contiguous()  # [1, seq, 64] packed
-        p = os.path.join(ldir, f"v2_initial_latent_{res}.safetensors")
-        save_file({"latent": packed}, p)
-        manifest["latents"][str(res)] = {"path": p, "sha256": C.sha256_file(p),
-                                         "tensor_sha256": C.tensor_sha256(packed),
-                                         "shape": list(packed.shape)}
         for steps in (25, 40):
             sigmas = np.linspace(1.0, 1 / steps, steps)
             mu = calculate_shift(seq, sched.config.get("base_image_seq_len", 256),
