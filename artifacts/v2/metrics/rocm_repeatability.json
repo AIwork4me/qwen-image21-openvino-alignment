@@ -1,0 +1,138 @@
+{
+  "R_FP32/C01": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "R_FP32/C05": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_BF16/C01": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_BF16/C05": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_INT8/C01": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_INT8/C05": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_W4A8/C01": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "C_W4A8/C05": {
+    "cond_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "hs_bitwise": [
+      true,
+      true,
+      true
+    ],
+    "cond_rel_l2": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}
