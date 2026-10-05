@@ -1,0 +1,30 @@
+Looking in indexes: https://repo.amd.com/rocm/whl-multi-arch/
+Collecting rocm==7.14.0 (from rocm[devel,device-gfx1100,libraries]==7.14.0)
+  Downloading rocm-7.14.0.tar.gz (24 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting rocm-sdk-core==7.14.0 (from rocm==7.14.0->rocm[devel,device-gfx1100,libraries]==7.14.0)
+  Downloading rocm_sdk_core-7.14.0-py3-none-linux_x86_64.whl (414.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 414.6/414.6 MB 97.4 MB/s  0:00:04
+Collecting rocm-sdk-libraries==7.14.0 (from rocm[devel,device-gfx1100,libraries]==7.14.0)
+  Downloading rocm_sdk_libraries-7.14.0-py3-none-linux_x86_64.whl (143.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.0/143.0 MB 95.1 MB/s  0:00:01
+Collecting rocm-sdk-devel==7.14.0 (from rocm[devel,device-gfx1100,libraries]==7.14.0)
+  Downloading rocm_sdk_devel-7.14.0-py3-none-linux_x86_64.whl (529.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.8/529.8 MB 95.1 MB/s  0:00:05
+Collecting rocm-sdk-device-gfx1100==7.14.0 (from rocm[devel,device-gfx1100,libraries]==7.14.0)
+  Downloading rocm_sdk_device_gfx1100-7.14.0-py3-none-linux_x86_64.whl (214.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.9/214.9 MB 103.9 MB/s  0:00:02
+Building wheels for collected packages: rocm
+  Building wheel for rocm (pyproject.toml): started
+  Building wheel for rocm (pyproject.toml): finished with status 'done'
+  Created wheel for rocm: filename=rocm-7.14.0-py3-none-any.whl size=28575 sha256=6dcaf1da0eea4ff07348d4fcc6edbbb5dce13e71e87d30b2a667085d3b376680
+  Stored in directory: /root/.cache/pip/wheels/78/2f/c6/310dec83424466f3ce733993cb8913c095dca200f6f15b958e
+Successfully built rocm
+Installing collected packages: rocm-sdk-libraries, rocm-sdk-devel, rocm-sdk-core, rocm-sdk-device-gfx1100, rocm
+
+Successfully installed rocm-7.14.0 rocm-sdk-core-7.14.0 rocm-sdk-devel-7.14.0 rocm-sdk-device-gfx1100-7.14.0 rocm-sdk-libraries-7.14.0

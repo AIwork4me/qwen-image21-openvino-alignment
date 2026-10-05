@@ -143,7 +143,7 @@ inherent trajectory sensitivity of Qwen-Image 2.1 conditioning — not an OpenVI
   - 1024/40 steps, 20 text prompts: CER median R0 0.080 vs OV 0.036; **0 prompts worse
     by >0.02, 6 better**; English `"FRESH BAKERY DAILY"` rendered exactly by both arms.
   - 2K/40 steps: see §12 — not significant.
-- Worst cases are in `reports/gallery/`, not only favorable ones.
+- Worst cases are in `reports/gallery_evidence/`, not only favorable ones.
 - Blind human evaluation package generated (100 pairs, left/right randomized, key stored
   separately); **human results PENDING — none fabricated**.
 
@@ -162,7 +162,7 @@ recorded, applied identically to both arms). 1 fixed seed executed (compute-boun
   the worst OCR pairs shows the *main* text rendered correctly in both arms (e.g.
   "DEEP SKY", "PURE GLOW", "HOTEL PACIFIC") — the CER differences come from small
   decorative/credit text that both arms render as different garbled textures. Worst
-  pairs retained in `reports/gallery/2k_worst_ocr_pair__*`.
+  pairs retained in `reports/gallery_evidence/` (see INDEX.md).
 - Canary 3-seed check (1024, 40 steps): LPIPS medians 0.041/0.051 (seeds 2/3) vs 0.089
   (seed 1 subset) — spread is seed-driven, no arm-direction.
 

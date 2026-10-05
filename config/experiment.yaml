@@ -46,7 +46,7 @@ latent_seed: &lseed 20261001               # seed used to pre-generate the froze
 
 stages:
   smoke_prompts_file: "prompts/smoke.json"
-  canary_prompts_file: "prompts/canary_10.json"
+  canary_prompts_file: "prompts/canary.json"
   stat_prompts_file: "prompts/alignment_100.json"
   production_prompts_file: "prompts/production_30.json"
 

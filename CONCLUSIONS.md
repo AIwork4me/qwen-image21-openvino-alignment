@@ -107,7 +107,7 @@ python scripts/perturbation_sweep.py --suite smoke --pid S02 --arm-ref R0 --arm-
 - `artifacts/plots/*.png` — 13 类关键图表
 - `artifacts/metrics/*.csv|json` — 全部数值证据
 - `artifacts/reviews/*.md` — 3 次独立子代理验核记录（PASS WITH WARNINGS，警告已整改）
-- `reports/gallery/`（本仓库内含精选图对）— 最好/中位/最差/中英文文字/交叉/扰动/2K
+- `reports/gallery_evidence/`（本仓库内含精选图对；`reports/gallery/INDEX.md` 为索引）— 最好/中位/最差/中英文文字/交叉/扰动/2K
 
 ## 7. 后续推荐实验的执行结果（已全部完成并经独立验核）
 

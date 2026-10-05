@@ -1,8 +1,0 @@
-[O_INT8_EXACT_src] 254 quantized layers, 750 plain tensors
-[O_INT8_EXACT_src] 7/254 layers dequantized
-[O_INT8_EXACT_src] 175/254 layers dequantized
-[O_INT8_EXACT_src] saving /valdata/models/v2_dequant_exact/O_INT8_EXACT/model.safetensors with 750 tensors (int8: 254, w4: 0)
-[O_W4A8_EXACT_src] 254 quantized layers, 750 plain tensors
-[O_W4A8_EXACT_src] 7/254 layers dequantized
-[O_W4A8_EXACT_src] 175/254 layers dequantized
-[O_W4A8_EXACT_src] saving /valdata/models/v2_dequant_exact/O_W4A8_EXACT/model.safetensors with 750 tensors (int8: 2, w4: 252)

@@ -1,4 +1,0 @@
-pid,formatted_text_match,input_ids_match,seq_len_r0,seq_len_comfy,drop_idx_r0,cond_len_r0,cond_len_comfy
-S01,1,1,30,30,14,16,16
-S02,1,1,40,40,14,26,26
-S03,1,1,36,36,14,22,22

@@ -1,0 +1,116 @@
+===== captured: 2026-10-05T00:40:53Z =====
+
+===== OS =====
+Linux j-szdqmqjrhyoqxyvnz2ejysxh5b 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+===== CPU =====
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        52 bits physical, 57 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               128
+On-line CPU(s) list:                  0-127
+Vendor ID:                            AuthenticAMD
+Model name:                           AMD EPYC 9334 32-Core Processor
+CPU family:                           25
+Model:                                17
+Thread(s) per core:                   2
+Core(s) per socket:                   32
+Socket(s):                            2
+Stepping:                             1
+BogoMIPS:                             5400.08
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd amd_ppin cppc amd_ibpb_ret arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid overflow_recov succor smca fsrm flush_l1d debug_swap
+Virtualization:                       AMD-V
+L1d cache:                            2 MiB (64 instances)
+L1i cache:                            2 MiB (64 instances)
+L2 cache:                             64 MiB (64 instances)
+L3 cache:                             256 MiB (8 instances)
+NUMA node(s):                         2
+NUMA node0 CPU(s):                    0-31,64-95
+NUMA node1 CPU(s):                    32-63,96-127
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Not affected
+Vulnerability Spec rstack overflow:   Mitigation; Safe RET
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+
+===== PCI GPU =====
+03:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+23:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+43:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+63:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+65:00.0 VGA compatible controller [0300]: ASPEED Technology, Inc. ASPEED Graphics Family [1a03:2000] (rev 52)
+83:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+a3:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+c3:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+e3:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:744b]
+
+===== EXISTING ROCM =====
+[37mROCk module version 6.16.13 is loaded[0m
+Runtime Version:         1.18
+  Name:                    AMD EPYC 9334 32-Core Processor    
+  Marketing Name:          AMD EPYC 9334 32-Core Processor    
+  Vendor Name:             CPU                                
+  Device Type:             CPU                                
+  Name:                    AMD EPYC 9334 32-Core Processor    
+  Marketing Name:          AMD EPYC 9334 32-Core Processor    
+  Vendor Name:             CPU                                
+  Device Type:             CPU                                
+  Name:                    gfx1100                            
+  Marketing Name:          AMD Radeon Graphics                
+  Vendor Name:             AMD                                
+  Device Type:             GPU                                
+      Name:                    amdgcn-amd-amdhsa--gfx1100         
+      Name:                    amdgcn-amd-amdhsa--gfx11-generic   
+
+
+
+======================================== ROCm System Management Interface ========================================
+================================================== Concise Info ==================================================
+Device  Node  IDs              Temp    Power  Partitions          SCLK  MCLK   Fan    Perf  PwrCap  VRAM%  GPU%  
+[3m              (DID,     GUID)  (Edge)  (Avg)  (Mem, Compute, ID)                                                 [0m
+==================================================================================================================
+0       5     0x744b,   13037  24.0°C  13.0W  N/A, N/A, 0         0Mhz  96Mhz  20.0%  auto  241.0W  0%     0%    
+==================================================================================================================
+============================================== End of ROCm SMI Log ===============================================
+/opt/rocm userspace version: 7.2.1
+
+===== PYTHON =====
+Python 3.12.3
+Python 3.12.3
+
+===== GIT =====
+git version 2.43.0
+
+===== DISK =====
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         3.5T  1.2T  2.2T  35% /
+/dev/loop2       98G   16M   93G   1% /workspace
+tmpfs           4.0G  308M  3.7G   8% /tmp
+
+===== MEM =====
+               total        used        free      shared  buff/cache   available
+Mem:           503Gi        72Gi        91Gi       383Mi       343Gi       430Gi
+Swap:             0B          0B          0B

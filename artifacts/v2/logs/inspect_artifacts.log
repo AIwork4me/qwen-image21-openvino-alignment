@@ -1,9 +1,0 @@
-/workspace/qwen-image21-openvino-alignment/scripts/inspect_comfyui_artifacts.py:65: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  "captured_utc": datetime.datetime.utcnow().isoformat() + "Z",
-[C_BF16] hashing qwen3vl_8b_bf16.safetensors (17.53 GB) ...
-[C_BF16] 750 tensors, metadata keys: ['format']
-[C_INT8] hashing qwen3vl_8b_int8_convrot.safetensors (9.35 GB) ...
-[C_INT8] 1258 tensors, metadata keys: ['format']
-[C_W4A8] hashing qwen3vl_8b_w4a8.safetensors (6.31 GB) ...
-[C_W4A8] 1762 tensors, metadata keys: ['format']
-wrote artifacts/v2/manifests/comfyui_encoder_artifacts.json

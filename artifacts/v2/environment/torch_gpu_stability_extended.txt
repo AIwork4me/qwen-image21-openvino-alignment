@@ -1,0 +1,14 @@
+/workspace/qwen-image21-v2-venv/lib/python3.12/site-packages/rocm_sdk/__init__.py:179: UserWarning: The program was compiled against a ROCm version matching '7\.14\.1' but the installed ROCm version in this Python environment is 7.14.0. This incompatibility may result in unexpected behavior
+  warnings.warn(
+== extended stability: bf16/fp32 matmul, sdpa, layernorm, deterministic check ==
+matmul torch.float32: finite=True
+matmul torch.bfloat16: finite=True
+matmul torch.float16: finite=True
+sdpa flash bf16 finite: True
+layernorm bf16 finite: True
+fp32 matmul bitwise-deterministic: True
+== ALL STABILITY CHECKS PASS ==
+---- pip check (known conflict expected) ----
+torch 2.12.0+rocm7.14.1 has requirement rocm[libraries]==7.14.1, but you have rocm 7.14.0.
+amd-torchvision-device-gfx1100 0.27.0+rocm7.14.1 has requirement rocm-sdk-device-gfx1100==7.14.1, but you have rocm-sdk-device-gfx1100 7.14.0.
+amd-torch-device-gfx1100 2.12.0+rocm7.14.1 has requirement rocm-sdk-device-gfx1100==7.14.1, but you have rocm-sdk-device-gfx1100 7.14.0.

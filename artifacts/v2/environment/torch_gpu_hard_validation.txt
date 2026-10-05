@@ -1,0 +1,10 @@
+/workspace/qwen-image21-v2-venv/lib/python3.12/site-packages/rocm_sdk/__init__.py:179: UserWarning: The program was compiled against a ROCm version matching '7\.14\.1' but the installed ROCm version in this Python environment is 7.14.0. This incompatibility may result in unexpected behavior
+  warnings.warn(
+torch.__version__ = 2.12.0+rocm7.14.1
+torch.version.hip = 7.14.60850
+torch.cuda.is_available() = True
+device_count = 1
+device 0
+ name: AMD Radeon Pro W7900D
+ props: _CudaDeviceProperties(name='AMD Radeon Pro W7900D', major=11, minor=0, gcnArchName='gfx1100', total_memory=49136MB, multi_processor_count=48, uuid=62336436-3837-3239-6431-353263356433, pci_bus_id=99, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)
+matmul PASS: torch.Size([4096, 4096]) torch.float16 cuda:0

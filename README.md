@@ -10,7 +10,7 @@ PyTorch reference for Qwen-Image 2.1, and why 25-step images look similar while
 ## One-command reproduction
 
 ```bash
-bash scripts/run_all_validation.sh       # full pipeline (long: many GPU-hours)
+bash scripts/run_all_validation.sh      # full pipeline (long: many GPU-hours)
 ```
 
 Stages are checkpointed; see REPRODUCTION.md for per-stage commands.

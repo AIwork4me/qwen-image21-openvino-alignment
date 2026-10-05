@@ -90,7 +90,7 @@ python scripts/perturbation_sweep.py --suite canary --pid C09 --arm-ref R0 --arm
 ```bash
 python scripts/benchmark_suite.py --suite canary       --arms R0,O3r --steps 25,40 --seeds 20261001
 python scripts/benchmark_suite.py --suite alignment_100 --arms R0,O3r --steps 25,40 --seeds 20261001
-python scripts/benchmark_suite.py --suite production_30 --arms R0,O3r --steps 40    --seeds <seeds> --resolution 2048
+python scripts/benchmark_suite.py --suite production_30 --arms R0,O3r --steps 40    --seeds 20261001 --resolution 2048
 python scripts/image_metrics.py --pattern "alignment_100_*_s20261001_40s" --arm-a R0 --arm-b O3r --ocr
 python scripts/blind_package.py --arm-a R0 --arm-b O3r --pattern "alignment_100_*_s20261001_40s"
 ```
@@ -106,6 +106,7 @@ python scripts/benchmark_cpu.py --arms O0,O1,O3r,O3 --n-warm 3 --n-iter 10
 ```bash
 python scripts/verify_artifacts.py
 python scripts/build_report.py
+python scripts/make_figures.py             # regenerates the 13 plot categories
 ```
 
 ## Everything
