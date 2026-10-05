@@ -12,6 +12,14 @@
       "ids_sha256": "72d1823e6eb1b2685898e775009ed1e844fb8f9d6cbb17cdd4369a7f867e5eda",
       "seq_len": 32
     },
+    "O_BF16": {
+      "ids_sha256": "72d1823e6eb1b2685898e775009ed1e844fb8f9d6cbb17cdd4369a7f867e5eda",
+      "seq_len": 32
+    },
+    "O_FP32": {
+      "ids_sha256": "72d1823e6eb1b2685898e775009ed1e844fb8f9d6cbb17cdd4369a7f867e5eda",
+      "seq_len": 32
+    },
     "R_BF16": {
       "ids_sha256": "72d1823e6eb1b2685898e775009ed1e844fb8f9d6cbb17cdd4369a7f867e5eda",
       "seq_len": 32
@@ -32,6 +40,14 @@
       "seq_len": 42
     },
     "C_W4A8": {
+      "ids_sha256": "61b1833072aa2578289a1a5d01d1aaa8faff304c0c757da222a4bf18029859d5",
+      "seq_len": 42
+    },
+    "O_BF16": {
+      "ids_sha256": "61b1833072aa2578289a1a5d01d1aaa8faff304c0c757da222a4bf18029859d5",
+      "seq_len": 42
+    },
+    "O_FP32": {
       "ids_sha256": "61b1833072aa2578289a1a5d01d1aaa8faff304c0c757da222a4bf18029859d5",
       "seq_len": 42
     },
@@ -58,6 +74,14 @@
       "ids_sha256": "301675dd8037097f2988008022495889860cacf02eceade55f524faaf809a113",
       "seq_len": 41
     },
+    "O_BF16": {
+      "ids_sha256": "301675dd8037097f2988008022495889860cacf02eceade55f524faaf809a113",
+      "seq_len": 41
+    },
+    "O_FP32": {
+      "ids_sha256": "301675dd8037097f2988008022495889860cacf02eceade55f524faaf809a113",
+      "seq_len": 41
+    },
     "R_BF16": {
       "ids_sha256": "301675dd8037097f2988008022495889860cacf02eceade55f524faaf809a113",
       "seq_len": 41
@@ -78,6 +102,14 @@
       "seq_len": 33
     },
     "C_W4A8": {
+      "ids_sha256": "03551f9eba4cadac5485a35701b5c8ae4632115424bdf81ef29d0778d974075f",
+      "seq_len": 33
+    },
+    "O_BF16": {
+      "ids_sha256": "03551f9eba4cadac5485a35701b5c8ae4632115424bdf81ef29d0778d974075f",
+      "seq_len": 33
+    },
+    "O_FP32": {
       "ids_sha256": "03551f9eba4cadac5485a35701b5c8ae4632115424bdf81ef29d0778d974075f",
       "seq_len": 33
     },
@@ -104,6 +136,14 @@
       "ids_sha256": "8369091a4c707f0a56d93c54e29453a834ebbed6116f2e0d2714f22383c1b651",
       "seq_len": 39
     },
+    "O_BF16": {
+      "ids_sha256": "8369091a4c707f0a56d93c54e29453a834ebbed6116f2e0d2714f22383c1b651",
+      "seq_len": 39
+    },
+    "O_FP32": {
+      "ids_sha256": "8369091a4c707f0a56d93c54e29453a834ebbed6116f2e0d2714f22383c1b651",
+      "seq_len": 39
+    },
     "R_BF16": {
       "ids_sha256": "8369091a4c707f0a56d93c54e29453a834ebbed6116f2e0d2714f22383c1b651",
       "seq_len": 39
@@ -124,6 +164,14 @@
       "seq_len": 34
     },
     "C_W4A8": {
+      "ids_sha256": "d264c40cc56bc9b7d5740fef1c245a2b56c4a611b006fe1a26c0057896bf7550",
+      "seq_len": 34
+    },
+    "O_BF16": {
+      "ids_sha256": "d264c40cc56bc9b7d5740fef1c245a2b56c4a611b006fe1a26c0057896bf7550",
+      "seq_len": 34
+    },
+    "O_FP32": {
       "ids_sha256": "d264c40cc56bc9b7d5740fef1c245a2b56c4a611b006fe1a26c0057896bf7550",
       "seq_len": 34
     },
@@ -150,6 +198,14 @@
       "ids_sha256": "e68e9944967a25f4ea8de0a3bd2894b0b8f1fc1bca78c81544b6a9c7475418c6",
       "seq_len": 39
     },
+    "O_BF16": {
+      "ids_sha256": "e68e9944967a25f4ea8de0a3bd2894b0b8f1fc1bca78c81544b6a9c7475418c6",
+      "seq_len": 39
+    },
+    "O_FP32": {
+      "ids_sha256": "e68e9944967a25f4ea8de0a3bd2894b0b8f1fc1bca78c81544b6a9c7475418c6",
+      "seq_len": 39
+    },
     "R_BF16": {
       "ids_sha256": "e68e9944967a25f4ea8de0a3bd2894b0b8f1fc1bca78c81544b6a9c7475418c6",
       "seq_len": 39
@@ -170,6 +226,14 @@
       "seq_len": 79
     },
     "C_W4A8": {
+      "ids_sha256": "2a1e7bac1eae6acdf2f4adde0e7c763339f72df9d7bc87cbb62511c43d6cb0a5",
+      "seq_len": 79
+    },
+    "O_BF16": {
+      "ids_sha256": "2a1e7bac1eae6acdf2f4adde0e7c763339f72df9d7bc87cbb62511c43d6cb0a5",
+      "seq_len": 79
+    },
+    "O_FP32": {
       "ids_sha256": "2a1e7bac1eae6acdf2f4adde0e7c763339f72df9d7bc87cbb62511c43d6cb0a5",
       "seq_len": 79
     },
@@ -196,6 +260,14 @@
       "ids_sha256": "7f11239ee6f9368b1141f5533ea850e77c1a0861b35626aeac4553bef563bded",
       "seq_len": 41
     },
+    "O_BF16": {
+      "ids_sha256": "7f11239ee6f9368b1141f5533ea850e77c1a0861b35626aeac4553bef563bded",
+      "seq_len": 41
+    },
+    "O_FP32": {
+      "ids_sha256": "7f11239ee6f9368b1141f5533ea850e77c1a0861b35626aeac4553bef563bded",
+      "seq_len": 41
+    },
     "R_BF16": {
       "ids_sha256": "7f11239ee6f9368b1141f5533ea850e77c1a0861b35626aeac4553bef563bded",
       "seq_len": 41
@@ -216,6 +288,14 @@
       "seq_len": 48
     },
     "C_W4A8": {
+      "ids_sha256": "6ae5ff62f9e3cc10c59bcaa837d0a4f89dc657554186f766502efc529c97bafe",
+      "seq_len": 48
+    },
+    "O_BF16": {
+      "ids_sha256": "6ae5ff62f9e3cc10c59bcaa837d0a4f89dc657554186f766502efc529c97bafe",
+      "seq_len": 48
+    },
+    "O_FP32": {
       "ids_sha256": "6ae5ff62f9e3cc10c59bcaa837d0a4f89dc657554186f766502efc529c97bafe",
       "seq_len": 48
     },

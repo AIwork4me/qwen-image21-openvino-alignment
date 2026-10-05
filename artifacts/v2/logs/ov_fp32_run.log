@@ -1,0 +1,9 @@
+/workspace/qwen-image21-v2-venv/lib/python3.12/site-packages/rocm_sdk/__init__.py:179: UserWarning: The program was compiled against a ROCm version matching '7\.14\.1' but the installed ROCm version in this Python environment is 7.14.0. This incompatibility may result in unexpected behavior
+  warnings.warn(
+inference_precision: <Type: 'float32'> exec_mode: ExecutionMode.ACCURACY
+O_FP32 C01: T=32 T'=18 7.7s
+O_FP32 C02: T=42 T'=28 1.8s
+O_FP32 C03: T=41 T'=27 1.6s
+O_FP32 C04: T=33 T'=19 1.4s
+O_FP32 C05: T=39 T'=25 1.6s
+timeout: the monitored command dumped core
