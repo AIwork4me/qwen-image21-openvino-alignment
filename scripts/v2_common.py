@@ -65,21 +65,22 @@ def tensor_sha256(t: torch.Tensor) -> str:
 
 
 def rel_l2(a: torch.Tensor, b: torch.Tensor) -> float:
-    a = a.float().flatten()
-    b = b.float().flatten()
+    a = a.double().flatten()
+    b = b.double().flatten()
     d = (a - b).norm() / a.norm().clamp(min=1e-12)
     return float(d)
 
 
 def cosine(a: torch.Tensor, b: torch.Tensor) -> float:
-    a = a.float().flatten()
-    b = b.float().flatten()
+    a = a.double().flatten()
+    b = b.double().flatten()
     return float(torch.nn.functional.cosine_similarity(a, b, dim=0))
 
 
 def pair_metrics(a: torch.Tensor, b: torch.Tensor) -> dict:
+    a64, b64 = a.double(), b.double()
     a32, b32 = a.float(), b.float()
-    d = a32 - b32
+    d = a64 - b64
     ad = d.abs()
     out = {
         "shape_a": list(a.shape), "shape_b": list(b.shape),
@@ -90,13 +91,13 @@ def pair_metrics(a: torch.Tensor, b: torch.Tensor) -> dict:
         "rmse": float(d.pow(2).mean().sqrt()),
         "rel_l2": rel_l2(a, b),
         "cosine": cosine(a, b),
-        "norm_ratio": float(b32.norm() / a32.norm().clamp(min=1e-12)),
-        "sign_agreement": float((torch.sign(a32) == torch.sign(b32)).float().mean()),
+        "norm_ratio": float(b64.norm() / a64.norm().clamp(min=1e-12)),
+        "sign_agreement": float((torch.sign(a64) == torch.sign(b64)).float().mean()),
         "nan": bool(torch.isnan(b32).any()), "inf": bool(torch.isinf(b32).any()),
     }
     if a.dim() >= 2:
-        pt_c = torch.nn.functional.cosine_similarity(a32, b32, dim=-1)
-        pt_l = (a32 - b32).norm(dim=-1) / a32.norm(dim=-1).clamp(min=1e-12)
+        pt_c = torch.nn.functional.cosine_similarity(a64, b64, dim=-1)
+        pt_l = (a64 - b64).norm(dim=-1) / a64.norm(dim=-1).clamp(min=1e-12)
         out["per_token_cosine_min"] = float(pt_c.min())
         out["per_token_cosine_mean"] = float(pt_c.mean())
         out["per_token_rel_l2_mean"] = float(pt_l.mean())

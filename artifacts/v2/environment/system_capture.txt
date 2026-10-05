@@ -49,3 +49,5 @@ Device  Node  IDs              Temp    Power  Partitions          SCLK  MCLK   F
 0       5     0x744b,   13037  25.0°C  11.0W  N/A, N/A, 0         0Mhz  96Mhz  20.0%  auto  241.0W  0%     0%    
 ==================================================================================================================
 ============================================== End of ROCm SMI Log ===============================================
+
+== host userspace post-install: 7.2.1 (unchanged; venv pip runtime is the 7.14.0 baseline) ==

@@ -45,6 +45,7 @@ rocm-sdk-devel==7.14.0
 EOF
 python -m pip install \
   --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
+  -c "$CONSTRAINTS" \
   "rocm[libraries,devel,device-gfx1100]==7.14.0" || true
 
 echo "== [6/6] hard gate =="

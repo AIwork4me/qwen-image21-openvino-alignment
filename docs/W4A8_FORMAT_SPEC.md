@@ -60,8 +60,9 @@ extension).
 3. Assign each normalized weight the nearest of 16 codebook levels. The
    codebook is the **frozen Lloyd-Max LUT for a unit Gaussian**
    (`_FIXED_LUT`, values ±0.9806…, ±0.7949…, …, ±0.0507) because ConvRot
-   Gaussanizes rotated groups; a per-tensor k-means fit is only a fallback
-   when excess kurtosis < -0.1.
+   Gaussianizes rotated groups (excess kurtosis ≤ -0.1 for Gaussian-like
+   layers); a per-tensor k-means fit runs only for heavy-tailed tensors
+   (excess kurtosis > -0.1) — not the case in this artifact.
 4. Two ALS (alternating least-squares) passes refine `group_scale`:
    `scale = Σ(w·level) / Σ(level²)` then re-assign codes.
 5. `s_channel[n] = absmax(reconstructed row) / 127`;

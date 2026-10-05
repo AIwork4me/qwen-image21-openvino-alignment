@@ -60,8 +60,8 @@ def main() -> int:
     for pkg in ("rocm", "rocm-sdk-core", "rocm-sdk-libraries", "rocm-sdk-device-gfx1100"):
         v = pip_version(pkg)
         report[f"pip_{pkg}"] = v
-        if pkg == "rocm" and v != REQUIRED["rocm_runtime_baseline"]:
-            failures.append(f"pip rocm {v} != {REQUIRED['rocm_runtime_baseline']} (SDK/runtime baseline mandate)")
+        if v != REQUIRED["rocm_runtime_baseline"]:
+            failures.append(f"pip {pkg} {v} != {REQUIRED['rocm_runtime_baseline']} (SDK/runtime baseline mandate)")
 
     if not torch.cuda.is_available():
         failures.append("torch.cuda.is_available() is False")

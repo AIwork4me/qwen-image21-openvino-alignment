@@ -35,7 +35,7 @@
     "onnx": "1.23.1",
     "onnxruntime": "1.30.0",
     "scipy": "1.18.1",
-    "pillow": "IMPORT_FAIL: No module named 'pillow'"
+    "pillow": "12.2.0"
   },
   "comfyui_commit": "d707c97a7d557b147cabf5831f2ed9e404da2afb",
   "note": "ROCm SDK/runtime baseline is 7.14.0 (pip rocm[libraries,devel,device-gfx1100]==7.14.0). PyTorch build tag 2.12.0+rocm7.14.1 is the mandated wheel and must never be reported as the ROCm SDK baseline. Torch wheels declare rocm==7.14.1 metadata deps; the 7.14.0 runtime baseline was restored after install (see rocm7140_restore_attempt.log)."

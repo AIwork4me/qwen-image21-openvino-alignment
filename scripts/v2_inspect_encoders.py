@@ -52,7 +52,8 @@ def main() -> int:
                 pass  # parsed lazily below (needs tensor read)
         out["artifacts"][arm] = {
             "filename": fname, "path": path, "size_bytes": size,
-            "safetensors_header_len": data_off,
+            "safetensors_data_start_offset": data_off,
+            "safetensors_header_len": data_off - 8,
             "safetensors_metadata": meta,
             "num_tensors": len(index),
             "dtype_histogram": dtypes,
