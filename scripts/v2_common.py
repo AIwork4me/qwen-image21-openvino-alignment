@@ -150,10 +150,16 @@ def load_prompts(suite: str) -> list[dict]:
 
 def gate_environment() -> None:
     """Hard gate: refuse to run authoritative experiments on a wrong stack."""
+    import subprocess as _sp
     import torch as _t
     assert _t.__version__.startswith("2.12.0+rocm7.14.1"), _t.__version__
     assert _t.cuda.is_available()
     p = _t.cuda.get_device_properties(0)
     assert "gfx1100" in (p.gcnArchName or ""), p.gcnArchName
     name = _t.cuda.get_device_name(0).lower()
-    assert "w7900" in name or "w 7900" in name, name
+    assert "w7900" in name.replace(" ", ""), name
+    out = _sp.run([sys.executable, "-m", "pip", "show", "rocm-sdk-core"],
+                  capture_output=True, text=True).stdout
+    ver = next((l.split(":", 1)[1].strip() for l in out.splitlines()
+                if l.startswith("Version:")), None)
+    assert ver == "7.14.1", f"pip rocm-sdk-core {ver} != 7.14.1 (ROCm 7.14.1 mandate)"

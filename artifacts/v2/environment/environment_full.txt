@@ -1,0 +1,54 @@
+===== captured 2026-10-05T23:29:27+00:00 — clean ROCm 7.14.1 authoritative v2 environment =====
+== OS ==
+Linux j-bdozl2px3w44nrqnt56psmd4ut 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+== CPU ==
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        52 bits physical, 57 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               128
+On-line CPU(s) list:                  0-127
+Vendor ID:                            AuthenticAMD
+Model name:                           AMD EPYC 9334 32-Core Processor
+CPU family:                           25
+Model:                                17
+Thread(s) per core:                   2
+Core(s) per socket:                   32
+== GPU ==
+GPU[0]		: Card Series: 		AMD Radeon Graphics
+GPU[0]		: Card Model: 		0x744b
+GPU[0]		: Card Vendor: 		Advanced Micro Devices, Inc. [AMD/ATI]
+GPU[0]		: Card SKU: 		D7070910
+GPU[0]		: GFX Version: 		gfx1100
+== torch ==
+torch 2.12.0+rocm7.14.1
+torchvision 0.27.0+rocm7.14.1
+HIP 7.14.60850
+GPU AMD Radeon Pro W7900D
+_CudaDeviceProperties(name='AMD Radeon Pro W7900D', major=11, minor=0, gcnArchName='gfx1100', total_memory=49136MB, multi_processor_count=48, uuid=33646230-3766-3838-3365-343138653932, pci_bus_id=67, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)
+== pip rocm ==
+Name: rocm-sdk-core
+Version: 7.14.1
+Name: rocm
+Version: 7.14.1
+Name: rocm-sdk-libraries
+Version: 7.14.1
+Name: rocm-sdk-device-gfx1100
+Version: 7.14.1
+Name: rocm-sdk-devel
+Version: 7.14.1
+== stability (7.14.1) ==
+torch 2.12.0+rocm7.14.1 hip 7.14.60850
+== extended stability: bf16/fp32 matmul, sdpa, layernorm, deterministic check ==
+matmul torch.float32: finite= True
+matmul torch.bfloat16: finite= True
+matmul torch.float16: finite= True
+sdpa flash bf16 finite: True
+layernorm bf16 finite: True
+fp32 matmul bitwise-deterministic: True
+== ALL STABILITY CHECKS PASS ==
+== pip check ==
+No broken requirements found.
+CLEAN
